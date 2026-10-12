@@ -387,7 +387,7 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
 /* ---------- FAQ ---------- */
 .faq{background:#fff;color:#111;padding:72px 16px 70px}
 .faq-in{max-width:1140px;margin:0 auto}
-.faq-kicker{display:table;margin:0 auto;padding:5px 9px;border-left:3px solid #7ddc5a;background:linear-gradient(90deg,#e9fbe2,rgba(233,251,226,0));font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1b1f2c}
+.faq-kicker{display:table;margin:0 auto;padding:5px 9px;border-left:3px solid var(--magenta);background:linear-gradient(90deg,#fde4f0,rgba(253,228,240,0));font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1b1f2c}
 .faq h2{text-align:center;font-size:clamp(30px,3.2vw,46px);font-weight:800;letter-spacing:-.03em;margin-top:14px;color:#0b0d14}
 .faq-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:34px;align-items:start}
 .faq-col h3{display:table;margin:0 auto 22px;padding:9px 16px;border-radius:6px;background:#c2185b;background:var(--magenta);color:#fff;font-size:15px;font-weight:700}
@@ -409,21 +409,23 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   .faq .ans{padding:0 14px 16px}
 }
 /* ---------- Footer (matches unlimited5ghomeinternet.com/fdl01a) ---------- */
-.site-footer{background:#fff linear-gradient(180deg,#d7ffcc 0%,rgba(254,205,230,0) 100%);color:#1a1a1a;font-family:Montserrat,Arial,sans-serif;padding:50px 0 calc(50px + env(safe-area-inset-bottom))}
+.site-footer{position:relative;overflow:hidden;background:radial-gradient(ellipse 55% 60% at 50% 0%,rgba(226,0,116,.28),transparent 70%),radial-gradient(ellipse 40% 50% at 100% 100%,rgba(60,40,140,.35),transparent 70%),linear-gradient(180deg,#0b1532 0%,#0a1330 55%,#120d2c 100%);color:#d6d9e6;border-top:3px solid var(--magenta);font-family:Montserrat,Arial,sans-serif;padding:50px 0 calc(50px + env(safe-area-inset-bottom))}
 .f-in{max-width:1170px;margin:0 auto;padding:0 5px}
-.f-logo{display:block;width:400px;max-width:calc(100% - 40px);height:auto;margin:35px auto 0}
-.f-tag{max-width:501px;margin:30px auto 0;text-align:center;font-size:16px;line-height:24px;color:#1a1a1a}
+.f-logo{display:block;width:400px;max-width:calc(100% - 40px);height:auto;margin:35px auto 0;box-sizing:content-box;padding:14px 22px;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.f-tag{max-width:501px;margin:30px auto 0;text-align:center;font-size:16px;line-height:24px;color:#d6d9e6}
 .f-bottom{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:50px;padding:0 5px;font-size:14px;line-height:24px}
 .f-left{text-align:left}
 .f-right{text-align:right}
 .f-copy{text-align:center}
-.f-left a,.f-right a{color:#188bf6;text-decoration:underline;text-underline-offset:2px}
+.f-left a,.f-right a{color:#ff4fa8;text-decoration:underline;text-underline-offset:3px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
 .f-left a+a,.f-right a+a{margin-left:18px}
-.f-copy a{color:#1a1a1a;text-decoration:none}
+.f-copy{color:#aeb3c4}
+.f-copy a{color:#fff;text-decoration:none}
 .site-footer a:hover{opacity:.8}
 @media (max-width:760px){
   .f-in{padding:0 10px}
-  .f-logo{width:350px;max-width:calc(100% - 20px)}
+  .f-logo{width:300px;max-width:calc(100% - 64px);padding:12px 18px}
   .f-tag{max-width:none;margin-top:30px}
   .f-bottom{grid-template-columns:1fr;gap:10px;margin-top:50px;text-align:center}
   .f-left,.f-right,.f-copy{text-align:center}
