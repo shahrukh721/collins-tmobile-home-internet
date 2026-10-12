@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T-Mobile 5G Home Internet | Collins Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#e20074;
+  --magenta-2:#ff1493;
+  --navy:#0a1330;
+  --navy-2:#0e1a3d;
+  --yellow:#ffc107;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--navy);color:#fff;font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+
+/* ---------- Header ---------- */
+.header{background:#fff;height:70px}
+.header .wrap{max-width:1000px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.logo-collins{display:block;line-height:0}
+.logo-collins svg{height:52px;width:auto}
+.header-right{display:flex;align-items:center;gap:56px}
+.logo-tm{display:flex;flex-direction:column;align-items:flex-end}
+.logo-tm img{height:34px;width:auto}
+.logo-tm span{font-family:Arial,sans-serif;font-size:7.5px;font-weight:700;letter-spacing:.3px;color:var(--magenta);text-transform:uppercase;margin-top:1px}
+.call-btn{display:inline-flex;align-items:center;gap:8px;background:#0b0b0b;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 16px;border-radius:7px;white-space:nowrap}
+.call-btn svg{width:16px;height:16px}
+
+/* ---------- Promo bar ---------- */
+.promo-bar{background:var(--magenta);min-height:39px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 28px;padding:6px 16px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.2px;text-align:center}
+.promo-bar .sep{width:1px;height:20px;background:rgba(255,255,255,.55)}
+.promo-bar .count{color:var(--yellow);text-decoration:underline;text-underline-offset:3px;font-size:17px;font-weight:800}
+.promo-bar .lt{font-weight:500}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(ellipse 45% 30% at 52% 92%, rgba(226,0,116,.55), transparent 70%),
+  radial-gradient(ellipse 60% 50% at 20% 70%, rgba(226,0,116,.22), transparent 70%),
+  radial-gradient(ellipse 50% 60% at 75% 20%, rgba(60,40,140,.35), transparent 70%),
+  linear-gradient(180deg,#0b1532 0%,#0a1330 60%,#120d2c 100%)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;max-width:1600px;margin:0 auto;padding:18px 78px 16px 115px;display:grid;grid-template-columns:minmax(0,1fr) 490px;gap:32px;align-items:start}
+
+.left{display:grid;grid-template-columns:480px minmax(0,1fr);grid-template-areas:"top top" "cards router" "feats feats" "fine fine";column-gap:0}
+.left-top{grid-area:top;padding-top:14px}
+.eyebrow{font-size:clamp(14px,1.15vw,18px);font-weight:700;text-transform:uppercase;letter-spacing:.2px}
+.eyebrow u{color:var(--yellow);text-underline-offset:3px}
+h1{font-weight:800;line-height:1.08;margin-top:8px}
+h1 .l1{display:block;font-size:clamp(30px,3.65vw,56px);letter-spacing:-.3px}
+h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-weight:900}
+.sub{font-size:clamp(17px,1.65vw,25px);font-weight:700;margin-top:4px}
+
+.cards{grid-area:cards;display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.card{position:relative;display:flex;align-items:center;gap:20px;padding:10px 16px 10px 20px;border-radius:7px;background:rgba(14,22,52,.82);border:1.5px solid rgba(255,255,255,.12);cursor:pointer;text-align:left;color:#fff;font-family:inherit;width:100%;transition:border-color .2s, background .2s}
+.card:hover{border-color:rgba(226,0,116,.6)}
+.card.active{background:linear-gradient(90deg,rgba(120,10,90,.85),rgba(70,10,70,.8));border-color:var(--magenta)}
+.card .ico{flex:0 0 48px;width:48px;height:48px;color:var(--magenta)}
+.card .body{flex:1;min-width:0}
+.card .price{font-size:clamp(28px,2.4vw,37px);font-weight:800;color:var(--yellow);line-height:1}
+.card .price small{font-size:.5em;color:#fff;vertical-align:top;position:relative;top:2px;margin-left:1px}
+.card:not(:first-child) .price{color:#fff}
+.card .title{font-size:17px;font-weight:700;margin-top:3px}
+.card .desc{font-family:Inter,Arial,sans-serif;font-size:13.5px;color:#d6d9e6;margin-top:3px;line-height:1.3}
+.card .go{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.card .go svg{width:18px;height:18px}
+
+.router{grid-area:router;align-self:end;position:relative;display:flex;justify-content:center;margin:-70px 0 6px 20px}
+.router::before{content:"";position:absolute;left:50%;bottom:-14px;width:115%;height:70px;transform:translateX(-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,40,150,.85),rgba(226,0,116,.35) 45%,transparent 72%);filter:blur(6px);pointer-events:none}
+.router img{position:relative;height:auto;width:auto;max-height:350px;max-width:100%;transform:scaleX(-1);filter:drop-shadow(10px 0 22px rgba(255,30,150,.55)) drop-shadow(0 18px 18px rgba(0,0,0,.45))}
+
+.feats{grid-area:feats;display:flex;margin-top:12px}
+.feat{display:flex;align-items:center;gap:10px;padding:4px 12px;border-left:1px solid rgba(255,255,255,.18);flex:1 1 auto;min-width:0}
+.feat:first-child{border-left:0;padding-left:0}
+.feat .fi{flex:0 0 46px;width:46px;height:46px;border:2px solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+.feat .fi svg{width:26px;height:26px}
+.feat p{font-size:13px;font-weight:500;line-height:1.25}
+@media (min-width:1381px){.feat p{white-space:nowrap}}
+.feat b{font-weight:700}
+
+.fine{grid-area:fine;font-family:Inter,Arial,sans-serif;font-size:10.5px;color:#c9cdda;line-height:1.45;margin-top:18px}
+.fine a{color:#fff}
+
+/* ---------- Form panel ---------- */
+.panel{margin-top:16px;background:rgba(10,18,44,.92);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px 32px 22px}
+.panel h2{text-align:center;font-size:clamp(22px,1.75vw,27px);font-weight:700;line-height:1.2;margin-bottom:18px}
+.field{position:relative;margin-bottom:8px}
+.field input,.field select{width:100%;height:39px;border:1px solid #d7dae2;border-radius:3px;background:#fff;color:#222;font-family:Inter,Arial,sans-serif;font-size:13px;padding:0 12px 0 40px;outline:none}
+.field input::placeholder{color:#6b6f7a}
+.field input:focus,.field select:focus{border-color:var(--magenta);box-shadow:0 0 0 2px rgba(226,0,116,.25)}
+.field .fic{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#6b6f7a;pointer-events:none}
+.field.phone input{padding-left:52px}
+.field .flag{position:absolute;left:10px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:5px;pointer-events:none}
+.field .flag svg.us{width:18px;height:12px}
+.field .flag svg.car{width:8px;height:8px;color:#555}
+.field select{padding-left:12px;appearance:none;-webkit-appearance:none;color:#6b6f7a;cursor:pointer}
+.field select.chosen{color:#222}
+.field .chev{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#222;pointer-events:none}
+.field.invalid input,.field.invalid select{border-color:#ff4d6d;box-shadow:0 0 0 2px rgba(255,77,109,.3)}
+.submit{width:100%;height:65px;margin-top:4px;border:0;border-radius:4px;background:var(--magenta);color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:clamp(18px,1.4vw,21px);display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background .2s}
+.submit:hover{background:#c80067}
+.submit svg{width:20px;height:20px}
+.consent{display:flex;gap:10px;margin-top:20px;font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.38;color:#dfe2ea}
+.consent input{flex:0 0 13px;width:13px;height:13px;margin-top:2px;accent-color:var(--magenta)}
+.consent a{color:#4ea3ff}
+.consent.invalid input{outline:2px solid #ff4d6d}
+.form-msg{display:none;margin-top:12px;padding:10px 12px;border-radius:4px;background:rgba(255,255,255,.08);font-size:13px;text-align:center}
+.form-msg.show{display:block}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1380px){
+  .hero .wrap{padding:18px 32px 16px}
+  .left{grid-template-columns:minmax(0,440px) minmax(0,1fr)}
+}
+@media (max-width:1180px){
+  .hero .wrap{grid-template-columns:1fr;max-width:820px}
+  .panel{max-width:560px;width:100%;margin:8px auto 0}
+}
+@media (max-width:760px){
+  .header{height:auto}
+  .header .wrap{height:min(15vw,96px);padding:0 3.5vw}
+  .logo-collins svg{height:min(9vw,56px)}
+  .header-right{gap:0}
+  .logo-tm img{height:min(6.6vw,40px)}
+  .logo-tm span{font-size:clamp(6px,1.75vw,10px)}
+  .call-btn,.promo-bar,.hero{display:none!important}
+  .mv{display:block!important}
+}
+@media (max-width:360px){
+  .feat{flex-basis:100%}
+  .card .ico{display:none}
+}
+
+/* ================= MOBILE PAGE (<=760) ================= */
+.mv{display:none;background:
+  radial-gradient(ellipse 38% 16% at 88% 14%, rgba(255,70,180,.55), transparent 70%),
+  radial-gradient(ellipse 45% 22% at 100% 34%, rgba(200,30,140,.45), transparent 70%),
+  radial-gradient(ellipse 60% 16% at 78% 64%, rgba(255,40,150,.32), transparent 70%),
+  radial-gradient(ellipse 50% 30% at 0% 40%, rgba(70,40,130,.3), transparent 70%),
+  linear-gradient(180deg,#0b0e24 0%,#16122f 55%,#0c0e22 100%)}
+.mv-ticker{background:var(--magenta);overflow:hidden;white-space:nowrap;height:clamp(28px,6.4vw,42px);display:flex;align-items:center}
+.mv-track{display:inline-flex;animation:mvTick 22s linear infinite}
+.mv-track span{display:inline-flex;align-items:center;font-weight:800;font-size:clamp(11px,2.5vw,16px);text-transform:uppercase;letter-spacing:.01em}
+.mv-track span::after{content:"";width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.7);margin:0 clamp(12px,3.2vw,22px)}
+@keyframes mvTick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mv-track{animation:none}}
+
+.mv-in{position:relative;max-width:560px;margin:0 auto;container-type:inline-size}
+.mv-glow{position:absolute;top:2cqw;right:0;width:46cqw;height:52cqw;pointer-events:none;opacity:.55;
+  background:repeating-linear-gradient(90deg,rgba(255,170,225,.16) 0 2px,transparent 2px 11cqw),repeating-linear-gradient(0deg,rgba(255,170,225,.12) 0 2px,transparent 2px 13cqw);
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 70% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 70% 40%,#000,transparent 75%);filter:blur(1.5px)}
+.mv-h1{position:relative;margin:0 5cqw;padding-top:6.8cqw;font-size:9.6cqw;line-height:.98;font-weight:800;letter-spacing:-.025em}
+.mv-sub{position:relative;margin:2.4cqw 5cqw 0;font-size:max(14px,3.8cqw);font-weight:600;line-height:1.22}
+.mv-offers{position:relative;margin-top:3cqw;padding:2cqw 0 0 3.9cqw}
+.mv-cards{position:relative;z-index:2;width:51.7cqw;display:flex;flex-direction:column;gap:1.8cqw}
+.mv-card{position:relative;display:block;width:100%;text-align:left;font-family:inherit;color:#fff;cursor:pointer;
+  background:rgba(16,18,40,.9);border:1.5px solid rgba(255,255,255,.14);border-radius:1.6cqw;padding:3.6cqw 7.4cqw 3cqw 3cqw}
+.mv-card.active{border:2px solid #ffcc1f;box-shadow:0 0 0 1px rgba(255,204,31,.25)}
+.mv-tag{position:absolute;top:-2.1cqw;left:2.2cqw;background:var(--magenta);color:#fff;font-weight:800;font-size:max(10px,2.2cqw);line-height:1;padding:.9cqw 1.6cqw;border-radius:.6cqw;text-transform:uppercase;letter-spacing:.02em}
+.mv-price{font-size:6.9cqw;font-weight:800;line-height:1;letter-spacing:-.02em}
+.mv-price em{font-style:normal;font-size:.84em}
+.mv-price sup{font-size:.32em;vertical-align:top;position:relative;top:.25em}
+.mv-card.best .mv-price{color:#ffc61a}
+.mv-card.best .mv-price sup{color:#fff}
+.mv-title{font-size:max(11.5px,2.75cqw);font-weight:700;margin-top:1.8cqw}
+.mv-desc{font-family:Inter,Arial,sans-serif;font-size:max(10.5px,2.35cqw);color:#cfd3e2;margin-top:1cqw;line-height:1.3}
+.mv-go{position:absolute;right:2cqw;top:50%;transform:translateY(-50%);width:max(24px,4.9cqw);height:max(24px,4.9cqw);border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
+.mv-go svg{width:55%;height:55%}
+.mv-gift{position:absolute;top:.2cqw;right:2.6cqw;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:.8cqw;padding:1cqw 1.6cqw .9cqw;text-align:center;line-height:1;box-shadow:0 1cqw 2cqw rgba(0,0,0,.35)}
+.mv-gift b{display:block;font-size:max(13px,4.4cqw);font-weight:800;letter-spacing:-.02em}
+.mv-gift b small{font-size:.55em;vertical-align:top;position:relative;top:.15em}
+.mv-gift i{display:block;font-style:normal;font-size:max(4.5px,1.05cqw);font-weight:800;text-transform:uppercase;margin-top:.5cqw}
+.mv-router{position:absolute;z-index:1;right:3.9cqw;bottom:4.8cqw;width:37.8cqw;filter:drop-shadow(-2cqw 0 4cqw rgba(255,40,160,.5))}
+.mv-router img{width:100%;height:auto;transform:scaleX(-1)}
+.mv-table{position:absolute;z-index:0;left:44cqw;right:0;bottom:-.8cqw;height:12.8cqw;border-radius:1.2cqw 0 0 0;
+  background:linear-gradient(180deg,#6b3048 0%,#40192d 30%,#24101f 100%);box-shadow:inset 0 .5cqw 0 rgba(255,140,200,.45)}
+.mv-table::before{content:"";position:absolute;left:14cqw;right:2cqw;top:-2cqw;height:7cqw;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,60,170,.75),transparent 70%);filter:blur(4px)}
+.mv-feats{display:flex;align-items:center;justify-content:space-between;margin:4.6cqw 3cqw 0 4.5cqw}
+.mv-feat{display:flex;align-items:center;gap:1.8cqw;min-width:0}
+.mv-sep{width:1px;align-self:stretch;margin:0 1.8cqw;background:rgba(255,255,255,.2)}
+.mv-fi{flex:0 0 auto;width:8.4cqw;height:8.4cqw;border:max(2px,.45cqw) solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+.mv-fi svg{width:55%;height:55%}
+.mv-feat p{font-size:max(9px,2.4cqw);font-weight:500;line-height:1.25;color:#e6e8f0;white-space:nowrap}
+@container (max-width:380px){.mv-feat p{white-space:normal}}
+.mv-feat b{font-weight:700;color:#fff}
+.mv-cta{display:flex;align-items:center;justify-content:center;gap:2.6cqw;margin:4.4cqw auto 0;width:89.6cqw;height:13.9cqw;min-height:52px;border:0;border-radius:1.6cqw;cursor:pointer;position:relative;overflow:hidden;
+  background:linear-gradient(100deg,#ff1a94 0%,#e20074 55%,#d0006b 100%);color:#fff;font:800 max(18px,5.1cqw) Montserrat,Arial,sans-serif;box-shadow:0 1.2cqw 3.5cqw rgba(226,0,116,.45)}
+.mv-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 55%,rgba(255,255,255,.14) 55% 70%,transparent 70%)}
+.mv-cta svg{width:max(20px,5.4cqw);height:max(20px,5.4cqw)}
+.mv-cta-sub{text-align:center;color:#c9ccd8;font-size:max(12px,2.8cqw);font-weight:500;margin-top:3.6cqw;padding-bottom:7cqw}
+.mv-strip{height:clamp(18px,5.5vw,34px);background:linear-gradient(100deg,#9a0b62 0%,#e20074 30%,#ff2a97 52%,#5a0d4b 52.4%,#3a0a3a 60%,#e20074 60.4%,#c8006a 100%)}
+.mv-fine{max-width:560px;margin:0 auto;padding:16px;font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.45;color:#c9cdda}
+.mv-fine a{color:#fff}
+
+/* ================= POPUP ================= */
+.pop-overlay{position:fixed;inset:0;z-index:1000;display:none;overflow-y:auto;padding:32px 24px;background:rgba(6,8,22,.74);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.pop-overlay.open{display:flex}
+.pop{position:relative;margin:auto;width:100%;max-width:880px;display:grid;grid-template-columns:53fr 47fr;background:#fff;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.55);container-type:inline-size;outline:none}
+.pop .m-only{display:none}
+.pop-close{position:absolute;z-index:5;top:-10px;right:-12px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#111;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.pop-close svg{width:20px;height:20px}
+
+.pop-l{position:relative;overflow:hidden;border-radius:18px 0 0 18px;color:#fff;padding:26px 22px 0;
+  background:radial-gradient(ellipse 70% 22% at 25% 100%,rgba(226,0,116,.6),transparent 70%),radial-gradient(ellipse 60% 25% at 100% 78%,rgba(226,0,116,.3),transparent 70%),linear-gradient(180deg,#0a0e25 0%,#0e1230 60%,#190d2c 100%)}
+.pop-badge{display:flex;align-items:center;justify-content:center;gap:8px;height:32px;margin:0 22px;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.01em;
+  background:linear-gradient(90deg,transparent,#b8006a 14%,#e20074 50%,#b8006a 86%,transparent)}
+.pop-badge svg{width:18px;height:18px}
+.pop-h{text-align:center;font-weight:800;font-size:46px;line-height:1;letter-spacing:-.03em;margin-top:12px}
+.pop-sub{text-align:center;font-size:21px;font-weight:600;line-height:1.2;margin-top:10px}
+.pc-list{display:flex;flex-direction:column;gap:9px;margin-top:20px}
+.pc{position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:11px 14px 11px 14px;border-radius:10px;background:rgba(12,16,38,.88);border:1.5px solid rgba(255,255,255,.2);color:#fff;text-align:left;font-family:inherit;cursor:pointer}
+.pc.active{border:2px solid #ffcc1f}
+.pc .ico{flex:0 0 44px;width:44px;height:44px;color:var(--magenta)}
+.pc .body{flex:1;min-width:0}
+.pc .price{font-size:31px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.pc .price sup{font-size:.4em;vertical-align:top;position:relative;top:.2em}
+.pc.best .price{color:#ffc61a}
+.pc.best .price sup{color:#fff}
+.pc .title{font-size:16px;font-weight:700;margin-top:3px}
+.pc .desc{font-family:Inter,Arial,sans-serif;font-size:13px;color:#e1e3ec;line-height:1.3;margin-top:2px}
+.pc .go{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
+.pc .go svg{width:16px;height:16px}
+.pc-tag{position:absolute;top:-12px;left:24px;background:var(--magenta);color:#fff;font-size:13px;font-weight:800;line-height:1;padding:5px 9px;border-radius:5px;text-transform:uppercase}
+.pc-gift{position:absolute;top:2px;left:235px;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:6px;padding:5px 10px 4px;text-align:center;line-height:1;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.pc-gift b{display:block;font-size:20px;font-weight:800}
+.pc-gift i{display:block;font-style:normal;font-size:9.5px;font-weight:800;text-transform:uppercase;margin-top:1px}
+.pop-bottom{position:relative;display:flex;justify-content:flex-end;margin-top:16px;min-height:236px}
+.pop-router{position:absolute;left:14px;bottom:0;width:150px;filter:drop-shadow(-6px 0 18px rgba(255,40,160,.55))}
+.pop-router img{width:100%;height:auto;transform:scaleX(-1);display:block}
+.pop-bottom::before{content:"";position:absolute;left:-30px;bottom:-26px;width:300px;height:70px;border-radius:50%;border:2px solid rgba(255,60,170,.7);box-shadow:0 0 18px rgba(255,40,160,.7),inset 0 0 18px rgba(255,40,160,.5);filter:blur(.5px)}
+.pop-feats{display:flex;flex-direction:column;gap:12px;width:52%;padding-bottom:18px}
+.pop-feat{display:flex;align-items:center;gap:12px}
+.pop-feat .fi{flex:0 0 48px;width:48px;height:48px;border:3px solid var(--magenta);border-radius:50%;background:rgba(20,8,30,.6);display:grid;place-items:center;color:var(--magenta)}
+.pop-feat .fi svg{width:26px;height:26px}
+.pop-feat p{font-size:14.5px;line-height:1.15;font-weight:500}
+.pop-feat b{font-weight:700}
+
+.pop-r{padding:30px 28px 22px;color:#0d1330}
+.pop-step{font-size:12.5px;font-weight:600;color:#333;letter-spacing:.3px;text-transform:uppercase}
+.pop-bar{width:214px;height:6px;border-radius:3px;background:#e6e8ee;margin-top:9px;overflow:hidden}
+.pop-bar i{display:block;height:100%;width:40%;background:var(--magenta);border-radius:3px;transition:width .4s}
+.pop-r h3{margin-top:28px;font-weight:800;font-size:39px;line-height:1.02;letter-spacing:-.03em;color:#0d1330}
+.pop-r h3 span{display:block;font-size:27px;font-weight:700;letter-spacing:-.01em;margin-top:4px}
+.pop-intro{font-family:Inter,Arial,sans-serif;font-size:15.5px;color:#2b2f3a;line-height:1.4;margin:10px 0 18px}
+.pf-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px}
+.pf{position:relative;grid-column:span 12}
+.pf input,.pf select{width:100%;height:42px;border:1.5px solid #cfd3dc;border-radius:6px;background:#fff;color:#111;font-family:Inter,Arial,sans-serif;font-size:15px;padding:0 12px 0 42px;outline:none}
+.pf input::placeholder{color:#6b7080}
+.pf input:focus,.pf select:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(226,0,116,.18)}
+.pf .fic{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:#6b7080;pointer-events:none}
+.pf.phone input{padding-left:92px}
+.pf .flag{position:absolute;left:42px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:6px;pointer-events:none}
+.pf .flag .us{width:21px;height:14px}
+.pf .flag .car{width:8px;height:8px;color:#444}
+.pf select{appearance:none;-webkit-appearance:none;color:#6b7080;cursor:pointer}
+.pf select.chosen{color:#111}
+.pf .chev{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#444;pointer-events:none}
+.pf.invalid input,.pf.invalid select{border-color:#ff3b5c;box-shadow:0 0 0 3px rgba(255,59,92,.15)}
+.pop-cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:58px;margin-top:16px;border:0;border-radius:6px;background:var(--magenta);color:#fff;font:700 21px Montserrat,Arial,sans-serif;cursor:pointer;transition:background .2s}
+.pop-cta:hover{background:#c80067}
+.pop-cta svg{width:22px;height:22px}
+.pop-trust{display:flex;align-items:center;justify-content:space-between;margin-top:18px}
+.pop-trust > div{display:flex;align-items:center;gap:8px;font-family:Inter,Arial,sans-serif;font-size:11px;line-height:1.3;color:#1b1f2c}
+.pop-trust svg{flex:0 0 auto;width:26px;height:26px;color:#0d1330}
+.pop-trust .sep{width:1px;height:34px;background:#d9dce3;flex:0 0 1px}
+.pop-consent{font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.45;color:#4a4f5c;margin-top:16px}
+.pop-consent a{color:#1b1f2c}
+.pop-msg{display:none;margin-top:12px;padding:10px 12px;border-radius:6px;background:#fdeaf3;color:#7a0040;font-family:Inter,Arial,sans-serif;font-size:13.5px;text-align:center}
+.pop-msg.show{display:block}
+.pm-list.invalid .pm{border-color:#ff3b5c}
+
+@media (max-width:860px) and (min-width:761px){
+  .pop-h{font-size:40px}.pop-r h3{font-size:34px}
+  .pc-gift{left:auto;right:58px}
+}
+
+/* ---------- Popup: mobile ---------- */
+@media (max-width:760px){
+  .pop-overlay{padding:12px}
+  .pop{grid-template-columns:minmax(0,1fr);max-width:520px;border-radius:3.6cqw;overflow:hidden}
+  .pop .d-only,.pop-bottom{display:none!important}
+  .pop .m-only{display:block}
+  .pop-l{border-radius:0;padding:0 0 9cqw;min-height:46cqw;
+    background:radial-gradient(circle at 80% 54%,rgba(226,0,116,.9) 0 18cqw,rgba(226,0,116,.35) 21.5cqw,transparent 27cqw),radial-gradient(ellipse 60% 50% at 100% 0%,rgba(110,40,160,.35),transparent 70%),linear-gradient(180deg,#0b0f27,#10122d)}
+  .pop-badge{margin:0;height:8.6cqw;min-height:36px;font-size:max(15px,3.6cqw);background:var(--magenta);gap:1.6cqw}
+  .pop-badge svg{width:max(16px,3.4cqw);height:max(16px,3.4cqw)}
+  .pop-badge .o{color:#ffd21f}
+  .pop-close{top:0;right:1.5cqw;width:max(36px,8.6cqw);height:max(36px,8.6cqw);background:transparent;color:#fff;box-shadow:none}
+  .pop-close svg{width:max(18px,4cqw);height:max(18px,4cqw)}
+  .pop-h{text-align:left;font-size:6.7cqw;margin:4.8cqw 0 0 4.7cqw;max-width:58cqw;line-height:1.02}
+  .pop-sub{text-align:left;font-size:max(13px,3.5cqw);margin:2.6cqw 0 0 4.7cqw;max-width:53cqw;line-height:1.25}
+  .pop-router{left:auto;right:5.4cqw;top:12.5cqw;bottom:auto;width:28.5cqw;z-index:3;filter:drop-shadow(0 2cqw 3cqw rgba(0,0,0,.4))}
+  .pop-router img{transform:none}
+  .pop-r{position:relative;z-index:2;margin-top:-5cqw;background:#fff;border-radius:3.6cqw 3.6cqw 0 0;padding:1.8cqw 3.9cqw 4cqw}
+  .pm-list{display:flex!important;flex-direction:column;gap:1.8cqw}
+  .pm{position:relative;display:flex;align-items:center;gap:3.6cqw;padding:2.6cqw 3cqw 2.6cqw 4cqw;border:1.5px solid #cfd3dc;border-radius:1.6cqw;cursor:pointer;background:#fff}
+  .pm.on{background:#fde8f3;border:max(2px,.35cqw) solid var(--magenta)}
+  .pm input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:max(22px,5.2cqw);height:max(22px,5.2cqw);border:2px solid #8a8f9c;border-radius:50%;margin:0;cursor:pointer}
+  .pm input:checked{border:max(3px,.55cqw) solid var(--magenta);background:radial-gradient(circle,var(--magenta) 0 48%,#fff 52%)}
+  .pm input:focus-visible{outline:2px solid var(--magenta);outline-offset:2px}
+  .pm .body{flex:1;min-width:0}
+  .pm .price{display:flex;flex-wrap:wrap;align-items:center;gap:1.5cqw 3cqw;font-size:max(24px,5.6cqw);font-weight:800;line-height:1;color:#11152b;letter-spacing:-.02em}
+  .pm .price sup{font-size:.4em;vertical-align:top;position:relative;top:-.5em}
+  .pm.on .price .amt{color:var(--magenta)}
+  .pm .bv{font-size:max(10px,2.3cqw);font-weight:800;color:#fff;background:var(--magenta);padding:.8cqw 1.6cqw;border-radius:.6cqw;letter-spacing:0;text-transform:uppercase}
+  .pm .gift{position:relative;top:-.6cqw;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:.8cqw;padding:.7cqw 2cqw .6cqw;text-align:center;line-height:1;color:#fff;box-shadow:0 1cqw 2cqw rgba(0,0,0,.25)}
+  .pm .gift b{display:block;font-size:max(14px,3.8cqw);font-weight:800}
+  .pm .gift i{display:block;font-style:normal;font-size:max(7px,1.8cqw);font-weight:800;text-transform:uppercase}
+  .pm .title{font-size:max(13.5px,3cqw);font-weight:700;color:#11152b;margin-top:.8cqw}
+  .pm .desc{font-family:Inter,Arial,sans-serif;font-size:max(11.5px,2.5cqw);color:#333846;line-height:1.3;margin-top:.4cqw}
+  .pm .desc a{color:#333846}
+  .pm .ico{flex:0 0 auto;width:max(32px,8.3cqw);height:max(32px,8.3cqw);color:var(--magenta)}
+  .pop-r form{margin-top:2.2cqw}
+  .pf-grid{gap:2.2cqw 1.6cqw}
+  .pf.half{grid-column:span 6}
+  .pf.addr{grid-column:span 7}
+  .pf.zip{grid-column:span 5}
+  .pf input{height:max(44px,7.6cqw);font-size:16px;padding-left:max(38px,8.5cqw)}
+  .pf .fic{left:2.6cqw;width:max(18px,3.6cqw);height:max(18px,3.6cqw)}
+  .pf.phone input{padding-left:max(88px,17cqw)}
+  .pf .flag{left:max(38px,8.5cqw)}
+  .pm-feats{display:flex!important;align-items:center;justify-content:space-between;margin-top:3.4cqw}
+  .pm-feats .f{display:flex;align-items:center;gap:1.8cqw;min-width:0}
+  .pm-feats .fi{flex:0 0 auto;width:max(34px,8.3cqw);height:max(34px,8.3cqw);border:max(2px,.45cqw) solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+  .pm-feats .fi svg{width:55%;height:55%}
+  .pm-feats p{font-size:max(9px,2.25cqw);line-height:1.25;color:#11152b;white-space:nowrap}
+  .pm-feats b{font-weight:700}
+  @container (max-width:360px){.pm-feats p{white-space:normal}.pm{gap:2.4cqw;padding-left:3cqw}.pm .ico{width:28px;height:28px}.pf.addr,.pf.zip{grid-column:span 6}}
+  .pm-feats .sep{width:1px;align-self:stretch;margin:0 1.6cqw;background:#d9dce3}
+  .pop-cta{height:max(52px,9.7cqw);margin-top:3.6cqw;border-radius:1.2cqw;font-size:max(18px,3.9cqw);font-weight:800;flex-direction:row-reverse}
+  .pop-trust{justify-content:center;gap:2.6cqw;margin-top:3.6cqw}
+  .pop-trust > div{font-size:max(9.5px,1.8cqw);gap:1.4cqw}
+  .pop-trust > div br{display:none}
+  .pop-trust svg{width:max(18px,3.4cqw);height:max(18px,3.4cqw);color:#11152b}
+  .pop-trust .sep{height:max(22px,4cqw)}
+  .pop-consent{text-align:center;font-size:max(9.5px,1.7cqw);margin-top:3cqw}
+}
+@media (max-width:400px){
+  .pop-trust{flex-wrap:wrap;gap:6px 10px}
+  .pop-trust .sep{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo-collins" href="#" aria-label="Collins Mobile">
+      <svg viewBox="0 0 250 60" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="hexL" x1="0" x2="1"><stop offset="0" stop-color="#3b3f44"/><stop offset=".5" stop-color="#2a2d31"/><stop offset=".5" stop-color="#4a4e54"/><stop offset="1" stop-color="#5c6066"/></linearGradient>
+          <linearGradient id="cmG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6dff4a"/><stop offset="1" stop-color="#27c41a"/></linearGradient>
+        </defs>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="url(#hexL)"/>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="none" stroke="#1d1f22" stroke-width="1.5"/>
+        <text x="27" y="39.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="-1.5" fill="url(#cmG)">CM</text>
+        <text x="60" y="38" font-family="Montserrat,Arial,sans-serif" font-size="19" letter-spacing=".6"><tspan font-weight="800" fill="#2b2e33">COLLINS</tspan><tspan font-weight="500" fill="#5d6168">MOBILE</tspan></text>
+      </svg>
+    </a>
+    <div class="header-right">
+      <div class="logo-tm"><img src="images/tmobile-home-internet.png" alt="T-Mobile Home Internet"><span>Authorized Retailer</span></div>
+      <a class="call-btn" href="tel:+18887654506">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+        888-765-4506
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="promo-bar">
+  <span>Wait time is less than <span class="count">(<span id="secs">15</span>) seconds</span></span>
+  <span class="sep"></span>
+  <span class="lt">For a limited time only - Order by 7:00 P.M. EST <span id="today">10/12/2026</span></span>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"><path d="M5 23 24 6l19 17"/><path d="M10 19v22h28V19"/><path d="M19.5 41V29h9v12"/></g></symbol>
+  <symbol id="i-gift" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="17" width="36" height="9" rx="1"/><path d="M9 26v16h30V26"/><path d="M24 17v25"/><path d="M24 17c-3-7-11-9-11-4 0 3 5 4 11 4z"/><path d="M24 17c3-7 11-9 11-4 0 3-5 4-11 4z"/></g></symbol>
+  <symbol id="i-wifi-c" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="21"/><path d="M12 21a17 17 0 0 1 24 0"/><path d="M16.5 26a11 11 0 0 1 15 0"/><path d="M21 31a5 5 0 0 1 6 0"/></g><circle cx="24" cy="35" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"><path d="M5 18a27 27 0 0 1 38 0"/><path d="M11.5 25a18 18 0 0 1 25 0"/><path d="M18 32a9 9 0 0 1 12 0"/></g><circle cx="24" cy="39" r="4" fill="currentColor"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 2.5v19M16.6 7.4C16 5.8 14.3 4.8 12 4.8c-2.8 0-4.6 1.4-4.6 3.5 0 4.7 9.3 2.6 9.3 7.4 0 2-1.9 3.5-4.7 3.5-2.4 0-4.3-1.1-4.8-2.9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"><path d="M6 2.8h8.5l4 4v14.4H6z"/><path d="M14.5 2.8v4h4"/><path d="M9 11h6.5M9 14h6.5M9 17h4.5"/></g></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84a.47.47 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 0 0-.59.22L2.74 8.87a.47.47 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.48.48 0 0 0-.12-.61zM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.2 3.5 9.6 7.8 8 9.6a12 12 0 0 0 6.4 6.4l1.8-1.6 4.3 2.4-.9 3.4c-.2.6-.8 1-1.4.9A17 17 0 0 1 3 5.8c-.1-.6.3-1.2.9-1.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+  <symbol id="i-caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z" fill="currentColor"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05A4.2 4.2 0 0 1 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+  <symbol id="i-us" viewBox="0 0 19 12"><rect width="19" height="12" fill="#b22234"/><g fill="#fff"><rect y="1.85" width="19" height=".92"/><rect y="3.7" width="19" height=".92"/><rect y="5.54" width="19" height=".92"/><rect y="7.38" width="19" height=".92"/><rect y="9.23" width="19" height=".92"/></g><rect width="7.6" height="6.46" fill="#3c3b6e"/></symbol>
+</svg>
+
+<!-- ================= MOBILE PAGE (shown <=760px) ================= -->
+<section class="mv" aria-label="T-Mobile 5G Home Internet offers">
+  <div class="mv-ticker" aria-hidden="true"><div class="mv-track"><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span></div></div>
+  <div class="mv-in">
+    <div class="mv-glow"></div>
+    <h1 class="mv-h1">T-Mobile 5G<br>Home Internet</h1>
+    <p class="mv-sub">3 Great Offers. Choose the<br>One That&rsquo;s Right for You.</p>
+
+    <div class="mv-offers">
+      <div class="mv-table"></div>
+      <div class="mv-router"><img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655"></div>
+      <div class="mv-cards">
+        <button type="button" class="mv-card best active" data-offer="$35/mo - Free 5G Wi-Fi Equipment">
+          <span class="mv-tag">Best Value</span>
+          <div class="mv-price">$35<em>/mo</em><sup>*</sup></div>
+          <div class="mv-title">Free 5G Wi-Fi Equipment</div>
+          <div class="mv-desc">With AutoPay and eligible voice line.</div>
+          <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+        <button type="button" class="mv-card" data-offer="$45/mo - Plus $100 Prepaid Gift Card">
+          <span class="mv-gift"><b><small>$</small>100</b><i>Prepaid Gift Card</i></span>
+          <div class="mv-price">$45<em>/mo</em><sup>*</sup></div>
+          <div class="mv-title">Plus $100 Prepaid Gift Card</div>
+          <div class="mv-desc">With AutoPay and eligible voice line. Gift card with qualifying activation.</div>
+          <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+        <button type="button" class="mv-card" data-offer="$50/mo - Standalone Home Internet">
+          <div class="mv-price">$50<em>/mo</em><sup>*</sup></div>
+          <div class="mv-title">Standalone Home Internet</div>
+          <div class="mv-desc">With AutoPay. No voice line required.</div>
+          <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mv-feats">
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+      <span class="mv-sep"></span>
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+      <span class="mv-sep"></span>
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+    </div>
+
+    <button type="button" class="mv-cta" data-open-pop><svg><use href="#i-arrow"/></svg>Check Availability Now</button>
+    <p class="mv-cta-sub">See Which of the 3 Offers You Qualify For</p>
+  </div>
+  <div class="mv-strip"></div>
+  <p class="mv-fine">
+    Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualifed accounts.<br>
+    *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <a href="#">See Full Terms</a><br>
+    **Allow 10 weeks. <a href="#">See Full Terms</a>
+  </p>
+</section>
+
+<section class="hero">
+  <!-- background light streaks + network mesh -->
+  <svg class="hero-bg" viewBox="0 0 1600 670" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="streak" x1="0" x2="1">
+        <stop offset="0" stop-color="#ff2d9b" stop-opacity="0"/>
+        <stop offset=".45" stop-color="#ff2d9b" stop-opacity=".9"/>
+        <stop offset="1" stop-color="#ff2d9b" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+      <filter id="blur2"><feGaussianBlur stdDeviation="1.2"/></filter>
+    </defs>
+    <g filter="url(#blur)" opacity=".75">
+      <path d="M0 330 C 300 380, 520 520, 900 560 S 1300 600, 1600 560" stroke="url(#streak)" stroke-width="22" fill="none"/>
+      <path d="M0 470 C 250 450, 500 560, 820 610 S 1250 640, 1600 620" stroke="url(#streak)" stroke-width="14" fill="none"/>
+    </g>
+    <g filter="url(#blur2)" opacity=".9">
+      <path d="M0 340 C 300 390, 520 525, 900 565 S 1300 605, 1600 565" stroke="#ff4fb0" stroke-width="2" fill="none"/>
+      <path d="M0 400 C 260 420, 540 545, 880 590 S 1300 620, 1600 600" stroke="#ff4fb0" stroke-width="1.2" fill="none" opacity=".7"/>
+      <path d="M0 480 C 250 460, 500 570, 820 615 S 1250 645, 1600 625" stroke="#ff4fb0" stroke-width="1.5" fill="none"/>
+    </g>
+    <g stroke="#6b78c9" stroke-width=".7" fill="none" opacity=".35">
+      <circle cx="1080" cy="300" r="260"/>
+      <ellipse cx="1080" cy="300" rx="260" ry="90"/>
+      <ellipse cx="1080" cy="300" rx="260" ry="170"/>
+      <ellipse cx="1080" cy="300" rx="90" ry="260"/>
+      <ellipse cx="1080" cy="300" rx="180" ry="260"/>
+      <path d="M840 220 L960 120 L1110 60 L1250 140 L1320 280 L1260 430 L1120 520 L960 480 L860 380 Z"/>
+      <path d="M960 120 L1080 300 L1250 140 M1080 300 L1320 280 M1080 300 L1120 520 M1080 300 L860 380 M1110 60 L1080 300"/>
+    </g>
+    <g fill="#9aa6ff" opacity=".55">
+      <circle cx="960" cy="120" r="2.2"/><circle cx="1110" cy="60" r="2.2"/><circle cx="1250" cy="140" r="2.2"/>
+      <circle cx="1320" cy="280" r="2.2"/><circle cx="1260" cy="430" r="2.2"/><circle cx="1120" cy="520" r="2.2"/>
+      <circle cx="860" cy="380" r="2.2"/><circle cx="840" cy="220" r="2.2"/><circle cx="1080" cy="300" r="2.6"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="left-top">
+        <p class="eyebrow">This is a <u>Limited Time</u> promotional offer!</p>
+        <h1>
+          <span class="l1">T-Mobile 5G Home Internet</span>
+          <span class="l2">3 Great Offers</span>
+        </h1>
+        <p class="sub">Choose the One That&rsquo;s Right for You</p>
+      </div>
+
+      <div class="cards" role="radiogroup" aria-label="Home Internet offers">
+        <button type="button" class="card active" data-offer="$35/mo - Free 5G Wi-Fi Equipment" role="radio" aria-checked="true">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 23 24 7l18 16"/><path d="M11 19v22h26V19"/><path d="M20 41V29h8v12"/></svg>
+          <div class="body">
+            <div class="price">$35/mo<small>*</small></div>
+            <div class="title">Free 5G Wi-Fi Equipment</div>
+            <div class="desc">With AutoPay and eligible voice line.</div>
+          </div>
+          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+        </button>
+
+        <button type="button" class="card" data-offer="$45/mo - Plus $100 Prepaid Gift Card" role="radio" aria-checked="false">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="17" width="36" height="9" rx="1"/><path d="M9 26v16h30V26"/><path d="M24 17v25"/><path d="M24 17c-3-7-11-9-11-4 0 3 5 4 11 4z"/><path d="M24 17c3-7 11-9 11-4 0 3-5 4-11 4z"/></svg>
+          <div class="body">
+            <div class="price">$45/mo<small>*</small></div>
+            <div class="title">Plus $100 Prepaid Gift Card</div>
+            <div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation. Terms apply.</div>
+          </div>
+          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+        </button>
+
+        <button type="button" class="card" data-offer="$50/mo - Standalone Home Internet" role="radio" aria-checked="false">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="21"/><path d="M12 21a17 17 0 0 1 24 0"/><path d="M16.5 26a11 11 0 0 1 15 0"/><path d="M21 31a5 5 0 0 1 6 0"/><circle cx="24" cy="35" r="1.4" fill="currentColor"/></svg>
+          <div class="body">
+            <div class="price">$50/mo<small>*</small></div>
+            <div class="title">Standalone Home Internet</div>
+            <div class="desc">With AutoPay. No voice line required.</div>
+          </div>
+          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+        </button>
+      </div>
+
+      <div class="router">
+        <img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655">
+      </div>
+
+      <div class="feats">
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18"/><path d="M16.5 7.5C16 6 14.3 5 12 5c-2.8 0-4.5 1.4-4.5 3.4 0 4.6 9 2.6 9 7.2 0 2-1.8 3.4-4.5 3.4-2.4 0-4.2-1.1-4.7-2.8"/></svg></span>
+          <p><b>$0 Due Today</b><br>for qualifying<br>customers</p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 11h7M9 14h7M9 17h5"/></svg></span>
+          <p><b>No Annual<br>Contracts</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5l1.6 2.6 3-.6.7 3 2.7 1.4-1.2 2.8 1.2 2.8-2.7 1.4-.7 3-3-.6L12 21.5l-1.6-2.6-3 .6-.7-3-2.7-1.4L5.2 12 4 9.2l2.7-1.4.7-3 3 .6z"/></svg></span>
+          <p><b>No Monthly<br>Equipment Fees</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z"/></svg></span>
+          <p><b>Easy<br>Self-Installation</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+          <p><b>15-Day Test Drive</b><br>for Qualifying<br>Customers</p>
+        </div>
+      </div>
+
+      <p class="fine">
+        Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualifed accounts.<br>
+        *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <a href="#">See Full Terms</a><br>
+        **Allow 10 weeks. <a href="#">See Full Terms</a>
+      </p>
+    </div>
+
+    <!-- Lead form -->
+    <aside class="panel" id="form">
+      <h2>Check availability and<br>choose your offer</h2>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <input name="first_name" placeholder="First Name*" autocomplete="given-name" required>
+        </div>
+        <div class="field">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <input name="last_name" placeholder="Last Name*" autocomplete="family-name" required>
+        </div>
+        <div class="field phone">
+          <span class="flag">
+            <svg class="us" viewBox="0 0 19 12"><rect width="19" height="12" fill="#b22234"/><g fill="#fff"><rect y="1.85" width="19" height=".92"/><rect y="3.7" width="19" height=".92"/><rect y="5.54" width="19" height=".92"/><rect y="7.38" width="19" height=".92"/><rect y="9.23" width="19" height=".92"/></g><rect width="7.6" height="6.46" fill="#3c3b6e"/></svg>
+            <svg class="car" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3h8L5 8z"/></svg>
+          </span>
+          <input name="phone" type="tel" placeholder="Mobile Phone*" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          <input name="email" type="email" placeholder="Email*" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <input name="address" placeholder="Address*" autocomplete="street-address" required>
+        </div>
+        <div class="field">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <input name="zip" placeholder="Zip Code*" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
+        </div>
+        <div class="field">
+          <select name="offer" id="offerSelect" required>
+            <option value="" selected disabled>Select Your Home Internet Offer**</option>
+            <option>$35/mo - Free 5G Wi-Fi Equipment</option>
+            <option>$45/mo - Plus $100 Prepaid Gift Card</option>
+            <option>$50/mo - Standalone Home Internet</option>
+          </select>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+
+        <button class="submit" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          Check Availability Now
+        </button>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>By submitting your information, you hereby agree to the <a href="#">Privacy Policy and Terms and Conditions</a>. You also hereby consent to receive marketing communications via automated telephone dialing system and/or pre-recorded calls, text messages, and/or emails from Collins Mobile LLC and marketing partners (in the privacy policy) at the phone number, physical address, and email address provided above, even if you are on any State and/or Federal Do Not Call list. Consent is not a condition of purchase and may be revoked at any time. Message and data rates may apply.</span>
+        </label>
+        <div class="form-msg" id="formMsg" role="status"></div>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= POPUP FORM ================= -->
+<div class="pop-overlay" id="popOverlay" aria-hidden="true">
+  <div class="pop" role="dialog" aria-modal="true" aria-labelledby="popTitle" tabindex="-1">
+    <button type="button" class="pop-close" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+
+    <div class="pop-l">
+      <div class="pop-badge"><svg><use href="#i-bolt"/></svg>Limited Time <span class="o">Offer</span></div>
+      <h2 class="pop-h">T-Mobile 5G<br>Home Internet</h2>
+      <p class="pop-sub d-only">3 Great Offers. Choose the One<br>That&rsquo;s Right for You.</p>
+      <p class="pop-sub m-only">3 Great Offers. Choose the One That&rsquo;s Right for You.</p>
+
+      <div class="pc-list d-only">
+        <button type="button" class="pc best active" data-offer="$35/mo - Free 5G Wi-Fi Equipment">
+          <span class="pc-tag">Best Value</span>
+          <svg class="ico"><use href="#i-home"/></svg>
+          <div class="body"><div class="price">$35/mo<sup>*</sup></div><div class="title">Free 5G Wi-Fi Equipment</div><div class="desc">With AutoPay and eligible voice line.</div></div>
+          <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+        <button type="button" class="pc" data-offer="$45/mo - Plus $100 Prepaid Gift Card">
+          <span class="pc-gift"><b>$100</b><i>Gift Card</i></span>
+          <svg class="ico"><use href="#i-gift"/></svg>
+          <div class="body"><div class="price">$45/mo<sup>*</sup></div><div class="title">Plus $100 Prepaid Gift Card</div><div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation.</div></div>
+          <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+        <button type="button" class="pc" data-offer="$50/mo - Standalone Home Internet">
+          <svg class="ico"><use href="#i-wifi"/></svg>
+          <div class="body"><div class="price">$50/mo<sup>*</sup></div><div class="title">Standalone Home Internet</div><div class="desc">With AutoPay. No voice line required.</div></div>
+          <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
+        </button>
+      </div>
+
+      <div class="pop-bottom">
+        <div class="pop-router d-only"><img src="images/router-angle.png" alt="" width="428" height="655"></div>
+        <div class="pop-feats d-only">
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+        </div>
+      </div>
+      <div class="pop-router m-only"><img src="images/router-front.png" alt="" width="882" height="1112"></div>
+    </div>
+
+    <div class="pop-r">
+      <div class="d-only">
+        <div class="pop-step" id="popStep">Step 1 of 2</div>
+        <div class="pop-bar"><i id="popBar"></i></div>
+        <h3 id="popTitle">Check Availability <span>and Choose Your Offer</span></h3>
+        <p class="pop-intro">Enter your information below to see which offers are available at your address.</p>
+      </div>
+
+      <form id="popForm" novalidate>
+        <div class="pm-list m-only" role="radiogroup" aria-label="Choose your offer">
+          <label class="pm on"><input type="radio" name="offer_choice" value="$35/mo - Free 5G Wi-Fi Equipment" checked>
+            <div class="body"><div class="price"><span class="amt">$35/mo<sup>*</sup></span><span class="bv">Best Value</span></div><div class="title">Free 5G Wi-Fi Equipment</div><div class="desc">With AutoPay and eligible voice line.</div></div>
+            <svg class="ico" viewBox="0 0 48 48"><use href="#i-home"/></svg></label>
+          <label class="pm"><input type="radio" name="offer_choice" value="$45/mo - Plus $100 Prepaid Gift Card">
+            <div class="body"><div class="price"><span class="amt">$45/mo<sup>*</sup></span><span class="gift"><b>$100</b><i>Gift Card</i></span></div><div class="title">Plus $100 Prepaid Gift Card</div><div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation. <a href="#">Terms</a> apply.</div></div>
+            <svg class="ico" viewBox="0 0 48 48"><use href="#i-gift"/></svg></label>
+          <label class="pm"><input type="radio" name="offer_choice" value="$50/mo - Standalone Home Internet">
+            <div class="body"><div class="price"><span class="amt">$50/mo<sup>*</sup></span></div><div class="title">Standalone Home Internet</div><div class="desc">With AutoPay. No voice line required.</div></div>
+            <svg class="ico" viewBox="0 0 48 48"><use href="#i-wifi"/></svg></label>
+        </div>
+
+        <div class="pf-grid" style="margin-top:0">
+          <div class="pf half"><svg class="fic"><use href="#i-user"/></svg><input name="first_name" placeholder="First Name*" autocomplete="given-name" required></div>
+          <div class="pf half"><svg class="fic"><use href="#i-user"/></svg><input name="last_name" placeholder="Last Name*" autocomplete="family-name" required></div>
+          <div class="pf phone"><svg class="fic"><use href="#i-phone"/></svg><span class="flag"><svg class="us"><use href="#i-us"/></svg><svg class="car" viewBox="0 0 10 10"><path d="M1 3h8L5 8z" fill="currentColor"/></svg></span><input name="phone" type="tel" placeholder="Mobile Phone*" autocomplete="tel" inputmode="tel" required></div>
+          <div class="pf"><svg class="fic"><use href="#i-mail"/></svg><input name="email" type="email" placeholder="Email*" autocomplete="email" required></div>
+          <div class="pf addr"><svg class="fic"><use href="#i-pin"/></svg><input name="address" placeholder="Address*" autocomplete="street-address" required></div>
+          <div class="pf zip"><svg class="fic"><use href="#i-pin"/></svg><input name="zip" placeholder="Zip Code*" autocomplete="postal-code" inputmode="numeric" maxlength="10" required></div>
+          <div class="pf d-only"><svg class="fic"><use href="#i-house"/></svg>
+            <select name="offer" id="popOffer" required>
+              <option value="" selected disabled>Select Your Home Internet Offer**</option>
+              <option>$35/mo - Free 5G Wi-Fi Equipment</option>
+              <option>$45/mo - Plus $100 Prepaid Gift Card</option>
+              <option>$50/mo - Standalone Home Internet</option>
+            </select>
+            <svg class="chev"><use href="#i-caret"/></svg>
+          </div>
+        </div>
+
+        <div class="pm-feats m-only">
+          <div class="f"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+          <span class="sep"></span>
+          <div class="f"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+          <span class="sep"></span>
+          <div class="f"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+        </div>
+
+        <button type="submit" class="pop-cta">Check Availability Now <svg><use href="#i-arrow"/></svg></button>
+
+        <div class="pop-trust">
+          <div><svg><use href="#i-lock"/></svg><span>Secure<br> &amp; Protected</span></div>
+          <span class="sep"></span>
+          <div><svg><use href="#i-shield"/></svg><span>No Obligation</span></div>
+          <span class="sep"></span>
+          <div><svg><use href="#i-people"/></svg><span>T-Mobile<br> Authorized Retailer</span></div>
+        </div>
+
+        <p class="pop-consent">By submitting your information, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>. You also consent to receive marketing communications via automated telephone dialing system and/or pre-recorded calls, text messages, and/or emails from Collins Mobile LLC and marketing partners (in the privacy policy) at the phone number, physical address, and email address provided above, even if you are on any State and/or Federal Do Not Call list. Consent is not a condition of purchase and may be revoked at any time. Message and data rates may apply.</p>
+        <div class="pop-msg" id="popMsg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Today's date in the promo bar (MM/DD/YYYY)
+  var d=new Date();
+  document.getElementById('today').textContent=
+    String(d.getMonth()+1).padStart(2,'0')+'/'+String(d.getDate()).padStart(2,'0')+'/'+d.getFullYear();
+
+  var $$=function(q,root){return [].slice.call((root||document).querySelectorAll(q))};
+  var inlineSel=document.getElementById('offerSelect');
+  var popSel=document.getElementById('popOffer');
+
+  // One source of truth for the chosen offer; every card/select/radio mirrors it
+  function choose(val){
+    $$('[data-offer]').forEach(function(c){
+      var on=c.dataset.offer===val;
+      c.classList.toggle('active',on);
+      if(c.hasAttribute('aria-checked')) c.setAttribute('aria-checked',on);
+    });
+    [inlineSel,popSel].forEach(function(sel){
+      sel.value=val; sel.classList.add('chosen');
+      sel.closest('.field,.pf').classList.remove('invalid');
+    });
+    $$('.pm input').forEach(function(r){r.checked=r.value===val; r.closest('.pm').classList.toggle('on',r.checked)});
+    document.querySelector('.pm-list').classList.remove('invalid');
+  }
+
+  // Popup open / close
+  var overlay=document.getElementById('popOverlay'), dialog=overlay.querySelector('.pop'), lastFocus=null;
+  function openPop(){
+    lastFocus=document.activeElement;
+    overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    overlay.scrollTop=0; dialog.focus();
+  }
+  function closePop(){
+    overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  overlay.querySelector('.pop-close').addEventListener('click',closePop);
+  overlay.addEventListener('mousedown',function(e){if(e.target===overlay) closePop()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open')) closePop()});
+
+  // Page offer cards (desktop + mobile) pick the offer and open the popup
+  $$('.card, .mv-card').forEach(function(c){
+    c.addEventListener('click',function(){choose(c.dataset.offer); openPop()});
+  });
+  $$('[data-open-pop]').forEach(function(b){b.addEventListener('click',openPop)});
+  // Popup cards / radios / selects just change the selection
+  $$('.pc').forEach(function(c){c.addEventListener('click',function(){choose(c.dataset.offer)})});
+  $$('.pm input').forEach(function(r){r.addEventListener('change',function(){choose(r.value)})});
+  [inlineSel,popSel].forEach(function(sel){sel.addEventListener('change',function(){choose(sel.value)})});
+
+  // Shared validation
+  function validate(form){
+    var ok=true;
+    $$('[required]',form).forEach(function(el){
+      if(!el.offsetParent && el.type!=='checkbox') return;   // skip fields hidden in this layout
+      var bad=el.type==='checkbox'?!el.checked:!el.value.trim();
+      if(el.name==='email'&&!bad) bad=!/^\S+@\S+\.\S+$/.test(el.value);
+      if(el.name==='phone'&&!bad) bad=el.value.replace(/\D/g,'').length<10;
+      if(el.name==='zip'&&!bad) bad=!/^\d{5}(-?\d{4})?$/.test(el.value.trim());
+      el.closest('.field,.consent,.pf').classList.toggle('invalid',bad);
+      if(bad) ok=false;
+    });
+    return ok;
+  }
+  document.addEventListener('input',function(e){var f=e.target.closest('.field,.consent,.pf');if(f)f.classList.remove('invalid')});
+
+  // Inline (desktop page) form
+  var form=document.getElementById('leadForm'),msg=document.getElementById('formMsg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=validate(form);
+    msg.textContent=ok?'Thanks! Checking availability at your address\u2026':'Please complete all required fields and check the consent box.';
+    msg.classList.add('show');
+    // TODO: post to lead endpoint here when ok === true
+  });
+
+  // Popup form
+  var popForm=document.getElementById('popForm'),popMsg=document.getElementById('popMsg');
+  popForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=validate(popForm);
+    var radio=popForm.querySelector('.pm input:checked');
+    var offer=popSel.offsetParent?popSel.value:(radio&&radio.value);
+    if(!offer){ok=false; popSel.closest('.pf').classList.add('invalid'); document.querySelector('.pm-list').classList.add('invalid')}
+    if(ok){
+      document.getElementById('popStep').textContent='Step 2 of 2';
+      document.getElementById('popBar').style.width='100%';
+    }
+    popMsg.textContent=ok?'Thanks! We\u2019re checking which offers are available at your address.':'Please complete all required fields.';
+    popMsg.classList.add('show');
+    // TODO: post to lead endpoint here when ok === true (offer = chosen plan)
+  });
+})();
+</script>
+</body>
+</html>
