@@ -345,6 +345,24 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   .pop-trust{flex-wrap:wrap;gap:6px 10px}
   .pop-trust .sep{display:none}
 }
+
+/* ================= LeadStacker form slots ================= */
+.ls-slot iframe{display:block;width:100%;min-height:420px}
+.ls-dark{background:#0d1330;border-radius:10px;padding:10px 8px 4px}
+.ls-slot:empty{display:none}
+@media (min-width:1181px){
+  .hero .left{position:sticky;top:20px;align-self:start}
+}
+@media (min-width:761px){
+  .pop{height:min(886px,calc(100vh - 64px))}
+  .pop-l{overflow:hidden}
+  .pop-r{overflow-y:auto;overscroll-behavior:contain}
+  .pop-r .ls-dark{margin-top:4px}
+}
+@media (max-width:760px){
+  .pop-r{padding-top:4cqw}
+  .ls-dark{border-radius:2cqw;padding:2cqw 1.4cqw 1cqw}
+}
 </style>
 </head>
 <body>
@@ -574,55 +592,7 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     <!-- Lead form -->
     <aside class="panel" id="form">
       <h2>Check availability and<br>choose your offer</h2>
-      <form id="leadForm" novalidate>
-        <div class="field">
-          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <input name="first_name" placeholder="First Name*" autocomplete="given-name" required>
-        </div>
-        <div class="field">
-          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <input name="last_name" placeholder="Last Name*" autocomplete="family-name" required>
-        </div>
-        <div class="field phone">
-          <span class="flag">
-            <svg class="us" viewBox="0 0 19 12"><rect width="19" height="12" fill="#b22234"/><g fill="#fff"><rect y="1.85" width="19" height=".92"/><rect y="3.7" width="19" height=".92"/><rect y="5.54" width="19" height=".92"/><rect y="7.38" width="19" height=".92"/><rect y="9.23" width="19" height=".92"/></g><rect width="7.6" height="6.46" fill="#3c3b6e"/></svg>
-            <svg class="car" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3h8L5 8z"/></svg>
-          </span>
-          <input name="phone" type="tel" placeholder="Mobile Phone*" autocomplete="tel" inputmode="tel" required>
-        </div>
-        <div class="field">
-          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
-          <input name="email" type="email" placeholder="Email*" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <input name="address" placeholder="Address*" autocomplete="street-address" required>
-        </div>
-        <div class="field">
-          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <input name="zip" placeholder="Zip Code*" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
-        </div>
-        <div class="field">
-          <select name="offer" id="offerSelect" required>
-            <option value="" selected disabled>Select Your Home Internet Offer**</option>
-            <option>$35/mo - Free 5G Wi-Fi Equipment</option>
-            <option>$45/mo - Plus $100 Prepaid Gift Card</option>
-            <option>$50/mo - Standalone Home Internet</option>
-          </select>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        </div>
-
-        <button class="submit" type="submit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-          Check Availability Now
-        </button>
-
-        <label class="consent">
-          <input type="checkbox" name="consent" required>
-          <span>By submitting your information, you hereby agree to the <a href="#">Privacy Policy and Terms and Conditions</a>. You also hereby consent to receive marketing communications via automated telephone dialing system and/or pre-recorded calls, text messages, and/or emails from Collins Mobile LLC and marketing partners (in the privacy policy) at the phone number, physical address, and email address provided above, even if you are on any State and/or Federal Do Not Call list. Consent is not a condition of purchase and may be revoked at any time. Message and data rates may apply.</span>
-        </label>
-        <div class="form-msg" id="formMsg" role="status"></div>
-      </form>
+      <div class="ls-slot" id="slotPage"></div>
     </aside>
   </div>
 </section>
@@ -677,61 +647,53 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
         <p class="pop-intro">Enter your information below to see which offers are available at your address.</p>
       </div>
 
-      <form id="popForm" novalidate>
-        <div class="pm-list m-only" role="radiogroup" aria-label="Choose your offer">
-          <label class="pm on"><input type="radio" name="offer_choice" value="$35/mo - Free 5G Wi-Fi Equipment" checked>
-            <div class="body"><div class="price"><span class="amt">$35/mo<sup>*</sup></span><span class="bv">Best Value</span></div><div class="title">Free 5G Wi-Fi Equipment</div><div class="desc">With AutoPay and eligible voice line.</div></div>
-            <svg class="ico" viewBox="0 0 48 48"><use href="#i-home"/></svg></label>
-          <label class="pm"><input type="radio" name="offer_choice" value="$45/mo - Plus $100 Prepaid Gift Card">
-            <div class="body"><div class="price"><span class="amt">$45/mo<sup>*</sup></span><span class="gift"><b>$100</b><i>Gift Card</i></span></div><div class="title">Plus $100 Prepaid Gift Card</div><div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation. <a href="#">Terms</a> apply.</div></div>
-            <svg class="ico" viewBox="0 0 48 48"><use href="#i-gift"/></svg></label>
-          <label class="pm"><input type="radio" name="offer_choice" value="$50/mo - Standalone Home Internet">
-            <div class="body"><div class="price"><span class="amt">$50/mo<sup>*</sup></span></div><div class="title">Standalone Home Internet</div><div class="desc">With AutoPay. No voice line required.</div></div>
-            <svg class="ico" viewBox="0 0 48 48"><use href="#i-wifi"/></svg></label>
-        </div>
+      <div class="ls-slot ls-dark" id="slotPop"></div>
 
-        <div class="pf-grid" style="margin-top:0">
-          <div class="pf half"><svg class="fic"><use href="#i-user"/></svg><input name="first_name" placeholder="First Name*" autocomplete="given-name" required></div>
-          <div class="pf half"><svg class="fic"><use href="#i-user"/></svg><input name="last_name" placeholder="Last Name*" autocomplete="family-name" required></div>
-          <div class="pf phone"><svg class="fic"><use href="#i-phone"/></svg><span class="flag"><svg class="us"><use href="#i-us"/></svg><svg class="car" viewBox="0 0 10 10"><path d="M1 3h8L5 8z" fill="currentColor"/></svg></span><input name="phone" type="tel" placeholder="Mobile Phone*" autocomplete="tel" inputmode="tel" required></div>
-          <div class="pf"><svg class="fic"><use href="#i-mail"/></svg><input name="email" type="email" placeholder="Email*" autocomplete="email" required></div>
-          <div class="pf addr"><svg class="fic"><use href="#i-pin"/></svg><input name="address" placeholder="Address*" autocomplete="street-address" required></div>
-          <div class="pf zip"><svg class="fic"><use href="#i-pin"/></svg><input name="zip" placeholder="Zip Code*" autocomplete="postal-code" inputmode="numeric" maxlength="10" required></div>
-          <div class="pf d-only"><svg class="fic"><use href="#i-house"/></svg>
-            <select name="offer" id="popOffer" required>
-              <option value="" selected disabled>Select Your Home Internet Offer**</option>
-              <option>$35/mo - Free 5G Wi-Fi Equipment</option>
-              <option>$45/mo - Plus $100 Prepaid Gift Card</option>
-              <option>$50/mo - Standalone Home Internet</option>
-            </select>
-            <svg class="chev"><use href="#i-caret"/></svg>
-          </div>
-        </div>
+      <div class="pm-feats m-only">
+        <div class="f"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+        <span class="sep"></span>
+        <div class="f"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+        <span class="sep"></span>
+        <div class="f"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+      </div>
 
-        <div class="pm-feats m-only">
-          <div class="f"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
-          <span class="sep"></span>
-          <div class="f"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
-          <span class="sep"></span>
-          <div class="f"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
-        </div>
-
-        <button type="submit" class="pop-cta">Check Availability Now <svg><use href="#i-arrow"/></svg></button>
-
-        <div class="pop-trust">
-          <div><svg><use href="#i-lock"/></svg><span>Secure<br> &amp; Protected</span></div>
-          <span class="sep"></span>
-          <div><svg><use href="#i-shield"/></svg><span>No Obligation</span></div>
-          <span class="sep"></span>
-          <div><svg><use href="#i-people"/></svg><span>T-Mobile<br> Authorized Retailer</span></div>
-        </div>
-
-        <p class="pop-consent">By submitting your information, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>. You also consent to receive marketing communications via automated telephone dialing system and/or pre-recorded calls, text messages, and/or emails from Collins Mobile LLC and marketing partners (in the privacy policy) at the phone number, physical address, and email address provided above, even if you are on any State and/or Federal Do Not Call list. Consent is not a condition of purchase and may be revoked at any time. Message and data rates may apply.</p>
-        <div class="pop-msg" id="popMsg" role="status"></div>
-      </form>
+      <div class="pop-trust">
+        <div><svg><use href="#i-lock"/></svg><span>Secure<br> &amp; Protected</span></div>
+        <span class="sep"></span>
+        <div><svg><use href="#i-shield"/></svg><span>No Obligation</span></div>
+        <span class="sep"></span>
+        <div><svg><use href="#i-people"/></svg><span>T-Mobile<br> Authorized Retailer</span></div>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- LeadStacker form: ONE iframe on the page (form_embed.js removes duplicate ids),
+     placed into #slotPage (desktop page) or #slotPop (popup) as needed. -->
+<template id="lsFormTpl">
+  <div class="ls-host" id="lsHost">
+    <iframe
+        src="https://link.leadstacker.com/widget/form/4a9d2QiY65WY6o9jIoJW"
+        style="width:100%;height:100%;border:none;border-radius:4px"
+        id="inline-4a9d2QiY65WY6o9jIoJW"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="FDL07 - 888-444-3098"
+        data-height="2361"
+        data-layout-iframe-id="inline-4a9d2QiY65WY6o9jIoJW"
+        data-form-id="4a9d2QiY65WY6o9jIoJW"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="FDL07 - 888-444-3098"
+        >
+    </iframe>
+  </div>
+</template>
 
 <script>
 (function(){
@@ -740,95 +702,57 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   document.getElementById('today').textContent=
     String(d.getMonth()+1).padStart(2,'0')+'/'+String(d.getDate()).padStart(2,'0')+'/'+d.getFullYear();
 
-  var $$=function(q,root){return [].slice.call((root||document).querySelectorAll(q))};
-  var inlineSel=document.getElementById('offerSelect');
-  var popSel=document.getElementById('popOffer');
+  var $$=function(q){return [].slice.call(document.querySelectorAll(q))};
+  var mobileMQ=window.matchMedia('(max-width:760px)');
+  var slotPage=document.getElementById('slotPage'), slotPop=document.getElementById('slotPop');
+  var overlay=document.getElementById('popOverlay'), dialog=overlay.querySelector('.pop'), lastFocus=null;
 
-  // One source of truth for the chosen offer; every card/select/radio mirrors it
+  // Insert the single form iframe into the right slot before form_embed.js runs
+  var tpl=document.getElementById('lsFormTpl');
+  var host=tpl.content.firstElementChild.cloneNode(true);
+  (mobileMQ.matches?slotPop:slotPage).appendChild(host);
+
+  // Move the form; moveBefore() keeps the iframe (and anything typed) alive where supported
+  function placeForm(slot){
+    if(host.parentNode===slot) return;
+    if(slot.moveBefore) slot.moveBefore(host,null); else slot.appendChild(host);
+  }
+  function homeSlot(){return (mobileMQ.matches||overlay.classList.contains('open'))?slotPop:slotPage}
+  (mobileMQ.addEventListener?mobileMQ.addEventListener('change',function(){placeForm(homeSlot())}):mobileMQ.addListener(function(){placeForm(homeSlot())}));
+
+  // Highlight the chosen offer on every card set (page + popup)
   function choose(val){
     $$('[data-offer]').forEach(function(c){
       var on=c.dataset.offer===val;
       c.classList.toggle('active',on);
       if(c.hasAttribute('aria-checked')) c.setAttribute('aria-checked',on);
     });
-    [inlineSel,popSel].forEach(function(sel){
-      sel.value=val; sel.classList.add('chosen');
-      sel.closest('.field,.pf').classList.remove('invalid');
-    });
-    $$('.pm input').forEach(function(r){r.checked=r.value===val; r.closest('.pm').classList.toggle('on',r.checked)});
-    document.querySelector('.pm-list').classList.remove('invalid');
   }
 
-  // Popup open / close
-  var overlay=document.getElementById('popOverlay'), dialog=overlay.querySelector('.pop'), lastFocus=null;
   function openPop(){
     lastFocus=document.activeElement;
     overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
     document.documentElement.style.overflow='hidden';
+    placeForm(slotPop);
     overlay.scrollTop=0; dialog.focus();
   }
   function closePop(){
     overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
     document.documentElement.style.overflow='';
+    placeForm(homeSlot());
     if(lastFocus) lastFocus.focus();
   }
   overlay.querySelector('.pop-close').addEventListener('click',closePop);
   overlay.addEventListener('mousedown',function(e){if(e.target===overlay) closePop()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open')) closePop()});
 
-  // Page offer cards (desktop + mobile) pick the offer and open the popup
   $$('.card, .mv-card').forEach(function(c){
     c.addEventListener('click',function(){choose(c.dataset.offer); openPop()});
   });
   $$('[data-open-pop]').forEach(function(b){b.addEventListener('click',openPop)});
-  // Popup cards / radios / selects just change the selection
   $$('.pc').forEach(function(c){c.addEventListener('click',function(){choose(c.dataset.offer)})});
-  $$('.pm input').forEach(function(r){r.addEventListener('change',function(){choose(r.value)})});
-  [inlineSel,popSel].forEach(function(sel){sel.addEventListener('change',function(){choose(sel.value)})});
-
-  // Shared validation
-  function validate(form){
-    var ok=true;
-    $$('[required]',form).forEach(function(el){
-      if(!el.offsetParent && el.type!=='checkbox') return;   // skip fields hidden in this layout
-      var bad=el.type==='checkbox'?!el.checked:!el.value.trim();
-      if(el.name==='email'&&!bad) bad=!/^\S+@\S+\.\S+$/.test(el.value);
-      if(el.name==='phone'&&!bad) bad=el.value.replace(/\D/g,'').length<10;
-      if(el.name==='zip'&&!bad) bad=!/^\d{5}(-?\d{4})?$/.test(el.value.trim());
-      el.closest('.field,.consent,.pf').classList.toggle('invalid',bad);
-      if(bad) ok=false;
-    });
-    return ok;
-  }
-  document.addEventListener('input',function(e){var f=e.target.closest('.field,.consent,.pf');if(f)f.classList.remove('invalid')});
-
-  // Inline (desktop page) form
-  var form=document.getElementById('leadForm'),msg=document.getElementById('formMsg');
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var ok=validate(form);
-    msg.textContent=ok?'Thanks! Checking availability at your address\u2026':'Please complete all required fields and check the consent box.';
-    msg.classList.add('show');
-    // TODO: post to lead endpoint here when ok === true
-  });
-
-  // Popup form
-  var popForm=document.getElementById('popForm'),popMsg=document.getElementById('popMsg');
-  popForm.addEventListener('submit',function(e){
-    e.preventDefault();
-    var ok=validate(popForm);
-    var radio=popForm.querySelector('.pm input:checked');
-    var offer=popSel.offsetParent?popSel.value:(radio&&radio.value);
-    if(!offer){ok=false; popSel.closest('.pf').classList.add('invalid'); document.querySelector('.pm-list').classList.add('invalid')}
-    if(ok){
-      document.getElementById('popStep').textContent='Step 2 of 2';
-      document.getElementById('popBar').style.width='100%';
-    }
-    popMsg.textContent=ok?'Thanks! We\u2019re checking which offers are available at your address.':'Please complete all required fields.';
-    popMsg.classList.add('show');
-    // TODO: post to lead endpoint here when ok === true (offer = chosen plan)
-  });
 })();
 </script>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
 </body>
 </html>
