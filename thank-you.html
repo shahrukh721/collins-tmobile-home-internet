@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>You're Qualified | T-Mobile 5G Home Internet | Collins Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#e20074;
+  --magenta-2:#ff1493;
+  --navy:#0a1330;
+  --yellow:#ffc107;
+  --green:#1fbf45;
+  --ink:#14161f;
+  --muted:#4a4f5c;
+  --pink-bg:#fdeff6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff;color:var(--ink);font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+
+/* ---------- Header ---------- */
+.header{background:#fff;height:65px}
+.header .wrap{max-width:900px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.logo-collins{display:block;line-height:0}
+.logo-collins svg{height:42px;width:auto}
+.logo-tm{display:flex;flex-direction:column;align-items:flex-end}
+.logo-tm img{height:30px;width:auto}
+.logo-tm span{font-family:Arial,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.3px;color:var(--magenta);text-transform:uppercase;margin-top:1px}
+
+/* ---------- Promo bar ---------- */
+.promo-bar{background:var(--magenta);min-height:42px;display:flex;align-items:center;justify-content:center;padding:6px 16px;color:#fff;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.2px;text-align:center}
+.promo-bar .count{color:#ffd21f;text-decoration:underline;text-underline-offset:3px;font-size:18px;font-weight:800;margin-left:6px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;background:
+  radial-gradient(ellipse 30% 22% at 72% 96%, rgba(255,30,150,.75), transparent 70%),
+  radial-gradient(ellipse 40% 50% at 15% 55%, rgba(226,0,116,.18), transparent 70%),
+  radial-gradient(ellipse 40% 60% at 85% 30%, rgba(60,40,140,.35), transparent 70%),
+  linear-gradient(180deg,#0b1532 0%,#0a1330 60%,#120d2c 100%)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;max-width:1320px;margin:0 auto;padding:28px 40px 78px 65px;display:grid;grid-template-columns:minmax(0,1fr) 330px 250px;gap:20px;align-items:center}
+.hello{display:flex;align-items:center;gap:22px}
+.check{flex:0 0 auto;width:100px;height:100px}
+h1{font-weight:800;font-size:clamp(38px,3.7vw,58px);line-height:1.02;letter-spacing:-.02em}
+h1 .name{display:block;color:var(--magenta)}
+.sub{font-size:clamp(20px,1.85vw,29px);font-weight:600;line-height:1.2;margin-top:20px}
+.sub b{font-weight:800}
+.lead{font-size:clamp(15px,1.2vw,19px);font-weight:500;line-height:1.35;margin-top:16px;color:#eceef5;max-width:660px}
+.lead b{color:var(--magenta);font-weight:800}
+
+.timer{display:inline-flex;align-items:center;gap:28px;margin-top:26px;padding:10px 16px 10px 26px;border:1.5px solid rgba(255,255,255,.22);border-radius:10px;background:rgba(10,14,35,.55)}
+.timer .clock{flex:0 0 auto;width:56px;height:56px;color:var(--magenta)}
+.timer .label{font-size:18px;font-weight:500;line-height:1.2;min-width:150px}
+.timer .label br{display:inline}
+.digits{display:flex;gap:10px}
+.digit{width:92px;padding:8px 0 6px;text-align:center;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.digit b{display:block;font-size:40px;font-weight:800;line-height:1.05;color:var(--magenta);font-variant-numeric:tabular-nums}
+.digit span{display:block;font-size:13.5px;font-weight:500;text-transform:uppercase;color:#e3e5ee;margin-top:4px;letter-spacing:.3px}
+
+.router{position:relative;align-self:end;margin-bottom:-30px;display:flex;justify-content:center}
+.router::before{content:"";position:absolute;left:50%;bottom:-6px;width:130%;height:80px;transform:translateX(-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,40,150,.9),rgba(226,0,116,.35) 45%,transparent 72%);filter:blur(6px)}
+.router img{position:relative;width:auto;max-width:100%;height:auto;max-height:400px;transform:scaleX(-1);filter:drop-shadow(10px 0 26px rgba(255,30,150,.6)) drop-shadow(0 20px 20px rgba(0,0,0,.45))}
+.script{position:relative;align-self:center;transform:rotate(-12deg);font-family:Caveat,cursive;font-weight:700;font-size:50px;line-height:1.05;white-space:nowrap;color:#fff;padding-bottom:22px;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.script span{display:block}
+.script span:nth-child(2){padding-left:12px}
+.script span:nth-child(3){padding-left:22px}
+.script svg{position:absolute;left:24px;bottom:0;width:230px;height:26px}
+
+/* ---------- Call band ---------- */
+.callband{position:relative;z-index:2;max-width:1270px;margin:-38px auto 0;display:grid;grid-template-columns:240px 1fr 400px;align-items:center;min-height:115px;text-decoration:none;color:inherit;
+  background:linear-gradient(180deg,#fff5fa,#fde9f3);border:1px solid #f5cde0;border-radius:14px;box-shadow:0 10px 30px rgba(20,10,40,.12)}
+.callband > div{display:flex;align-items:center;justify-content:center;height:100%;padding:14px 0}
+.callband .c1{border-right:1px solid #e9bcd2;height:60px}
+.callband .c3{border-left:1px solid #e9bcd2;height:60px;justify-content:flex-start;padding-left:58px;gap:18px}
+.phone-circle{width:78px;height:78px;border-radius:50%;background:var(--magenta);display:grid;place-items:center;box-shadow:0 6px 16px rgba(226,0,116,.35)}
+.phone-circle svg{width:40px;height:40px;color:#fff}
+.callband .c2{flex-direction:column}
+.callband .kicker{font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.2px;color:var(--ink)}
+.callband .num{font-size:clamp(44px,4.2vw,66px);font-weight:900;line-height:1;color:var(--magenta);letter-spacing:-.01em;margin-top:4px}
+.callband .headset{flex:0 0 auto;width:54px;height:54px;color:var(--magenta)}
+.callband .standby b{display:block;font-size:15.5px;font-weight:800;color:var(--ink)}
+.callband .standby span{display:block;font-family:Montserrat,Arial,sans-serif;font-size:13.5px;font-weight:500;line-height:1.35;color:#333846;margin-top:4px}
+.callband:hover .num{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+
+/* ---------- Features ---------- */
+.features{max-width:1270px;margin:0 auto;padding:20px 16px 34px;display:grid;grid-template-columns:repeat(4,1fr)}
+.fcard{text-align:center;padding:0 22px;border-left:1px solid #dcdfe6}
+.fcard:first-child{border-left:0}
+.fcard .ic{width:46px;height:46px;margin:0 auto 10px;color:var(--magenta)}
+.fcard h3{font-size:19px;font-weight:800;color:var(--ink)}
+.fcard p{font-size:16.5px;font-weight:500;line-height:1.3;color:var(--muted);margin-top:6px}
+.fcard .ic-phone{display:none}
+
+.m-only,.m-in{display:none}
+
+@media (max-width:1240px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr) 300px;padding-left:40px}
+  .script{display:none}
+  .callband{grid-template-columns:160px 1fr 330px}
+  .callband .c3{padding-left:28px}
+}
+@media (max-width:1000px) and (min-width:761px){
+  .callband{grid-template-columns:130px 1fr}
+  .callband .c3{display:none}
+  .features{grid-template-columns:repeat(2,1fr);row-gap:24px}
+  .fcard:nth-child(3){border-left:0}
+  .timer{flex-wrap:wrap}
+}
+
+/* ================= MOBILE (<=760) ================= */
+@media (max-width:760px){
+  .d-only{display:none!important}
+  .m-only{display:block}
+  .m-in{display:inline}
+  .header{height:auto}
+  .header .wrap{height:min(15vw,90px);padding:0 4vw}
+  .logo-collins svg{height:min(8.6vw,50px)}
+  .logo-tm img{height:min(6.4vw,38px)}
+  .logo-tm span{font-size:clamp(5.5px,1.6vw,9px)}
+  .promo-bar{min-height:0;height:clamp(36px,9vw,54px);font-size:clamp(12.5px,3.4vw,18px)}
+  .promo-bar .count{font-size:1.06em}
+
+  .t-in{max-width:560px;margin:0 auto;container-type:inline-size}
+  .hero .wrap{display:block;padding:0;max-width:none}
+  .hero .t-in{position:relative;padding:5.8cqw 5.2cqw 9cqw}
+  .hello{gap:2.4cqw;position:relative;z-index:2}
+  .check{width:11.6cqw;height:11.6cqw}
+  h1{font-size:max(22px,5.9cqw)}
+  .sub{position:relative;z-index:2;font-size:max(15px,3.15cqw);font-weight:700;margin-top:4.4cqw;max-width:56cqw}
+  .sub b{font-weight:700}
+  .d-br{display:none}
+  .lead{position:relative;z-index:2;font-size:max(14px,3.05cqw);font-weight:500;margin-top:4cqw;max-width:52cqw;color:#fff}
+  .lead b{color:inherit;font-weight:500}
+  .router{position:absolute;z-index:3;right:3.6cqw;top:11.6cqw;width:30cqw;margin:0;display:block}
+  .router::before{width:120%;height:14cqw;bottom:-2cqw}
+  .router img{width:100%;max-height:none;transform:none;filter:drop-shadow(-1.5cqw 0 4cqw rgba(255,30,150,.55)) drop-shadow(0 3cqw 3cqw rgba(0,0,0,.4))}
+
+  .timer{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:0 3cqw;width:100%;margin-top:6.4cqw;padding:2.6cqw 3cqw 2.6cqw 3.4cqw;border-radius:1.6cqw}
+  .timer .clock{width:max(36px,9.6cqw);height:max(36px,9.6cqw);grid-row:span 2}
+  .timer .label{min-width:0;font-size:max(13.5px,2.75cqw);font-weight:700;text-align:center;padding-right:9cqw}
+  .timer .label br{display:none}
+  .digits{justify-content:center;gap:2.6cqw;margin-top:1.6cqw;padding-right:9cqw}
+  .digit{width:max(52px,12.3cqw);padding:1cqw 0 .8cqw;border-radius:1cqw}
+  .digit b{font-size:max(24px,5.8cqw)}
+  .digit span{font-size:max(9.5px,2cqw);margin-top:.4cqw}
+
+  .page-m{max-width:560px;margin:0 auto;container-type:inline-size;padding:0 0 6cqw}
+  .callband{display:flex;align-items:center;gap:3.4cqw;margin:-4.4cqw 5.2cqw 0;min-height:0;padding:3.4cqw 3.6cqw 3.6cqw 4.4cqw;border-radius:2cqw}
+  .callband > div{padding:0;height:auto}
+  .callband .c1{border:0;height:auto}
+  .callband .c3{display:none}
+  .phone-circle{width:max(48px,11.4cqw);height:max(48px,11.4cqw)}
+  .phone-circle svg{width:52%;height:52%}
+  .callband .c2{align-items:flex-start;flex:1;min-width:0}
+  .callband .kicker{font-size:max(14px,3.4cqw);text-transform:none;letter-spacing:-.01em;align-self:center}
+  .callband .num{font-size:max(30px,8.4cqw);margin-top:.4cqw;white-space:nowrap}
+  .callband .m-standby{font-size:max(12px,2.55cqw);font-weight:500;line-height:1.3;color:#262a36;margin-top:1.6cqw}
+
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:2cqw;padding:2.4cqw 5.2cqw 0}
+  .fcard{display:flex;gap:2.6cqw;text-align:left;padding:3.4cqw 2.6cqw 3.4cqw 3.4cqw;border:0;border-radius:1.6cqw;background:#fdf1f7}
+  .fcard .ic{flex:0 0 auto;width:max(30px,8.2cqw);height:max(30px,8.2cqw);margin:0}
+  .fcard h3{font-size:max(12.5px,2.75cqw)}
+  .fcard p{font-size:max(11.5px,2.45cqw);margin-top:.8cqw;line-height:1.3}
+  .fcard.speak .ic-headset{display:none}
+  .fcard.speak .ic-phone{display:block}
+
+  .m-cta{display:block;margin:2.4cqw 5.2cqw 0;padding:2.8cqw 4cqw 2.6cqw;border-radius:1.6cqw;background:linear-gradient(100deg,#ff1593,#e20074 60%,#d6006e);color:#fff;text-decoration:none;text-align:center;box-shadow:0 1.2cqw 3cqw rgba(226,0,116,.35)}
+  .m-cta .row{display:flex;align-items:center;justify-content:center;gap:3cqw}
+  .m-cta .row svg{flex:0 0 auto;width:max(22px,5cqw);height:max(22px,5cqw)}
+  .m-cta b{font-size:max(17px,4.7cqw);font-weight:800;letter-spacing:-.01em;white-space:nowrap}
+  .m-cta small{display:block;font-family:Montserrat,Arial,sans-serif;font-size:max(11.5px,2.5cqw);font-weight:500;margin-top:.6cqw;color:#ffe3f1}
+  .trust{display:flex!important;align-items:center;justify-content:center;gap:3.4cqw;margin:4.4cqw 3cqw 0}
+  .trust > div{display:flex;align-items:center;gap:1.6cqw;font-family:Inter,Arial,sans-serif;font-size:max(10px,1.9cqw);color:#1b1f2c;white-space:nowrap}
+  .trust svg{flex:0 0 auto;width:max(18px,3.6cqw);height:max(18px,3.6cqw);color:#11152b}
+  .trust .sep{width:1px;height:max(22px,5cqw);background:#d9dce3}
+}
+@container (max-width:460px){
+  .trust{flex-wrap:wrap;gap:8px 14px}
+  .trust .sep{display:none}
+}
+@container (max-width:370px){
+  .m-cta b{font-size:15px}
+  .m-cta .row{gap:2cqw}
+  .features{grid-template-columns:1fr}
+  .callband .num{font-size:max(26px,8.4cqw)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone-solid" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-phone-line" viewBox="0 0 24 24"><path d="M7.2 3.5 9.6 7.8 8 9.6a12 12 0 0 0 6.4 6.4l1.8-1.6 4.3 2.4-.9 3.4c-.2.6-.8 1-1.4.9A17 17 0 0 1 3 5.8c-.1-.6.3-1.2.9-1.4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 12v13h9"/></g></symbol>
+  <symbol id="i-headset" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28v-4a16 16 0 0 1 32 0v4"/><rect x="5" y="26" width="8" height="12" rx="3"/><rect x="35" y="26" width="8" height="12" rx="3"/><path d="M40 38c0 4-4 6-10 6h-3"/></g><rect x="22" y="41.5" width="6" height="5" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-stopwatch" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="27" r="16"/><path d="M24 27v-8M19 4h10M24 4v7M37 13l3-3"/></g></symbol>
+  <symbol id="i-people" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="6"/><circle cx="11" cy="19" r="4.5"/><circle cx="37" cy="19" r="4.5"/><path d="M14 38c0-6 4.5-11 10-11s10 5 10 11z"/><path d="M4 36c0-4.5 3-8 7-8 1.6 0 3 .4 4 1.2M44 36c0-4.5-3-8-7-8-1.6 0-3 .4-4 1.2"/></g></symbol>
+  <symbol id="i-tag" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"><path d="M26 5h15a2 2 0 0 1 2 2v15L22 43a3 3 0 0 1-4.2 0L5 30.2A3 3 0 0 1 5 26z"/><circle cx="34" cy="14" r="3"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></symbol>
+  <symbol id="i-group" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05A4.2 4.2 0 0 1 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="wrap">
+    <span class="logo-collins" aria-label="Collins Mobile">
+      <svg viewBox="0 0 250 60" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="hexL" x1="0" x2="1"><stop offset="0" stop-color="#3b3f44"/><stop offset=".5" stop-color="#2a2d31"/><stop offset=".5" stop-color="#4a4e54"/><stop offset="1" stop-color="#5c6066"/></linearGradient>
+          <linearGradient id="cmG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6dff4a"/><stop offset="1" stop-color="#27c41a"/></linearGradient>
+        </defs>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="url(#hexL)"/>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="none" stroke="#1d1f22" stroke-width="1.5"/>
+        <text x="27" y="39.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="-1.5" fill="url(#cmG)">CM</text>
+        <text x="60" y="38" font-family="Montserrat,Arial,sans-serif" font-size="19" letter-spacing=".6"><tspan font-weight="800" fill="#2b2e33">COLLINS</tspan><tspan font-weight="500" fill="#5d6168">MOBILE</tspan></text>
+      </svg>
+    </span>
+    <div class="logo-tm"><img src="images/tmobile-home-internet.png" alt="T-Mobile Home Internet"><span>Authorized Retailer</span></div>
+  </div>
+</header>
+
+<div class="promo-bar">Wait time is less than <span class="count">(15) seconds</span></div>
+
+<section class="hero">
+  <svg class="hero-bg" viewBox="0 0 1600 445" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="streak" x1="0" x2="1"><stop offset="0" stop-color="#ff2d9b" stop-opacity="0"/><stop offset=".45" stop-color="#ff2d9b" stop-opacity=".9"/><stop offset="1" stop-color="#ff2d9b" stop-opacity="0"/></linearGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+      <filter id="blur2"><feGaussianBlur stdDeviation="1.2"/></filter>
+    </defs>
+    <g filter="url(#blur)" opacity=".7">
+      <path d="M0 90 C 250 120, 520 250, 900 340 S 1300 420, 1600 380" stroke="url(#streak)" stroke-width="20" fill="none"/>
+      <path d="M0 170 C 260 150, 520 300, 860 390 S 1250 440, 1600 430" stroke="url(#streak)" stroke-width="12" fill="none"/>
+    </g>
+    <g filter="url(#blur2)" opacity=".9">
+      <path d="M0 100 C 250 130, 520 260, 900 348 S 1300 428, 1600 388" stroke="#ff4fb0" stroke-width="2" fill="none"/>
+      <path d="M0 180 C 260 160, 520 310, 860 398 S 1250 448, 1600 438" stroke="#ff4fb0" stroke-width="1.4" fill="none"/>
+    </g>
+    <g stroke="#6b78c9" stroke-width=".7" fill="none" opacity=".35">
+      <circle cx="1230" cy="200" r="240"/><ellipse cx="1230" cy="200" rx="240" ry="85"/><ellipse cx="1230" cy="200" rx="240" ry="160"/>
+      <ellipse cx="1230" cy="200" rx="85" ry="240"/><ellipse cx="1230" cy="200" rx="165" ry="240"/>
+      <path d="M1010 120 L1110 40 L1260 0 L1400 70 L1460 200 L1410 340 L1270 420 L1110 380 L1020 280 Z"/>
+      <path d="M1110 40 L1230 200 L1400 70 M1230 200 L1460 200 M1230 200 L1270 420 M1230 200 L1020 280"/>
+    </g>
+    <g fill="#9aa6ff" opacity=".55"><circle cx="1110" cy="40" r="2.2"/><circle cx="1400" cy="70" r="2.2"/><circle cx="1460" cy="200" r="2.2"/><circle cx="1410" cy="340" r="2.2"/><circle cx="1020" cy="280" r="2.2"/><circle cx="1230" cy="200" r="2.6"/></g>
+  </svg>
+
+  <div class="wrap t-in">
+    <div class="copy">
+      <div class="hello">
+        <svg class="check" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="var(--green)" stroke-width="9"/><path d="M29 51 44 65 72 36" fill="none" stroke="var(--green)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h1 id="greet">Congratulations,<span class="name" id="greetName">Phil!</span></h1>
+      </div>
+      <p class="sub">You&rsquo;ve qualified for <b>one of our best<br class="d-br"> T-Mobile 5G Home Internet offers!</b></p>
+      <p class="lead"><b>Call now</b> to speak with our team<span class="m-in"> and</span><span class="d-only">,</span> confirm your eligibility, review your offer options, and get set up.</p>
+
+      <div class="timer" role="timer" aria-live="off">
+        <svg class="clock"><use href="#i-clock"/></svg>
+        <div class="label">Your offer is<br> being held for:</div>
+        <div class="digits">
+          <div class="digit"><b id="tH">00</b><span>Hours</span></div>
+          <div class="digit"><b id="tM">15</b><span>Minutes</span></div>
+          <div class="digit"><b id="tS">00</b><span>Seconds</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="router"><img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655"></div>
+
+    <div class="script d-only" aria-hidden="true">
+      <span>Fast.</span><span>Reliable.</span><span>Home Internet.</span>
+      <svg viewBox="0 0 230 26"><path d="M4 20 C 70 8, 150 2, 226 6 C 160 9, 90 16, 30 24" fill="var(--magenta)" stroke="var(--magenta)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<main class="page-m">
+  <a class="callband" href="tel:+18887654506" aria-label="Call 888-765-4506 to confirm your offer">
+    <div class="c1"><span class="phone-circle"><svg><use href="#i-phone-solid"/></svg></span></div>
+    <div class="c2">
+      <span class="kicker"><span class="d-only">Call now to confirm your offer</span><span class="m-only">Call Now to Confirm Your Offer</span></span>
+      <span class="num">888-765-4506</span>
+      <span class="m-only m-standby">Our team is standing by and wait times are currently less than 15 seconds.</span>
+    </div>
+    <div class="c3">
+      <svg class="headset"><use href="#i-headset"/></svg>
+      <div class="standby"><b>Our team is standing by</b><span>and wait times are currently<br>less than 15 seconds.</span></div>
+    </div>
+  </a>
+
+  <section class="features">
+    <div class="fcard"><svg class="ic"><use href="#i-stopwatch"/></svg><div><h3>Limited Availability</h3><p>Offers and inventory are limited and available on a first-come, first-served basis.</p></div></div>
+    <div class="fcard"><svg class="ic"><use href="#i-people"/></svg><div><h3>High Demand</h3><p>A large number of customers are calling today. Call now to secure your spot.</p></div></div>
+    <div class="fcard"><svg class="ic"><use href="#i-tag"/></svg><div><h3>This Offer Won&rsquo;t Last</h3><p>Promotional offers can change or end at any time without notice.</p></div></div>
+    <div class="fcard speak"><svg class="ic ic-headset"><use href="#i-headset"/></svg><svg class="ic ic-phone"><use href="#i-phone-line"/></svg><div><h3>Speak to a Real Person</h3><p>Get all your questions answered and complete your setup with our U.S.-based team.</p></div></div>
+  </section>
+
+  <a class="m-cta m-only" href="tel:+18887654506">
+    <span class="row"><svg><use href="#i-phone-solid"/></svg><b>CALL NOW: 888-765-4506</b><svg><use href="#i-arrow"/></svg></span>
+    <small>Wait times are currently less than 15 seconds.</small>
+  </a>
+
+  <div class="trust m-only">
+    <div><svg><use href="#i-lock"/></svg>Secure &amp; Protected</div>
+    <span class="sep"></span>
+    <div><svg><use href="#i-shield"/></svg>No Obligation</div>
+    <span class="sep"></span>
+    <div><svg><use href="#i-group"/></svg>T-Mobile Authorized Retailer</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  // First name from the redirect URL, e.g. thank-you.html?first_name=Phil
+  var q=new URLSearchParams(location.search);
+  var name=(q.get('first_name')||q.get('firstname')||q.get('name')||'').trim().split(/\s+/)[0]||'';
+  name=name.replace(/[^\p{L}\p{M}'\-]/gu,'').slice(0,24);
+  var greet=document.getElementById('greet'), nameEl=document.getElementById('greetName');
+  if(name){
+    nameEl.textContent=name.charAt(0).toUpperCase()+name.slice(1)+'!';
+  }else{
+    greet.firstChild.nodeValue='Congratulations!';
+    nameEl.remove();
+  }
+
+  // 15:00 hold timer; survives a refresh within the same tab session
+  var KEY='tmo_ty_hold_until', LEN=15*60*1000, until=0;
+  try{until=+sessionStorage.getItem(KEY)||0}catch(e){}
+  if(!until||until<Date.now()-LEN){until=Date.now()+LEN; try{sessionStorage.setItem(KEY,until)}catch(e){}}
+  var h=document.getElementById('tH'),m=document.getElementById('tM'),s=document.getElementById('tS');
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var left=Math.max(0,Math.round((until-Date.now())/1000));
+    h.textContent=pad(Math.floor(left/3600)); m.textContent=pad(Math.floor(left%3600/60)); s.textContent=pad(left%60);
+    if(left>0) setTimeout(tick,1000-(Date.now()%1000));
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
