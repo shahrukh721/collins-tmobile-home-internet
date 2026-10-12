@@ -190,6 +190,14 @@ h1 .name{display:block;color:var(--magenta)}
   .features{grid-template-columns:1fr}
   .callband .num{font-size:max(26px,8.4cqw)}
 }
+
+/* ---------- Footer ---------- */
+.site-footer{background:#070b1d;color:#aeb3c4;text-align:center;padding:22px 16px calc(22px + env(safe-area-inset-bottom));font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5}
+.site-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px}
+.site-footer a{color:#fff;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer span[aria-hidden]{color:#4b5170}
+.site-footer p{margin-top:8px;font-size:12px}
 </style>
 </head>
 <body>
@@ -315,6 +323,20 @@ h1 .name{display:block;color:var(--magenta)}
     <div><svg><use href="#i-group"/></svg>T-Mobile Authorized Retailer</div>
   </div>
 </main>
+
+<footer class="site-footer">
+  <nav aria-label="Legal">
+    <a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms of Service</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a>
+  </nav>
+  <p>&copy; <span class="yr">2026</span> Collins Mobile LLC &middot; T-Mobile Authorized Retailer</p>
+</footer>
+<script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
 
 <script>
 (function(){
