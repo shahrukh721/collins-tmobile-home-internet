@@ -383,13 +383,51 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   .pop-call b{font-size:max(15px,3.6cqw)}
 }
 
+
+/* ---------- FAQ ---------- */
+.faq{background:#fff;color:#111;padding:72px 16px 70px}
+.faq-in{max-width:1140px;margin:0 auto}
+.faq-kicker{display:table;margin:0 auto;padding:5px 9px;border-left:3px solid #7ddc5a;background:linear-gradient(90deg,#e9fbe2,rgba(233,251,226,0));font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1b1f2c}
+.faq h2{text-align:center;font-size:clamp(30px,3.2vw,46px);font-weight:800;letter-spacing:-.03em;margin-top:14px;color:#0b0d14}
+.faq-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:34px;align-items:start}
+.faq-col h3{display:table;margin:0 auto 22px;padding:9px 16px;border-radius:6px;background:#c2185b;background:var(--magenta);color:#fff;font-size:15px;font-weight:700}
+.faq details{background:#fff;border:1px solid #e1e4ea;border-radius:6px;box-shadow:0 1px 4px rgba(15,20,40,.05);margin-bottom:14px}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:20px 46px 20px 18px;font-size:14.5px;font-weight:500;line-height:1.35;color:#1b1f2c}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:20px;top:50%;width:7px;height:7px;border-right:2px solid #1b1f2c;border-bottom:2px solid #1b1f2c;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq summary:focus-visible{outline:2px solid var(--magenta);outline-offset:2px;border-radius:6px}
+.faq details[open]{border-color:#f2b6d2}
+.faq .ans{padding:0 18px 18px;font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.6;color:#454a57}
+.faq .ans p+p{margin-top:8px}
+.faq .ans a{color:var(--magenta);font-weight:600}
+@media (max-width:760px){
+  .faq{padding:48px 16px 44px}
+  .faq-cols{grid-template-columns:minmax(0,1fr);gap:18px}
+  .faq-col h3{margin-bottom:16px}
+  .faq summary{padding:16px 42px 16px 14px;font-size:14px}
+  .faq .ans{padding:0 14px 16px}
+}
 /* ---------- Footer ---------- */
-.site-footer{background:#070b1d;color:#aeb3c4;text-align:center;padding:22px 16px calc(22px + env(safe-area-inset-bottom));font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5}
-.site-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px}
-.site-footer a{color:#fff;text-decoration:none}
-.site-footer a:hover{text-decoration:underline}
-.site-footer span[aria-hidden]{color:#4b5170}
-.site-footer p{margin-top:8px;font-size:12px}
+.site-footer{background:linear-gradient(180deg,#eefbe8 0%,#e2f7d8 100%);color:#1b1f2c;text-align:center;padding:46px 16px calc(22px + env(safe-area-inset-bottom));font-family:Montserrat,Arial,sans-serif}
+.f-logos{display:flex;align-items:center;justify-content:center;gap:14px}
+.f-collins{height:36px;width:auto}
+.f-x{font-size:34px;font-weight:800;line-height:1;color:#7ddc5a}
+.f-tm{display:flex;flex-direction:column;align-items:flex-end}
+.f-tm img{height:30px;width:auto}
+.f-tm span{font-family:Arial,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.3px;color:var(--magenta);text-transform:uppercase;margin-top:1px}
+.f-tag{max-width:470px;margin:16px auto 0;font-size:14px;line-height:1.5;color:#2b2f3a}
+.f-bottom{max-width:1140px;margin:34px auto 0;display:flex;align-items:center;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.f-links{display:flex;gap:18px}
+.f-links a{color:#3d4560;text-decoration:underline;text-underline-offset:2px}
+.f-links a:hover{color:var(--magenta)}
+.f-copy{color:#2b2f3a}
+@media (max-width:760px){
+  .f-bottom{flex-direction:column;gap:10px}
+  .f-copy{order:3}
+  .f-collins{height:30px}
+  .f-tm img{height:25px}
+}
 </style>
 </head>
 <body>
@@ -627,17 +665,59 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   </div>
 </section>
 
+<section class="faq" id="faq" aria-labelledby="faqTitle">
+  <div class="faq-in">
+    <span class="faq-kicker">T-Mobile FAQs</span>
+    <h2 id="faqTitle">People Ask Us</h2>
+    <div class="faq-cols">
+      <div class="faq-col">
+        <h3>General</h3>
+        <details><summary>Do these plans come with 5-Year price guarantee?</summary><div class="ans"><p>Yes, new and upgrading customers on T-Mobile Rely Internet, T-Mobile Amplified Internet, T-Mobile All-In Internet, and AWAY&trade; are covered by a 5-year price guarantee. The 5-year price guarantee means we won&rsquo;t change the price of fixed-wireless 5G internet data for at least 5 years while you are on an eligible plan. Taxes &amp; fees, voluntary equipment or speed upgrades, future wireless generations, select limited-time promotions, per-use charges, third-party services, and network management practices aren&rsquo;t included. This guarantee starts when you activate or switch to an eligible plan and doesn&rsquo;t restart if you add a line or change plans after that.</p></div></details>
+        <details><summary>Can I purchase higher-speed service?</summary><div class="ans"><p>We don&rsquo;t offer tiered pricing based on speeds at this time. Customers receive the best speeds available from the service at their location. As better speeds are available, customers will automatically experience them, at no additional cost. During congestion, Internet customers may notice speeds slower than customers using other T-Mobile services and further reduction if using &gt;1.2TB/mo., due to data prioritization.</p></div></details>
+        <details><summary>Are there ways I cannot use T-Mobile 5G Home Internet?</summary><div class="ans"><p>You can use your Home Internet for all the homework, streaming, and video conferencing you need! But to ensure that our network is available for all customers, there are some restrictions on activities that can damage or disproportionately congest the network. For example, Home Internet is not intended for unattended use, automatic data feeds, automated machine-to-machine connections, or uses that automatically consume unreasonable amounts of available network capacity. In addition, many T-Mobile Internet products are intended to be used in a fixed location, and use at a location other than one we&rsquo;ve approved is not permitted.</p></div></details>
+        <details><summary>Who is eligible for T-Mobile 5G Home Internet?</summary><div class="ans"><p>Eligibility is determined by the service address. Address eligibility is based off network capacity, which is expanding all the time, but can also change as more customers join T-Mobile.</p><p>Home Internet and Home Internet Plus must have a service address that is eligible for unlimited service. These plans are eligible for use at only the approved address.</p><p>Home Internet Lite must have a service address eligible for Lite plans. Home Internet Lite plans activated starting May 9, 2024 may only be used at the approved address.</p><p>AWAY&trade; customers must have an eligible physical address to get started. Once activated, AWAY&trade; plans may be used nationwide across T-Mobile&rsquo;s network, but should not be used primarily in a single location.</p></div></details>
+        <details><summary>Can I get a discount for having both T-Mobile phone and Internet services?</summary><div class="ans"><p>Yes, you can get a discount when you bundle new Home Internet or Home Internet Plus with T-Mobile voice service.</p></div></details>
+        <details><summary>Can I get T-Mobile 5G Internet for my business?</summary><div class="ans"><p>Great news! T-Mobile has the Internet access solutions that you need to keep your business and your employees connected and productive.</p></div></details>
+        <details><summary>Can I transfer my T-Mobile 5G Internet service when I move homes?</summary><div class="ans"><p>Yes, give us a call at <a href="tel:+18332981408">1-833-298-1408</a> prior to moving to confirm that your new address is eligible for service and set up a change of address.</p></div></details>
+      </div>
+      <div class="faq-col">
+        <h3>Worry-free 15-day test drive</h3>
+        <details><summary>What is Worry-free 15-day test drive, and who is eligible?</summary><div class="ans"><p>New and existing T-Mobile customers activating Home Internet on a qualifying plan are eligible to receive their money back via a onetime bill credit if they choose to schedule cancellation of service within the first 15 days of activation.</p></div></details>
+        <details><summary>How can I try Worry-free 15-day test drive</summary><div class="ans"><p>Any customer who activates T-Mobile Home Internet or Small Business Internet on a qualifying plan within the promotional window and schedules cancellation of service within the first 15 days of activation will qualify for Worry-free 15-day test drive.</p></div></details>
+        <details><summary>How can I get my money back if I do not wish to continue with T-Mobile Internet?</summary><div class="ans"><p>At the time cancellation is scheduled, a one time bill credit will be applied to your account to zero out any T-Mobile Internet service charges on your bill. If there is a credit balance on the account because a payment was made before the one time bill credit was applied, the credit balance will be proactively paid out after 30 days via a Prepaid MasterCard from North Lane to the billing address on file.</p></div></details>
+        <details><summary>When does my 15 days start for Worry-free 15-day test drive?</summary><div class="ans"><p>Your 15 Days starts the day you activate and bring home your device from a retail store or once you receive a notification that your 5G gateway has shipped.</p></div></details>
+        <details><summary>Do I need to return any equipment that was sent to me if I cancel service?</summary><div class="ans"><p>Yes, you will need to return the gateway after you cancel your service, or you will be charged a non-return fee to your bill that is not eligible for any money back adjustment. Equipment Non-Return Fees are not part of Worry-free 15-day test drive. These will be handled in the same way they would without Worry-free 15-day test drive and are not eligible for a money back adjustment.</p></div></details>
+        <details><summary>What is the difference between T-Mobile 30 day Network Worry-free 15-day test drive, and the 15 day Internet Worry-free 15-day test drive?</summary><div class="ans"><p>The T-Mobile Network Worry-free 15-day test drive allows non-T-Mobile customers to try T-Mobile&rsquo;s network for up to 30 days with their own phone, phone number and apps from another carrier. While the T-Mobile Internet Worry-free 15-day test drive allows Non-T-Mobile customers and existing T-Mobile customers to try out T-Mobile Home Internet or Small Business Internet service for 15 days after activation worry-free. If T-Mobile Internet is not right for you, cancel within the first 15 days for a full refund.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
-  <nav aria-label="Legal">
-    <a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms of Service</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a>
-  </nav>
-  <p>&copy; <span class="yr">2026</span> Collins Mobile LLC &middot; T-Mobile Authorized Retailer</p>
+  <div class="f-logos">
+    <svg class="f-collins" viewBox="0 0 250 60" role="img" aria-label="Collins Mobile">
+      <defs>
+        <linearGradient id="hexF" x1="0" x2="1"><stop offset="0" stop-color="#3b3f44"/><stop offset=".5" stop-color="#2a2d31"/><stop offset=".5" stop-color="#4a4e54"/><stop offset="1" stop-color="#5c6066"/></linearGradient>
+        <linearGradient id="cmF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6dff4a"/><stop offset="1" stop-color="#27c41a"/></linearGradient>
+      </defs>
+      <path d="M27 2 50 15v30L27 58 4 45V15z" fill="url(#hexF)"/>
+      <text x="27" y="39.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="-1.5" fill="url(#cmF)">CM</text>
+      <text x="60" y="38" font-family="Montserrat,Arial,sans-serif" font-size="19" letter-spacing=".6"><tspan font-weight="800" fill="#2b2e33">COLLINS</tspan><tspan font-weight="500" fill="#5d6168">MOBILE</tspan></text>
+    </svg>
+    <span class="f-x" aria-hidden="true">&times;</span>
+    <span class="f-tm"><img src="images/tmobile-home-internet.png" alt="T-Mobile Home Internet"><span>Authorized Retailer</span></span>
+  </div>
+  <p class="f-tag">We&rsquo;re developing the ultimate communications network to power high-quality, secure, affordable, fast connections.</p>
+  <div class="f-bottom">
+    <nav class="f-links" aria-label="Legal">
+      <a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a>
+    </nav>
+    <p class="f-copy"><span class="yr">2026</span> All Rights Reserved Unlimited5GHomeInternet.com</p>
+    <nav class="f-links" aria-label="Terms and contact">
+      <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a>
+      <a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a>
+    </nav>
+  </div>
 </footer>
 <script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
 

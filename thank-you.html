@@ -192,12 +192,25 @@ h1 .name{display:block;color:var(--magenta)}
 }
 
 /* ---------- Footer ---------- */
-.site-footer{background:#070b1d;color:#aeb3c4;text-align:center;padding:22px 16px calc(22px + env(safe-area-inset-bottom));font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5}
-.site-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px}
-.site-footer a{color:#fff;text-decoration:none}
-.site-footer a:hover{text-decoration:underline}
-.site-footer span[aria-hidden]{color:#4b5170}
-.site-footer p{margin-top:8px;font-size:12px}
+.site-footer{background:linear-gradient(180deg,#eefbe8 0%,#e2f7d8 100%);color:#1b1f2c;text-align:center;padding:46px 16px calc(22px + env(safe-area-inset-bottom));font-family:Montserrat,Arial,sans-serif}
+.f-logos{display:flex;align-items:center;justify-content:center;gap:14px}
+.f-collins{height:36px;width:auto}
+.f-x{font-size:34px;font-weight:800;line-height:1;color:#7ddc5a}
+.f-tm{display:flex;flex-direction:column;align-items:flex-end}
+.f-tm img{height:30px;width:auto}
+.f-tm span{font-family:Arial,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.3px;color:var(--magenta);text-transform:uppercase;margin-top:1px}
+.f-tag{max-width:470px;margin:16px auto 0;font-size:14px;line-height:1.5;color:#2b2f3a}
+.f-bottom{max-width:1140px;margin:34px auto 0;display:flex;align-items:center;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.f-links{display:flex;gap:18px}
+.f-links a{color:#3d4560;text-decoration:underline;text-underline-offset:2px}
+.f-links a:hover{color:var(--magenta)}
+.f-copy{color:#2b2f3a}
+@media (max-width:760px){
+  .f-bottom{flex-direction:column;gap:10px}
+  .f-copy{order:3}
+  .f-collins{height:30px}
+  .f-tm img{height:25px}
+}
 </style>
 </head>
 <body>
@@ -325,16 +338,31 @@ h1 .name{display:block;color:var(--magenta)}
 </main>
 
 <footer class="site-footer">
-  <nav aria-label="Legal">
-    <a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms of Service</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a>
-  </nav>
-  <p>&copy; <span class="yr">2026</span> Collins Mobile LLC &middot; T-Mobile Authorized Retailer</p>
+  <div class="f-logos">
+    <svg class="f-collins" viewBox="0 0 250 60" role="img" aria-label="Collins Mobile">
+      <defs>
+        <linearGradient id="hexF" x1="0" x2="1"><stop offset="0" stop-color="#3b3f44"/><stop offset=".5" stop-color="#2a2d31"/><stop offset=".5" stop-color="#4a4e54"/><stop offset="1" stop-color="#5c6066"/></linearGradient>
+        <linearGradient id="cmF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6dff4a"/><stop offset="1" stop-color="#27c41a"/></linearGradient>
+      </defs>
+      <path d="M27 2 50 15v30L27 58 4 45V15z" fill="url(#hexF)"/>
+      <text x="27" y="39.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="-1.5" fill="url(#cmF)">CM</text>
+      <text x="60" y="38" font-family="Montserrat,Arial,sans-serif" font-size="19" letter-spacing=".6"><tspan font-weight="800" fill="#2b2e33">COLLINS</tspan><tspan font-weight="500" fill="#5d6168">MOBILE</tspan></text>
+    </svg>
+    <span class="f-x" aria-hidden="true">&times;</span>
+    <span class="f-tm"><img src="images/tmobile-home-internet.png" alt="T-Mobile Home Internet"><span>Authorized Retailer</span></span>
+  </div>
+  <p class="f-tag">We&rsquo;re developing the ultimate communications network to power high-quality, secure, affordable, fast connections.</p>
+  <div class="f-bottom">
+    <nav class="f-links" aria-label="Legal">
+      <a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a>
+    </nav>
+    <p class="f-copy"><span class="yr">2026</span> All Rights Reserved Unlimited5GHomeInternet.com</p>
+    <nav class="f-links" aria-label="Terms and contact">
+      <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a>
+      <a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a>
+    </nav>
+  </div>
 </footer>
 <script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
 
