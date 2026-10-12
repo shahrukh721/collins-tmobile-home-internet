@@ -340,13 +340,31 @@ h1 .name{display:block;color:var(--magenta)}
 
 <script>
 (function(){
-  // First name from the redirect URL, e.g. thank-you.html?first_name=Phil
-  var q=new URLSearchParams(location.search);
-  var name=(q.get('first_name')||q.get('firstname')||q.get('name')||'').trim().split(/\s+/)[0]||'';
-  name=name.replace(/[^\p{L}\p{M}'\-]/gu,'').slice(0,24);
+  // First name: 1) redirect URL (?first_name=Phil), 2) LeadStacker/GHL "sticky contact" data.
+  // On submit the GHL form iframe posts the contact to the landing page, and form_embed.js
+  // saves it in localStorage "_ud" (same origin as this page), so we can read it here.
+  function clean(v){
+    v=String(v||'').trim();
+    if(!v||/[{}]/.test(v)) return '';               // ignore unreplaced {{contact.first_name}} tags
+    v=v.split(/\s+/)[0].replace(/[^\p{L}\p{M}'\-]/gu,'').slice(0,24);
+    return v?v.charAt(0).toUpperCase()+v.slice(1):'';
+  }
+  function fromUrl(){
+    var q=new URLSearchParams(location.search);
+    return clean(q.get('first_name')||q.get('firstName')||q.get('firstname')||q.get('name')||q.get('full_name'));
+  }
+  function fromGhl(){
+    try{
+      var raw=localStorage.getItem('_ud'); if(!raw) return '';
+      if(raw.indexOf("'")>-1&&raw.indexOf('"')<0) raw=raw.replace(/'/g,'"');
+      var d=JSON.parse(raw)||{}, c=d.contact||d;
+      return clean(c.first_name||c.firstName||c.firstname||c.full_name||c.fullName||c.name);
+    }catch(e){return ''}
+  }
+  var name=fromUrl()||fromGhl();
   var greet=document.getElementById('greet'), nameEl=document.getElementById('greetName');
   if(name){
-    nameEl.textContent=name.charAt(0).toUpperCase()+name.slice(1)+'!';
+    nameEl.textContent=name+'!';
   }else{
     greet.firstChild.nodeValue='Congratulations!';
     nameEl.remove();
