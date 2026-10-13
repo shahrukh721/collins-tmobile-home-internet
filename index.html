@@ -431,6 +431,14 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   .f-left,.f-right,.f-copy{text-align:center}
   .f-left{order:1}.f-copy{order:2}.f-right{order:3}
 }
+
+/* Mobile: fixed copy of the CTA once the in-flow (sticky) one has scrolled off the top */
+.mv-cta-fixed{position:fixed!important;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(140%);margin:0!important;z-index:900;opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
+.mv-cta-fixed.show{transform:translateX(-50%);opacity:1;pointer-events:auto}
+@media (max-width:760px){
+  .site-footer{padding-bottom:calc(50px + 80px + env(safe-area-inset-bottom))}
+}
+@media (min-width:761px){.mv-cta-fixed{display:none!important}}
 </style>
 </head>
 <body>
@@ -535,6 +543,7 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     </div>
 
     <button type="button" class="mv-cta" data-open-pop><svg><use href="#i-arrow"/></svg>Check Availability Now</button>
+    <button type="button" class="mv-cta mv-cta-fixed" data-open-pop aria-hidden="true" tabindex="-1"><svg><use href="#i-arrow"/></svg>Check Availability Now</button>
     <p class="mv-cta-sub">See Which of the 3 Offers You Qualify For</p>
   </div>
   <div class="mv-strip"></div>
@@ -904,6 +913,18 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     store('tmo_pop_auto','1'); openPop();
   }
   setTimeout(tryAuto,AUTO_DELAY);
+
+  // Mobile CTA: show the fixed copy when the in-flow button is above the viewport
+  var ctaInline=document.querySelector('.mv-cta:not(.mv-cta-fixed)'), ctaFixed=document.querySelector('.mv-cta-fixed');
+  function syncCta(){
+    var show=mobileMQ.matches && ctaInline.getBoundingClientRect().bottom<0;
+    ctaFixed.classList.toggle('show',show);
+    ctaFixed.setAttribute('aria-hidden',show?'false':'true');
+    ctaFixed.tabIndex=show?0:-1;
+  }
+  window.addEventListener('scroll',syncCta,{passive:true});
+  window.addEventListener('resize',syncCta);
+  syncCta();
 
   var exitArmed=false;
   setTimeout(function(){exitArmed=true},3000);   // ignore the first few seconds
