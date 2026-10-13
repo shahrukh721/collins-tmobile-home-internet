@@ -883,6 +883,48 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     if(natural>avail) popL.style.zoom=(avail/natural).toFixed(3);
   }
   window.addEventListener('resize',function(){markRows(); fitPop()});
+
+  // ---------- Auto popup + exit intent (each once per visit) ----------
+  var AUTO_DELAY=7000;                       // ms before the timed popup
+  function store(k,v){try{if(v===undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k,v)}catch(e){return null}}
+  function leadSubmitted(){try{return !!localStorage.getItem('_ud')}catch(e){return false}}  // GHL sticky-contact data, set on submit
+  // Don't interrupt someone filling in the page form. (The GHL iframe grabs focus on load,
+  // so focus alone isn't a signal - use real pointer/touch activity over the form instead.)
+  var formActiveAt=0;
+  ['mouseover','mousemove','pointerdown','touchstart'].forEach(function(ev){
+    host.addEventListener(ev,function(){formActiveAt=Date.now()},{passive:true});
+  });
+  function canPop(){
+    if(overlay.classList.contains('open')||leadSubmitted()) return false;
+    return Date.now()-formActiveAt>15000;
+  }
+  function tryAuto(){
+    if(store('tmo_pop_auto')) return;
+    if(document.hidden||!canPop()){setTimeout(tryAuto,4000); return}
+    store('tmo_pop_auto','1'); openPop();
+  }
+  setTimeout(tryAuto,AUTO_DELAY);
+
+  var exitArmed=false;
+  setTimeout(function(){exitArmed=true},3000);   // ignore the first few seconds
+  function exitIntent(){
+    if(!exitArmed||store('tmo_pop_exit')||!canPop()) return;
+    store('tmo_pop_exit','1'); store('tmo_pop_auto','1'); openPop();
+  }
+  // Desktop: cursor leaves through the top of the window (towards tabs / address bar / close)
+  document.addEventListener('mouseout',function(e){
+    if(mobileMQ.matches||e.relatedTarget||e.clientY>8) return;
+    exitIntent();
+  });
+  // Phones: a quick scroll back up after reading down the page
+  var lastY=window.scrollY,lastT=Date.now(),maxY=0;
+  window.addEventListener('scroll',function(){
+    if(!mobileMQ.matches) return;
+    var y=window.scrollY,t=Date.now();
+    maxY=Math.max(maxY,y);
+    if(maxY>600&&y<lastY&&(lastY-y)/Math.max(t-lastT,1)>1.2&&y>150) exitIntent();   // >1.2px/ms upward
+    lastY=y; lastT=t;
+  },{passive:true});
   markRows();
 })();
 </script>
