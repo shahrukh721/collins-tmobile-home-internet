@@ -214,6 +214,26 @@ h1 .name{display:block;color:var(--magenta)}
   .f-left,.f-right,.f-copy{text-align:center}
   .f-left{order:1}.f-copy{order:2}.f-right{order:3}
 }
+
+/* ---------- Plan terms ---------- */
+.terms-link{display:inline;background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.terms-btn{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-top:2px;background:none;border:0;padding:4px 2px;font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.terms-btn svg{width:15px;height:15px;color:var(--magenta)}
+.terms-overlay{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:24px 16px;background:rgba(6,8,22,.78);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.terms-overlay.open{display:flex}
+.terms-box{position:relative;width:100%;max-width:760px;max-height:min(80vh,720px);display:flex;flex-direction:column;background:#fff;color:#1b1f2c;border-radius:14px;border-top:4px solid var(--magenta);box-shadow:0 30px 90px rgba(0,0,0,.55);outline:none}
+.terms-box h2{font-family:Montserrat,Arial,sans-serif;font-size:22px;font-weight:800;padding:22px 56px 12px 24px;border-bottom:1px solid #eceef3}
+.terms-body{overflow-y:auto;overscroll-behavior:contain;padding:16px 24px 24px;font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.6;color:#3a3f4c}
+.terms-body p+p{margin-top:14px}
+.terms-body a{color:var(--magenta)}
+.terms-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:0;background:#f1f2f6;color:#1b1f2c;display:grid;place-items:center;cursor:pointer}
+.terms-close svg{width:16px;height:16px}
+@media (max-width:760px){
+  .terms-overlay{padding:12px;align-items:flex-end}
+  .terms-box{max-height:86vh;border-radius:14px}
+  .terms-box h2{font-size:19px;padding:18px 52px 10px 18px}
+  .terms-body{padding:14px 18px 20px;font-size:13px}
+}
 </style>
 </head>
 <body>
@@ -347,12 +367,36 @@ h1 .name{display:block;color:var(--magenta)}
     <div class="f-bottom">
       <p class="f-left"><a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a><a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a></p>
       <p class="f-copy"><span class="yr">2026</span> All Rights Reserved <a href="https://unlimited5ghomeinternet.com/" target="_blank" rel="noopener">Unlimited5GHomeInternet.com</a></p>
-      <p class="f-right"><a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a></p>
+      <p class="f-right"><a href="#plan-terms" data-terms>Plan Terms</a><a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a></p>
     </div>
   </div>
 </footer>
 <script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
 
+<!-- ================= PLAN TERMS ================= -->
+<div class="terms-overlay" id="termsOverlay" aria-hidden="true">
+  <div class="terms-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle" tabindex="-1">
+    <button type="button" class="terms-close" aria-label="Close plan terms"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+    <h2 id="termsTitle">Plan terms</h2>
+    <div class="terms-body">
+      <p>Limited-time; subject to change. Qualifying credit, postpaid voice line, and new Internet line required. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Credits may take up to 2 bill cycles; credits will stop if you cancel any lines or change plans. Limit 1/account. May not be combined with some offers or discounts. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. Not available in all areas. $35 device connection charge due at sale. Plus taxes &amp; fees for accounts currently paying for a T-Mobile wireless line with additional taxes &amp; fees: Monthly Regulatory Programs &amp; Telco Recovery Fees totaling up to $2.60 per line, and federal and local surcharges apply. See Broadband Facts at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a>. Credit approval required. For use only with select T-Mobile Gateways for in-home use at location provided at activation; service restricted away from approved address. Return gateway undamaged or pay up to $370. Video streaming resolution depends on available speeds. For best performance, leave video streaming applications at their default resolution setting. Not compatible with some live TV streaming services. AutoPay Pricing for lines 1-8 on account. AutoPay discount requires bank account or debit card, otherwise $10 more/line/mo. May not be reflected on first bill. Network Management: Service may be slowed, suspended, terminated, or restricted for misuse, abnormal use, interference with our network or ability to provide quality service to other users. See <a href="https://www.t-mobile.com/OpenInternet" target="_blank" rel="noopener">T-Mobile.com/OpenInternet</a> for details. See Terms and Conditions (including arbitration provision) at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a> for additional information. 5-Year Price Guarantee means that we won&rsquo;t change the price of fixed-wireless 5G internet data for at least 5 years while you are on an eligible plan. Taxes &amp; fees, voluntary equipment or speed upgrades, future wireless generations, select limited-time promotions, per-use charges, third-party services, and network management practices aren&rsquo;t included. This guarantee starts when you activate or switch to an eligible plan and doesn&rsquo;t restart if you add a line or change plans after that.</p>
+      <p>Limited-time; subject to change. Month On Us: With one-time bill credit equal to monthly rate plus fees after AutoPay and other applicable discounts. Qualifying new Internet line required. Enter promotional code at checkout. Not transferrable. Allow 2 bill cycles for credit. Limit 2/account. May not be combined with some offers or discounts. Up to $200 Back: Available for digital activations ($100: Rely; $100: Amplified; $200: All-In), not available in retail. Register code within 30 days of activating qualifying new Home Internet line. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Up to $200 via virtual prepaid Mastercard; use online or in-store via accepted mobile payment apps; no cash access &amp; expires in 6 months. The Virtual Prepaid Mastercard is issued by Sunrise Banks N.A., Member FDIC, pursuant to a license from Mastercard International Incorporated. Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Incorporated. This card may be used everywhere Debit Mastercard is accepted. Registration, activation, acceptance, or use of this card constitutes acceptance of the terms and conditions stated in the Prepaid Card Agreement. This promotion is not associated, sponsored, or endorsed by Mastercard or Sunrise Banks N.A. Lines must be active and in good standing when card is issued. Max 1/account. May not be combined with some offers, discounts, or promotions.</p>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  // Plan terms modal: any [data-terms] element opens it
+  var ov=document.getElementById('termsOverlay'), box=ov.querySelector('.terms-box'), last=null;
+  function open(e){ if(e) e.preventDefault(); last=document.activeElement; ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; box.querySelector('.terms-body').scrollTop=0; box.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true'); if(!document.querySelector('.pop-overlay.open')) document.documentElement.style.overflow=''; if(last) last.focus(); }
+  document.addEventListener('click',function(e){ var t=e.target.closest('[data-terms]'); if(t){ e.stopPropagation(); open(e); } },true);
+  ov.querySelector('.terms-close').addEventListener('click',close);
+  ov.addEventListener('mousedown',function(e){ if(e.target===ov) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')){ e.stopImmediatePropagation(); close(); } },true);
+  window.__termsOpen=function(){return ov.classList.contains('open')};
+})();
+</script>
 <script>
 (function(){
   // First name: 1) redirect URL (?first_name=Phil), 2) LeadStacker/GHL "sticky contact" data.

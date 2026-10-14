@@ -65,8 +65,9 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
 .card .body{flex:1;min-width:0}
 .card .price{font-size:clamp(28px,2.4vw,37px);font-weight:800;color:var(--yellow);line-height:1}
 .card .price small{font-size:.5em;color:#fff;vertical-align:top;position:relative;top:2px;margin-left:1px}
-.card:not(:first-child) .price{color:#fff}
-.card .title{font-size:17px;font-weight:700;margin-top:3px}
+.card .title{font-size:17px;font-weight:700;margin:0 0 3px}
+.card .bonus{font-size:14px;font-weight:700;color:#fff;margin-top:5px}
+.card .price small{color:var(--yellow)}
 .card .desc{font-family:Inter,Arial,sans-serif;font-size:13.5px;color:#d6d9e6;margin-top:3px;line-height:1.3}
 .card .go{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}
 .card .go svg{width:18px;height:18px}
@@ -166,9 +167,9 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
 .mv-price{font-size:6.9cqw;font-weight:800;line-height:1;letter-spacing:-.02em}
 .mv-price em{font-style:normal;font-size:.84em}
 .mv-price sup{font-size:.32em;vertical-align:top;position:relative;top:.25em}
-.mv-card.best .mv-price{color:#ffc61a}
-.mv-card.best .mv-price sup{color:#fff}
-.mv-title{font-size:max(11.5px,2.75cqw);font-weight:700;margin-top:1.8cqw}
+.mv-price{color:#ffc61a}
+.mv-bonus{font-size:max(11px,2.5cqw);font-weight:700;color:#fff;margin-top:1.2cqw;line-height:1.25}
+.mv-title{font-size:max(11.5px,2.75cqw);font-weight:700;margin-bottom:1.2cqw}
 .mv-desc{font-family:Inter,Arial,sans-serif;font-size:max(10.5px,2.35cqw);color:#cfd3e2;margin-top:1cqw;line-height:1.3}
 .mv-go{position:absolute;right:2cqw;top:50%;transform:translateY(-50%);width:max(24px,4.9cqw);height:max(24px,4.9cqw);border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
 .mv-go svg{width:55%;height:55%}
@@ -220,9 +221,9 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
 .pc .body{flex:1;min-width:0}
 .pc .price{font-size:31px;font-weight:800;line-height:1;letter-spacing:-.02em}
 .pc .price sup{font-size:.4em;vertical-align:top;position:relative;top:.2em}
-.pc.best .price{color:#ffc61a}
-.pc.best .price sup{color:#fff}
-.pc .title{font-size:16px;font-weight:700;margin-top:3px}
+.pc .price{color:#ffc61a}
+.pc .bonus{font-size:12.5px;font-weight:700;color:#fff;margin-top:3px}
+.pc .title{font-size:15px;font-weight:700;margin-bottom:2px}
 .pc .desc{font-family:Inter,Arial,sans-serif;font-size:13px;color:#e1e3ec;line-height:1.3;margin-top:2px}
 .pc .go{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
 .pc .go svg{width:16px;height:16px}
@@ -439,6 +440,30 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   .site-footer{padding-bottom:calc(50px + 80px + env(safe-area-inset-bottom))}
 }
 @media (min-width:761px){.mv-cta-fixed{display:none!important}}
+
+/* ---------- Plan terms ---------- */
+.terms-link{display:inline;background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.terms-btn{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-top:2px;background:none;border:0;padding:4px 2px;font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.terms-btn svg{width:15px;height:15px;color:var(--magenta)}
+.terms-overlay{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:24px 16px;background:rgba(6,8,22,.78);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.terms-overlay.open{display:flex}
+.terms-box{position:relative;width:100%;max-width:760px;max-height:min(80vh,720px);display:flex;flex-direction:column;background:#fff;color:#1b1f2c;border-radius:14px;border-top:4px solid var(--magenta);box-shadow:0 30px 90px rgba(0,0,0,.55);outline:none}
+.terms-box h2{font-family:Montserrat,Arial,sans-serif;font-size:22px;font-weight:800;padding:22px 56px 12px 24px;border-bottom:1px solid #eceef3}
+.terms-body{overflow-y:auto;overscroll-behavior:contain;padding:16px 24px 24px;font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.6;color:#3a3f4c}
+.terms-body p+p{margin-top:14px}
+.terms-body a{color:var(--magenta)}
+.terms-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:0;background:#f1f2f6;color:#1b1f2c;display:grid;place-items:center;cursor:pointer}
+.terms-close svg{width:16px;height:16px}
+@media (max-width:760px){
+  .terms-overlay{padding:12px;align-items:flex-end}
+  .terms-box{max-height:86vh;border-radius:14px}
+  .terms-box h2{font-size:19px;padding:18px 52px 10px 18px}
+  .terms-body{padding:14px 18px 20px;font-size:13px}
+}
+
+.dag{font-size:.7em;vertical-align:top;position:relative;top:-.1em}
+.mv-cards .terms-btn{font-size:max(12px,2.6cqw)}
+.pc-list .terms-btn{font-size:12.5px;margin-top:0}
 </style>
 </head>
 <body>
@@ -511,26 +536,27 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
       <div class="mv-table"></div>
       <div class="mv-router"><img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655"></div>
       <div class="mv-cards">
-        <button type="button" class="mv-card best active" data-offer="$35/mo - Free 5G Wi-Fi Equipment">
-          <span class="mv-tag">Best Value</span>
+        <button type="button" class="mv-card active" data-offer="$35/mo - Rely Home Internet">
+          <div class="mv-title">Rely Home Internet</div>
           <div class="mv-price">$35<em>/mo</em><sup>*</sup></div>
-          <div class="mv-title">Free 5G Wi-Fi Equipment</div>
-          <div class="mv-desc">With AutoPay and eligible voice line.</div>
+          <div class="mv-desc">With AutoPay, qualifying voice line + taxes and fees</div>
           <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
-        <button type="button" class="mv-card" data-offer="$45/mo - Plus $100 Prepaid Gift Card">
-          <span class="mv-gift"><b><small>$</small>100</b><i>Prepaid Gift Card</i></span>
+        <button type="button" class="mv-card" data-offer="$45/mo - Amplified Home Internet">
+          <div class="mv-title">Amplified Home Internet</div>
           <div class="mv-price">$45<em>/mo</em><sup>*</sup></div>
-          <div class="mv-title">Plus $100 Prepaid Gift Card</div>
-          <div class="mv-desc">With AutoPay and eligible voice line. Gift card with qualifying activation.</div>
+          <div class="mv-desc">With AutoPay, qualifying voice line + taxes and fees</div>
+          <div class="mv-bonus">+ $100 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div>
           <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
-        <button type="button" class="mv-card" data-offer="$50/mo - Standalone Home Internet">
-          <div class="mv-price">$50<em>/mo</em><sup>*</sup></div>
-          <div class="mv-title">Standalone Home Internet</div>
-          <div class="mv-desc">With AutoPay. No voice line required.</div>
+        <button type="button" class="mv-card" data-offer="$55/mo - All-In Home Internet">
+          <div class="mv-title">All-In Home Internet</div>
+          <div class="mv-price">$55<em>/mo</em><sup>*</sup></div>
+          <div class="mv-desc">With AutoPay, qualifying voice line + taxes and fees</div>
+          <div class="mv-bonus">+ $200 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div>
           <span class="mv-go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
       </div>
     </div>
 
@@ -550,7 +576,8 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
   <p class="mv-fine">
     Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualifed accounts.<br>
     *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a><br>
-    **Allow 10 weeks. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a>
+    **Allow 10 weeks. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a><br>
+    &dagger;Up to $200 via virtual prepaid Mastercard ($100: Rely; $100: Amplified; $200: All-In) for digital activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button>
   </p>
 </section>
 
@@ -603,35 +630,38 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
       </div>
 
       <div class="cards" role="radiogroup" aria-label="Home Internet offers">
-        <button type="button" class="card active" data-offer="$35/mo - Free 5G Wi-Fi Equipment" role="radio" aria-checked="true">
+        <button type="button" class="card active" data-offer="$35/mo - Rely Home Internet" role="radio" aria-checked="true">
           <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 23 24 7l18 16"/><path d="M11 19v22h26V19"/><path d="M20 41V29h8v12"/></svg>
           <div class="body">
+            <div class="title">Rely Home Internet</div>
             <div class="price">$35/mo<small>*</small></div>
-            <div class="title">Free 5G Wi-Fi Equipment</div>
-            <div class="desc">With AutoPay and eligible voice line.</div>
+            <div class="desc">With AutoPay, qualifying voice line + taxes and fees</div>
           </div>
           <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
         </button>
 
-        <button type="button" class="card" data-offer="$45/mo - Plus $100 Prepaid Gift Card" role="radio" aria-checked="false">
+        <button type="button" class="card" data-offer="$45/mo - Amplified Home Internet" role="radio" aria-checked="false">
           <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="17" width="36" height="9" rx="1"/><path d="M9 26v16h30V26"/><path d="M24 17v25"/><path d="M24 17c-3-7-11-9-11-4 0 3 5 4 11 4z"/><path d="M24 17c3-7 11-9 11-4 0 3-5 4-11 4z"/></svg>
           <div class="body">
+            <div class="title">Amplified Home Internet</div>
             <div class="price">$45/mo<small>*</small></div>
-            <div class="title">Plus $100 Prepaid Gift Card</div>
-            <div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation. Terms apply.</div>
+            <div class="desc">With AutoPay, qualifying voice line + taxes and fees</div>
+            <div class="bonus">+ $100 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div>
           </div>
           <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
         </button>
 
-        <button type="button" class="card" data-offer="$50/mo - Standalone Home Internet" role="radio" aria-checked="false">
-          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="21"/><path d="M12 21a17 17 0 0 1 24 0"/><path d="M16.5 26a11 11 0 0 1 15 0"/><path d="M21 31a5 5 0 0 1 6 0"/><circle cx="24" cy="35" r="1.4" fill="currentColor"/></svg>
+        <button type="button" class="card" data-offer="$55/mo - All-In Home Internet" role="radio" aria-checked="false">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24c-4.5-6-8-9-12-9a9 9 0 0 0 0 18c4 0 7.5-3 12-9s8-9 12-9a9 9 0 0 1 0 18c-4 0-7.5-3-12-9z"/></svg>
           <div class="body">
-            <div class="price">$50/mo<small>*</small></div>
-            <div class="title">Standalone Home Internet</div>
-            <div class="desc">With AutoPay. No voice line required.</div>
+            <div class="title">All-In Home Internet</div>
+            <div class="price">$55/mo<small>*</small></div>
+            <div class="desc">With AutoPay, qualifying voice line + taxes and fees</div>
+            <div class="bonus">+ $200 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div>
           </div>
           <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
         </button>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
       </div>
 
       <div class="router">
@@ -664,7 +694,8 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
       <p class="fine">
         Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualifed accounts.<br>
         *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a><br>
-        **Allow 10 weeks. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a>
+        **Allow 10 weeks. <a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">See Full Terms</a><br>
+    &dagger;Up to $200 via virtual prepaid Mastercard ($100: Rely; $100: Amplified; $200: All-In) for digital activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button>
       </p>
     </div>
 
@@ -711,11 +742,24 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     <div class="f-bottom">
       <p class="f-left"><a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a><a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a></p>
       <p class="f-copy"><span class="yr">2026</span> All Rights Reserved <a href="https://unlimited5ghomeinternet.com/" target="_blank" rel="noopener">Unlimited5GHomeInternet.com</a></p>
-      <p class="f-right"><a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a></p>
+      <p class="f-right"><a href="#plan-terms" data-terms>Plan Terms</a><a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a></p>
     </div>
   </div>
 </footer>
 <script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+
+
+<!-- ================= PLAN TERMS ================= -->
+<div class="terms-overlay" id="termsOverlay" aria-hidden="true">
+  <div class="terms-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle" tabindex="-1">
+    <button type="button" class="terms-close" aria-label="Close plan terms"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+    <h2 id="termsTitle">Plan terms</h2>
+    <div class="terms-body">
+      <p>Limited-time; subject to change. Qualifying credit, postpaid voice line, and new Internet line required. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Credits may take up to 2 bill cycles; credits will stop if you cancel any lines or change plans. Limit 1/account. May not be combined with some offers or discounts. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. Not available in all areas. $35 device connection charge due at sale. Plus taxes &amp; fees for accounts currently paying for a T-Mobile wireless line with additional taxes &amp; fees: Monthly Regulatory Programs &amp; Telco Recovery Fees totaling up to $2.60 per line, and federal and local surcharges apply. See Broadband Facts at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a>. Credit approval required. For use only with select T-Mobile Gateways for in-home use at location provided at activation; service restricted away from approved address. Return gateway undamaged or pay up to $370. Video streaming resolution depends on available speeds. For best performance, leave video streaming applications at their default resolution setting. Not compatible with some live TV streaming services. AutoPay Pricing for lines 1-8 on account. AutoPay discount requires bank account or debit card, otherwise $10 more/line/mo. May not be reflected on first bill. Network Management: Service may be slowed, suspended, terminated, or restricted for misuse, abnormal use, interference with our network or ability to provide quality service to other users. See <a href="https://www.t-mobile.com/OpenInternet" target="_blank" rel="noopener">T-Mobile.com/OpenInternet</a> for details. See Terms and Conditions (including arbitration provision) at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a> for additional information. 5-Year Price Guarantee means that we won&rsquo;t change the price of fixed-wireless 5G internet data for at least 5 years while you are on an eligible plan. Taxes &amp; fees, voluntary equipment or speed upgrades, future wireless generations, select limited-time promotions, per-use charges, third-party services, and network management practices aren&rsquo;t included. This guarantee starts when you activate or switch to an eligible plan and doesn&rsquo;t restart if you add a line or change plans after that.</p>
+      <p>Limited-time; subject to change. Month On Us: With one-time bill credit equal to monthly rate plus fees after AutoPay and other applicable discounts. Qualifying new Internet line required. Enter promotional code at checkout. Not transferrable. Allow 2 bill cycles for credit. Limit 2/account. May not be combined with some offers or discounts. Up to $200 Back: Available for digital activations ($100: Rely; $100: Amplified; $200: All-In), not available in retail. Register code within 30 days of activating qualifying new Home Internet line. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Up to $200 via virtual prepaid Mastercard; use online or in-store via accepted mobile payment apps; no cash access &amp; expires in 6 months. The Virtual Prepaid Mastercard is issued by Sunrise Banks N.A., Member FDIC, pursuant to a license from Mastercard International Incorporated. Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Incorporated. This card may be used everywhere Debit Mastercard is accepted. Registration, activation, acceptance, or use of this card constitutes acceptance of the terms and conditions stated in the Prepaid Card Agreement. This promotion is not associated, sponsored, or endorsed by Mastercard or Sunrise Banks N.A. Lines must be active and in good standing when card is issued. Max 1/account. May not be combined with some offers, discounts, or promotions.</p>
+    </div>
+  </div>
+</div>
 
 <!-- ================= POPUP FORM ================= -->
 <div class="pop-overlay" id="popOverlay" aria-hidden="true">
@@ -729,23 +773,22 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
       <p class="pop-sub m-only">3 Great Offers. Choose the One That&rsquo;s Right for You.</p>
 
       <div class="pc-list d-only">
-        <button type="button" class="pc best active" data-offer="$35/mo - Free 5G Wi-Fi Equipment">
-          <span class="pc-tag">Best Value</span>
+        <button type="button" class="pc active" data-offer="$35/mo - Rely Home Internet">
           <svg class="ico"><use href="#i-home"/></svg>
-          <div class="body"><div class="price">$35/mo<sup>*</sup></div><div class="title">Free 5G Wi-Fi Equipment</div><div class="desc">With AutoPay and eligible voice line.</div></div>
+          <div class="body"><div class="title">Rely Home Internet</div><div class="price">$35/mo<sup>*</sup></div><div class="desc">With AutoPay, qualifying voice line + taxes and fees</div></div>
           <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
-        <button type="button" class="pc" data-offer="$45/mo - Plus $100 Prepaid Gift Card">
-          <span class="pc-gift"><b>$100</b><i>Gift Card</i></span>
+        <button type="button" class="pc" data-offer="$45/mo - Amplified Home Internet">
           <svg class="ico"><use href="#i-gift"/></svg>
-          <div class="body"><div class="price">$45/mo<sup>*</sup></div><div class="title">Plus $100 Prepaid Gift Card</div><div class="desc">With AutoPay and eligible voice line.<br>Gift card with qualifying activation.</div></div>
+          <div class="body"><div class="title">Amplified Home Internet</div><div class="price">$45/mo<sup>*</sup></div><div class="desc">With AutoPay, qualifying voice line + taxes and fees</div><div class="bonus">+ $100 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div></div>
           <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
-        <button type="button" class="pc" data-offer="$50/mo - Standalone Home Internet">
-          <svg class="ico"><use href="#i-wifi"/></svg>
-          <div class="body"><div class="price">$50/mo<sup>*</sup></div><div class="title">Standalone Home Internet</div><div class="desc">With AutoPay. No voice line required.</div></div>
+        <button type="button" class="pc" data-offer="$55/mo - All-In Home Internet">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24c-4.5-6-8-9-12-9a9 9 0 0 0 0 18c4 0 7.5-3 12-9s8-9 12-9a9 9 0 0 1 0 18c-4 0-7.5-3-12-9z"/></svg>
+          <div class="body"><div class="title">All-In Home Internet</div><div class="price">$55/mo<sup>*</sup></div><div class="desc">With AutoPay, qualifying voice line + taxes and fees</div><div class="bonus">+ $200 virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div></div>
           <span class="go"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></span>
         </button>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
       </div>
 
       <div class="pop-bottom">
@@ -904,7 +947,7 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     host.addEventListener(ev,function(){formActiveAt=Date.now()},{passive:true});
   });
   function canPop(){
-    if(overlay.classList.contains('open')||leadSubmitted()) return false;
+    if(overlay.classList.contains('open')||leadSubmitted()||(window.__termsOpen&&window.__termsOpen())) return false;
     return Date.now()-formActiveAt>15000;
   }
   function tryAuto(){
@@ -947,6 +990,19 @@ h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-
     lastY=y; lastT=t;
   },{passive:true});
   markRows();
+})();
+</script>
+<script>
+(function(){
+  // Plan terms modal: any [data-terms] element opens it
+  var ov=document.getElementById('termsOverlay'), box=ov.querySelector('.terms-box'), last=null;
+  function open(e){ if(e) e.preventDefault(); last=document.activeElement; ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; box.querySelector('.terms-body').scrollTop=0; box.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true'); if(!document.querySelector('.pop-overlay.open')) document.documentElement.style.overflow=''; if(last) last.focus(); }
+  document.addEventListener('click',function(e){ var t=e.target.closest('[data-terms]'); if(t){ e.stopPropagation(); open(e); } },true);
+  ov.querySelector('.terms-close').addEventListener('click',close);
+  ov.addEventListener('mousedown',function(e){ if(e.target===ov) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')){ e.stopImmediatePropagation(); close(); } },true);
+  window.__termsOpen=function(){return ov.classList.contains('open')};
 })();
 </script>
 <script src="https://link.leadstacker.com/js/form_embed.js"></script>
