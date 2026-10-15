@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>T-Mobile 5G Home Internet $35/mo + $100 Back | Collins Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#e20074;
+  --magenta-2:#ff1493;
+  --navy:#0a1330;
+  --navy-2:#0e1a3d;
+  --yellow:#ffc107;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--navy);color:#fff;font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+
+/* ---------- Header ---------- */
+.header{background:#fff;height:70px}
+.header .wrap{max-width:1000px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.logo-collins{display:block;line-height:0}
+.logo-collins svg{height:52px;width:auto}
+.header-right{display:flex;align-items:center;gap:56px}
+.logo-tm{display:flex;flex-direction:column;align-items:flex-end}
+.logo-tm img{height:34px;width:auto}
+.logo-tm span{font-family:Arial,sans-serif;font-size:7.5px;font-weight:700;letter-spacing:.3px;color:var(--magenta);text-transform:uppercase;margin-top:1px}
+.call-btn{display:inline-flex;align-items:center;gap:8px;background:#0b0b0b;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 16px;border-radius:7px;white-space:nowrap}
+.call-btn svg{width:16px;height:16px}
+
+/* ---------- Promo bar ---------- */
+.promo-bar{background:var(--magenta);min-height:39px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 28px;padding:6px 16px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.2px;text-align:center}
+.promo-bar .sep{width:1px;height:20px;background:rgba(255,255,255,.55)}
+.promo-bar .count{color:var(--yellow);text-decoration:underline;text-underline-offset:3px;font-size:17px;font-weight:800}
+.promo-bar .lt{font-weight:500}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(ellipse 45% 30% at 52% 92%, rgba(226,0,116,.55), transparent 70%),
+  radial-gradient(ellipse 60% 50% at 20% 70%, rgba(226,0,116,.22), transparent 70%),
+  radial-gradient(ellipse 50% 60% at 75% 20%, rgba(60,40,140,.35), transparent 70%),
+  linear-gradient(180deg,#0b1532 0%,#0a1330 60%,#120d2c 100%)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;max-width:1600px;margin:0 auto;padding:18px 78px 16px 115px;display:grid;grid-template-columns:minmax(0,1fr) 490px;gap:32px;align-items:start}
+
+.left{display:grid;grid-template-columns:480px minmax(0,1fr);grid-template-areas:"top top" "cards router" "feats feats" "fine fine";column-gap:0}
+.left-top{grid-area:top;padding-top:14px}
+.eyebrow{font-size:clamp(14px,1.15vw,18px);font-weight:700;text-transform:uppercase;letter-spacing:.2px}
+.eyebrow u{color:var(--yellow);text-underline-offset:3px}
+h1{font-weight:800;line-height:1.08;margin-top:8px}
+h1 .l1{display:block;font-size:clamp(30px,3.65vw,56px);letter-spacing:-.3px}
+h1 .l2{display:block;font-size:clamp(34px,3.85vw,60px);color:var(--yellow);font-weight:900}
+.sub{font-size:clamp(17px,1.65vw,25px);font-weight:700;margin-top:4px}
+
+.cards{grid-area:cards;display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.card{position:relative;display:flex;align-items:center;gap:20px;padding:10px 16px 10px 20px;border-radius:7px;background:rgba(14,22,52,.82);border:1.5px solid rgba(255,255,255,.12);cursor:pointer;text-align:left;color:#fff;font-family:inherit;width:100%;transition:border-color .2s, background .2s}
+.card:hover{border-color:rgba(226,0,116,.6)}
+.card.active{background:linear-gradient(90deg,rgba(120,10,90,.85),rgba(70,10,70,.8));border-color:var(--magenta)}
+.card .ico{flex:0 0 48px;width:48px;height:48px;color:var(--magenta)}
+.card .body{flex:1;min-width:0}
+.card .price{font-size:clamp(28px,2.4vw,37px);font-weight:800;color:var(--yellow);line-height:1}
+.card .price small{font-size:.5em;color:#fff;vertical-align:top;position:relative;top:2px;margin-left:1px}
+.card .title{font-size:17px;font-weight:700;margin:0 0 3px}
+.card .bonus{font-size:14px;font-weight:700;color:#fff;margin-top:5px}
+.card .price small{color:var(--yellow)}
+.card .desc{font-family:Inter,Arial,sans-serif;font-size:13.5px;color:#d6d9e6;margin-top:3px;line-height:1.3}
+.card .go{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.card .go svg{width:18px;height:18px}
+
+.router{grid-area:router;align-self:end;position:relative;display:flex;justify-content:center;margin:-70px 0 6px 20px}
+.router::before{content:"";position:absolute;left:50%;bottom:-14px;width:115%;height:70px;transform:translateX(-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,40,150,.85),rgba(226,0,116,.35) 45%,transparent 72%);filter:blur(6px);pointer-events:none}
+.router img{position:relative;height:auto;width:auto;max-height:350px;max-width:100%;transform:scaleX(-1);filter:drop-shadow(10px 0 22px rgba(255,30,150,.55)) drop-shadow(0 18px 18px rgba(0,0,0,.45))}
+
+.feats{grid-area:feats;display:flex;flex-wrap:wrap;row-gap:14px;margin-top:12px}
+.feat{display:flex;align-items:center;gap:10px;padding:4px 10px;border-left:1px solid rgba(255,255,255,.18);flex:1 1 auto;min-width:max-content}
+.feat.row-start{border-left:0;padding-left:0}
+.feat:first-child{border-left:0;padding-left:0}
+.feat .fi{flex:0 0 46px;width:46px;height:46px;border:2px solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+.feat .fi svg{width:26px;height:26px}
+.feat p{font-size:13px;font-weight:500;line-height:1.25;white-space:nowrap}
+.feat b{font-weight:700}
+
+.fine{grid-area:fine;font-family:Inter,Arial,sans-serif;font-size:10.5px;color:#c9cdda;line-height:1.45;margin-top:18px}
+.fine a{color:#fff}
+
+/* ---------- Form panel ---------- */
+.panel{margin-top:16px;background:rgba(10,18,44,.92);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px 32px 22px}
+.panel h2{text-align:center;font-size:clamp(22px,1.75vw,27px);font-weight:700;line-height:1.2;margin-bottom:18px}
+.field{position:relative;margin-bottom:8px}
+.field input,.field select{width:100%;height:39px;border:1px solid #d7dae2;border-radius:3px;background:#fff;color:#222;font-family:Inter,Arial,sans-serif;font-size:13px;padding:0 12px 0 40px;outline:none}
+.field input::placeholder{color:#6b6f7a}
+.field input:focus,.field select:focus{border-color:var(--magenta);box-shadow:0 0 0 2px rgba(226,0,116,.25)}
+.field .fic{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#6b6f7a;pointer-events:none}
+.field.phone input{padding-left:52px}
+.field .flag{position:absolute;left:10px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:5px;pointer-events:none}
+.field .flag svg.us{width:18px;height:12px}
+.field .flag svg.car{width:8px;height:8px;color:#555}
+.field select{padding-left:12px;appearance:none;-webkit-appearance:none;color:#6b6f7a;cursor:pointer}
+.field select.chosen{color:#222}
+.field .chev{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#222;pointer-events:none}
+.field.invalid input,.field.invalid select{border-color:#ff4d6d;box-shadow:0 0 0 2px rgba(255,77,109,.3)}
+.submit{width:100%;height:65px;margin-top:4px;border:0;border-radius:4px;background:var(--magenta);color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:clamp(18px,1.4vw,21px);display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background .2s}
+.submit:hover{background:#c80067}
+.submit svg{width:20px;height:20px}
+.consent{display:flex;gap:10px;margin-top:20px;font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.38;color:#dfe2ea}
+.consent input{flex:0 0 13px;width:13px;height:13px;margin-top:2px;accent-color:var(--magenta)}
+.consent a{color:#4ea3ff}
+.consent.invalid input{outline:2px solid #ff4d6d}
+.form-msg{display:none;margin-top:12px;padding:10px 12px;border-radius:4px;background:rgba(255,255,255,.08);font-size:13px;text-align:center}
+.form-msg.show{display:block}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1380px){
+  .hero .wrap{padding:18px 32px 16px}
+  .left{grid-template-columns:minmax(0,440px) minmax(0,1fr)}
+}
+@media (max-width:1180px){
+  .hero .wrap{grid-template-columns:1fr;max-width:820px}
+  .panel{max-width:560px;width:100%;margin:8px auto 0}
+}
+@media (max-width:760px){
+  .header{height:auto}
+  .header .wrap{height:min(15vw,96px);padding:0 3.5vw}
+  .logo-collins svg{height:min(9vw,56px)}
+  .header-right{gap:0}
+  .logo-tm img{height:min(6.6vw,40px)}
+  .logo-tm span{font-size:clamp(6px,1.75vw,10px)}
+  .call-btn,.promo-bar,.hero{display:none!important}
+  .mv{display:block!important}
+}
+@media (max-width:360px){
+  .feat{flex-basis:100%}
+  .card .ico{display:none}
+}
+
+/* ================= MOBILE PAGE (<=760) ================= */
+.mv{display:none;background:
+  radial-gradient(ellipse 38% 16% at 88% 14%, rgba(255,70,180,.55), transparent 70%),
+  radial-gradient(ellipse 45% 22% at 100% 34%, rgba(200,30,140,.45), transparent 70%),
+  radial-gradient(ellipse 60% 16% at 78% 64%, rgba(255,40,150,.32), transparent 70%),
+  radial-gradient(ellipse 50% 30% at 0% 40%, rgba(70,40,130,.3), transparent 70%),
+  linear-gradient(180deg,#0b0e24 0%,#16122f 55%,#0c0e22 100%)}
+.mv-ticker{background:var(--magenta);overflow:hidden;white-space:nowrap;height:clamp(28px,6.4vw,42px);display:flex;align-items:center}
+.mv-track{display:inline-flex;animation:mvTick 22s linear infinite}
+.mv-track span{display:inline-flex;align-items:center;font-weight:800;font-size:clamp(11px,2.5vw,16px);text-transform:uppercase;letter-spacing:.01em}
+.mv-track span::after{content:"";width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.7);margin:0 clamp(12px,3.2vw,22px)}
+@keyframes mvTick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mv-track{animation:none}}
+
+.mv-in{position:relative;max-width:560px;margin:0 auto;container-type:inline-size}
+.mv-glow{position:absolute;top:2cqw;right:0;width:46cqw;height:52cqw;pointer-events:none;opacity:.55;
+  background:repeating-linear-gradient(90deg,rgba(255,170,225,.16) 0 2px,transparent 2px 11cqw),repeating-linear-gradient(0deg,rgba(255,170,225,.12) 0 2px,transparent 2px 13cqw);
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 70% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 70% 40%,#000,transparent 75%);filter:blur(1.5px)}
+.mv-h1{position:relative;margin:0 5cqw;padding-top:6.8cqw;font-size:9.6cqw;line-height:.98;font-weight:800;letter-spacing:-.025em}
+.mv-sub{position:relative;margin:2.4cqw 5cqw 0;font-size:max(14px,3.8cqw);font-weight:600;line-height:1.22}
+.mv-offers{position:relative;margin-top:3cqw;padding:2cqw 0 0 3.9cqw}
+.mv-cards{position:relative;z-index:2;width:51.7cqw;display:flex;flex-direction:column;gap:1.8cqw}
+.mv-card{position:relative;display:block;width:100%;text-align:left;font-family:inherit;color:#fff;cursor:pointer;
+  background:rgba(16,18,40,.9);border:1.5px solid rgba(255,255,255,.14);border-radius:1.6cqw;padding:3.6cqw 7.4cqw 3cqw 3cqw}
+.mv-card.active{border:2px solid #ffcc1f;box-shadow:0 0 0 1px rgba(255,204,31,.25)}
+.mv-tag{position:absolute;top:-2.1cqw;left:2.2cqw;background:var(--magenta);color:#fff;font-weight:800;font-size:max(10px,2.2cqw);line-height:1;padding:.9cqw 1.6cqw;border-radius:.6cqw;text-transform:uppercase;letter-spacing:.02em}
+.mv-price{font-size:6.9cqw;font-weight:800;line-height:1;letter-spacing:-.02em}
+.mv-price em{font-style:normal;font-size:.84em}
+.mv-price sup{font-size:.32em;vertical-align:top;position:relative;top:.25em}
+.mv-price{color:#ffc61a}
+.mv-bonus{font-size:max(11px,2.5cqw);font-weight:700;color:#fff;margin-top:1.2cqw;line-height:1.25}
+.mv-title{font-size:max(11.5px,2.75cqw);font-weight:700;margin-bottom:1.2cqw}
+.mv-desc{font-family:Inter,Arial,sans-serif;font-size:max(10.5px,2.35cqw);color:#cfd3e2;margin-top:1cqw;line-height:1.3}
+.mv-go{position:absolute;right:2cqw;top:50%;transform:translateY(-50%);width:max(24px,4.9cqw);height:max(24px,4.9cqw);border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
+.mv-go svg{width:55%;height:55%}
+.mv-gift{position:absolute;top:.2cqw;right:2.6cqw;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:.8cqw;padding:1cqw 1.6cqw .9cqw;text-align:center;line-height:1;box-shadow:0 1cqw 2cqw rgba(0,0,0,.35)}
+.mv-gift b{display:block;font-size:max(13px,4.4cqw);font-weight:800;letter-spacing:-.02em}
+.mv-gift b small{font-size:.55em;vertical-align:top;position:relative;top:.15em}
+.mv-gift i{display:block;font-style:normal;font-size:max(4.5px,1.05cqw);font-weight:800;text-transform:uppercase;margin-top:.5cqw}
+.mv-router{position:absolute;z-index:1;right:3.9cqw;bottom:4.8cqw;width:37.8cqw;filter:drop-shadow(-2cqw 0 4cqw rgba(255,40,160,.5))}
+.mv-router img{width:100%;height:auto;transform:scaleX(-1)}
+.mv-table{position:absolute;z-index:0;left:44cqw;right:0;bottom:-.8cqw;height:12.8cqw;border-radius:1.2cqw 0 0 0;
+  background:linear-gradient(180deg,#6b3048 0%,#40192d 30%,#24101f 100%);box-shadow:inset 0 .5cqw 0 rgba(255,140,200,.45)}
+.mv-table::before{content:"";position:absolute;left:14cqw;right:2cqw;top:-2cqw;height:7cqw;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,60,170,.75),transparent 70%);filter:blur(4px)}
+.mv-feats{display:flex;align-items:center;justify-content:space-between;margin:4.6cqw 3cqw 0 4.5cqw}
+.mv-feat{display:flex;align-items:center;gap:1.8cqw;min-width:0}
+.mv-sep{width:1px;align-self:stretch;margin:0 1.8cqw;background:rgba(255,255,255,.2)}
+.mv-fi{flex:0 0 auto;width:8.4cqw;height:8.4cqw;border:max(2px,.45cqw) solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+.mv-fi svg{width:55%;height:55%}
+.mv-feat p{font-size:max(9px,2.4cqw);font-weight:500;line-height:1.25;color:#e6e8f0;white-space:nowrap}
+@container (max-width:380px){.mv-feat p{white-space:normal}}
+.mv-feat b{font-weight:700;color:#fff}
+.mv-cta{display:flex;align-items:center;justify-content:center;gap:2.6cqw;margin:4.4cqw auto 0;width:89.6cqw;height:13.9cqw;min-height:52px;border:0;border-radius:1.6cqw;cursor:pointer;position:sticky;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;overflow:hidden;
+  background:linear-gradient(100deg,#ff1a94 0%,#e20074 55%,#d0006b 100%);color:#fff;font:800 max(18px,5.1cqw) Montserrat,Arial,sans-serif;box-shadow:0 1.2cqw 3.5cqw rgba(226,0,116,.45)}
+.mv-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 55%,rgba(255,255,255,.14) 55% 70%,transparent 70%)}
+.mv-cta svg{width:max(20px,5.4cqw);height:max(20px,5.4cqw)}
+.mv-cta-sub{text-align:center;color:#c9ccd8;font-size:max(12px,2.8cqw);font-weight:500;margin-top:3.6cqw;padding-bottom:7cqw}
+.mv-strip{height:clamp(18px,5.5vw,34px);background:linear-gradient(100deg,#9a0b62 0%,#e20074 30%,#ff2a97 52%,#5a0d4b 52.4%,#3a0a3a 60%,#e20074 60.4%,#c8006a 100%)}
+.mv-fine{max-width:560px;margin:0 auto;padding:16px;font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.45;color:#c9cdda}
+.mv-fine a{color:#fff}
+
+/* ================= POPUP ================= */
+.pop-overlay{position:fixed;inset:0;z-index:1000;display:none;overflow-y:auto;padding:32px 24px;background:rgba(6,8,22,.74);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.pop-overlay.open{display:flex}
+.pop{position:relative;margin:auto;width:100%;max-width:880px;display:grid;grid-template-columns:53fr 47fr;background:#fff;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.55);container-type:inline-size;outline:none}
+.pop .m-only{display:none}
+.pop-close{position:absolute;z-index:5;top:-10px;right:-12px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#111;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.pop-close svg{width:20px;height:20px}
+
+.pop-l{position:relative;overflow:hidden;border-radius:18px 0 0 18px;color:#fff;padding:26px 22px 0;
+  background:radial-gradient(ellipse 70% 22% at 25% 100%,rgba(226,0,116,.6),transparent 70%),radial-gradient(ellipse 60% 25% at 100% 78%,rgba(226,0,116,.3),transparent 70%),linear-gradient(180deg,#0a0e25 0%,#0e1230 60%,#190d2c 100%)}
+.pop-badge{display:flex;align-items:center;justify-content:center;gap:8px;height:32px;margin:0 22px;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.01em;
+  background:linear-gradient(90deg,transparent,#b8006a 14%,#e20074 50%,#b8006a 86%,transparent)}
+.pop-badge svg{width:18px;height:18px}
+.pop-h{text-align:center;font-weight:800;font-size:46px;line-height:1;letter-spacing:-.03em;margin-top:12px}
+.pop-sub{text-align:center;font-size:21px;font-weight:600;line-height:1.2;margin-top:10px}
+.pc-list{display:flex;flex-direction:column;gap:9px;margin-top:20px}
+.pc{position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:11px 14px 11px 14px;border-radius:10px;background:rgba(12,16,38,.88);border:1.5px solid rgba(255,255,255,.2);color:#fff;text-align:left;font-family:inherit;cursor:pointer}
+.pc.active{border:2px solid #ffcc1f}
+.pc .ico{flex:0 0 44px;width:44px;height:44px;color:var(--magenta)}
+.pc .body{flex:1;min-width:0}
+.pc .price{font-size:31px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.pc .price sup{font-size:.4em;vertical-align:top;position:relative;top:.2em}
+.pc .price{color:#ffc61a}
+.pc .bonus{font-size:12.5px;font-weight:700;color:#fff;margin-top:3px}
+.pc .title{font-size:15px;font-weight:700;margin-bottom:2px}
+.pc .desc{font-family:Inter,Arial,sans-serif;font-size:13px;color:#e1e3ec;line-height:1.3;margin-top:2px}
+.pc .go{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.13);display:grid;place-items:center}
+.pc .go svg{width:16px;height:16px}
+.pc-tag{position:absolute;top:-12px;left:24px;background:var(--magenta);color:#fff;font-size:13px;font-weight:800;line-height:1;padding:5px 9px;border-radius:5px;text-transform:uppercase}
+.pc-gift{position:absolute;top:2px;left:235px;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:6px;padding:5px 10px 4px;text-align:center;line-height:1;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.pc-gift b{display:block;font-size:20px;font-weight:800}
+.pc-gift i{display:block;font-style:normal;font-size:9.5px;font-weight:800;text-transform:uppercase;margin-top:1px}
+.pop-bottom{position:relative;display:flex;justify-content:flex-end;margin-top:16px;min-height:236px}
+.pop-router{position:absolute;left:14px;bottom:0;width:150px;filter:drop-shadow(-6px 0 18px rgba(255,40,160,.55))}
+.pop-router img{width:100%;height:auto;transform:scaleX(-1);display:block}
+.pop-bottom::before{content:"";position:absolute;left:-30px;bottom:-26px;width:300px;height:70px;border-radius:50%;border:2px solid rgba(255,60,170,.7);box-shadow:0 0 18px rgba(255,40,160,.7),inset 0 0 18px rgba(255,40,160,.5);filter:blur(.5px)}
+.pop-feats{display:flex;flex-direction:column;gap:12px;width:52%;padding-bottom:18px}
+.pop-feat{display:flex;align-items:center;gap:12px}
+.pop-feat .fi{flex:0 0 48px;width:48px;height:48px;border:3px solid var(--magenta);border-radius:50%;background:rgba(20,8,30,.6);display:grid;place-items:center;color:var(--magenta)}
+.pop-feat .fi svg{width:26px;height:26px}
+.pop-feat p{font-size:14.5px;line-height:1.15;font-weight:500}
+.pop-feat b{font-weight:700}
+
+.pop-r{padding:30px 28px 22px;color:#0d1330}
+.pop-step{font-size:12.5px;font-weight:600;color:#333;letter-spacing:.3px;text-transform:uppercase}
+.pop-bar{width:214px;height:6px;border-radius:3px;background:#e6e8ee;margin-top:9px;overflow:hidden}
+.pop-bar i{display:block;height:100%;width:40%;background:var(--magenta);border-radius:3px;transition:width .4s}
+.pop-r h3{margin-top:28px;font-weight:800;font-size:39px;line-height:1.02;letter-spacing:-.03em;color:#0d1330}
+.pop-r h3 span{display:block;font-size:27px;font-weight:700;letter-spacing:-.01em;margin-top:4px}
+.pop-intro{font-family:Inter,Arial,sans-serif;font-size:15.5px;color:#2b2f3a;line-height:1.4;margin:10px 0 18px}
+.pf-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px}
+.pf{position:relative;grid-column:span 12}
+.pf input,.pf select{width:100%;height:42px;border:1.5px solid #cfd3dc;border-radius:6px;background:#fff;color:#111;font-family:Inter,Arial,sans-serif;font-size:15px;padding:0 12px 0 42px;outline:none}
+.pf input::placeholder{color:#6b7080}
+.pf input:focus,.pf select:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(226,0,116,.18)}
+.pf .fic{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:#6b7080;pointer-events:none}
+.pf.phone input{padding-left:92px}
+.pf .flag{position:absolute;left:42px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:6px;pointer-events:none}
+.pf .flag .us{width:21px;height:14px}
+.pf .flag .car{width:8px;height:8px;color:#444}
+.pf select{appearance:none;-webkit-appearance:none;color:#6b7080;cursor:pointer}
+.pf select.chosen{color:#111}
+.pf .chev{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#444;pointer-events:none}
+.pf.invalid input,.pf.invalid select{border-color:#ff3b5c;box-shadow:0 0 0 3px rgba(255,59,92,.15)}
+.pop-cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:58px;margin-top:16px;border:0;border-radius:6px;background:var(--magenta);color:#fff;font:700 21px Montserrat,Arial,sans-serif;cursor:pointer;transition:background .2s}
+.pop-cta:hover{background:#c80067}
+.pop-cta svg{width:22px;height:22px}
+.pop-trust{display:flex;align-items:center;justify-content:space-between;margin-top:18px}
+.pop-trust > div{display:flex;align-items:center;gap:8px;font-family:Inter,Arial,sans-serif;font-size:11px;line-height:1.3;color:#1b1f2c}
+.pop-trust svg{flex:0 0 auto;width:26px;height:26px;color:#0d1330}
+.pop-trust .sep{width:1px;height:34px;background:#d9dce3;flex:0 0 1px}
+.pop-consent{font-family:Inter,Arial,sans-serif;font-size:10.5px;line-height:1.45;color:#4a4f5c;margin-top:16px}
+.pop-consent a{color:#1b1f2c}
+.pop-msg{display:none;margin-top:12px;padding:10px 12px;border-radius:6px;background:#fdeaf3;color:#7a0040;font-family:Inter,Arial,sans-serif;font-size:13.5px;text-align:center}
+.pop-msg.show{display:block}
+.pm-list.invalid .pm{border-color:#ff3b5c}
+
+@media (max-width:860px) and (min-width:761px){
+  .pop-h{font-size:40px}.pop-r h3{font-size:34px}
+  .pc-gift{left:auto;right:58px}
+}
+
+/* ---------- Popup: mobile ---------- */
+@media (max-width:760px){
+  .pop-overlay{padding:12px}
+  .pop{grid-template-columns:minmax(0,1fr);max-width:520px;border-radius:3.6cqw;overflow:hidden}
+  .pop .d-only,.pop-bottom{display:none!important}
+  .pop .m-only{display:block}
+  .pop-l{border-radius:0;padding:0 0 9cqw;min-height:46cqw;
+    background:radial-gradient(circle at 80% 54%,rgba(226,0,116,.9) 0 18cqw,rgba(226,0,116,.35) 21.5cqw,transparent 27cqw),radial-gradient(ellipse 60% 50% at 100% 0%,rgba(110,40,160,.35),transparent 70%),linear-gradient(180deg,#0b0f27,#10122d)}
+  .pop-badge{margin:0;height:8.6cqw;min-height:36px;font-size:max(15px,3.6cqw);background:var(--magenta);gap:1.6cqw}
+  .pop-badge svg{width:max(16px,3.4cqw);height:max(16px,3.4cqw)}
+  .pop-badge .o{color:#ffd21f}
+  .pop-close{top:0;right:1.5cqw;width:max(36px,8.6cqw);height:max(36px,8.6cqw);background:transparent;color:#fff;box-shadow:none}
+  .pop-close svg{width:max(18px,4cqw);height:max(18px,4cqw)}
+  .pop-h{text-align:left;font-size:6.7cqw;margin:4.8cqw 0 0 4.7cqw;max-width:58cqw;line-height:1.02}
+  .pop-sub{text-align:left;font-size:max(13px,3.5cqw);margin:2.6cqw 0 0 4.7cqw;max-width:53cqw;line-height:1.25}
+  .pop-router{left:auto;right:5.4cqw;top:12.5cqw;bottom:auto;width:28.5cqw;z-index:3;filter:drop-shadow(0 2cqw 3cqw rgba(0,0,0,.4))}
+  .pop-router img{transform:none}
+  .pop-r{position:relative;z-index:2;margin-top:-5cqw;background:#fff;border-radius:3.6cqw 3.6cqw 0 0;padding:1.8cqw 3.9cqw 4cqw}
+  .pm-list{display:flex!important;flex-direction:column;gap:1.8cqw}
+  .pm{position:relative;display:flex;align-items:center;gap:3.6cqw;padding:2.6cqw 3cqw 2.6cqw 4cqw;border:1.5px solid #cfd3dc;border-radius:1.6cqw;cursor:pointer;background:#fff}
+  .pm.on{background:#fde8f3;border:max(2px,.35cqw) solid var(--magenta)}
+  .pm input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:max(22px,5.2cqw);height:max(22px,5.2cqw);border:2px solid #8a8f9c;border-radius:50%;margin:0;cursor:pointer}
+  .pm input:checked{border:max(3px,.55cqw) solid var(--magenta);background:radial-gradient(circle,var(--magenta) 0 48%,#fff 52%)}
+  .pm input:focus-visible{outline:2px solid var(--magenta);outline-offset:2px}
+  .pm .body{flex:1;min-width:0}
+  .pm .price{display:flex;flex-wrap:wrap;align-items:center;gap:1.5cqw 3cqw;font-size:max(24px,5.6cqw);font-weight:800;line-height:1;color:#11152b;letter-spacing:-.02em}
+  .pm .price sup{font-size:.4em;vertical-align:top;position:relative;top:-.5em}
+  .pm.on .price .amt{color:var(--magenta)}
+  .pm .bv{font-size:max(10px,2.3cqw);font-weight:800;color:#fff;background:var(--magenta);padding:.8cqw 1.6cqw;border-radius:.6cqw;letter-spacing:0;text-transform:uppercase}
+  .pm .gift{position:relative;top:-.6cqw;transform:rotate(-8deg);background:linear-gradient(135deg,#ff2d95,#e20074);border-radius:.8cqw;padding:.7cqw 2cqw .6cqw;text-align:center;line-height:1;color:#fff;box-shadow:0 1cqw 2cqw rgba(0,0,0,.25)}
+  .pm .gift b{display:block;font-size:max(14px,3.8cqw);font-weight:800}
+  .pm .gift i{display:block;font-style:normal;font-size:max(7px,1.8cqw);font-weight:800;text-transform:uppercase}
+  .pm .title{font-size:max(13.5px,3cqw);font-weight:700;color:#11152b;margin-top:.8cqw}
+  .pm .desc{font-family:Inter,Arial,sans-serif;font-size:max(11.5px,2.5cqw);color:#333846;line-height:1.3;margin-top:.4cqw}
+  .pm .desc a{color:#333846}
+  .pm .ico{flex:0 0 auto;width:max(32px,8.3cqw);height:max(32px,8.3cqw);color:var(--magenta)}
+  .pop-r form{margin-top:2.2cqw}
+  .pf-grid{gap:2.2cqw 1.6cqw}
+  .pf.half{grid-column:span 6}
+  .pf.addr{grid-column:span 7}
+  .pf.zip{grid-column:span 5}
+  .pf input{height:max(44px,7.6cqw);font-size:16px;padding-left:max(38px,8.5cqw)}
+  .pf .fic{left:2.6cqw;width:max(18px,3.6cqw);height:max(18px,3.6cqw)}
+  .pf.phone input{padding-left:max(88px,17cqw)}
+  .pf .flag{left:max(38px,8.5cqw)}
+  .pm-feats{display:flex!important;align-items:center;justify-content:space-between;margin-top:3.4cqw}
+  .pm-feats .f{display:flex;align-items:center;gap:1.8cqw;min-width:0}
+  .pm-feats .fi{flex:0 0 auto;width:max(34px,8.3cqw);height:max(34px,8.3cqw);border:max(2px,.45cqw) solid var(--magenta);border-radius:50%;display:grid;place-items:center;color:var(--magenta)}
+  .pm-feats .fi svg{width:55%;height:55%}
+  .pm-feats p{font-size:max(9px,2.25cqw);line-height:1.25;color:#11152b;white-space:nowrap}
+  .pm-feats b{font-weight:700}
+  @container (max-width:360px){.pm-feats p{white-space:normal}.pm{gap:2.4cqw;padding-left:3cqw}.pm .ico{width:28px;height:28px}.pf.addr,.pf.zip{grid-column:span 6}}
+  .pm-feats .sep{width:1px;align-self:stretch;margin:0 1.6cqw;background:#d9dce3}
+  .pop-cta{height:max(52px,9.7cqw);margin-top:3.6cqw;border-radius:1.2cqw;font-size:max(18px,3.9cqw);font-weight:800;flex-direction:row-reverse}
+  .pop-trust{justify-content:center;gap:2.6cqw;margin-top:3.6cqw}
+  .pop-trust > div{font-size:max(9.5px,1.8cqw);gap:1.4cqw}
+  .pop-trust > div br{display:none}
+  .pop-trust svg{width:max(18px,3.4cqw);height:max(18px,3.4cqw);color:#11152b}
+  .pop-trust .sep{height:max(22px,4cqw)}
+  .pop-consent{text-align:center;font-size:max(9.5px,1.7cqw);margin-top:3cqw}
+}
+@media (max-width:400px){
+  .pop-trust{flex-wrap:wrap;gap:6px 10px}
+  .pop-trust .sep{display:none}
+}
+
+/* ================= LeadStacker form slots ================= */
+.ls-slot iframe{display:block;width:100%;min-height:420px}
+/* trim LeadStacker's built-in empty padding (~70px above fields, ~180px below the button) */
+.ls-host{overflow:hidden}
+.ls-host iframe{margin-top:-44px!important;margin-bottom:-150px!important}
+.ls-dark{background:#0d1330;border-radius:10px;padding:10px 8px 4px}
+.ls-slot:empty{display:none}
+@media (min-width:1181px){
+  .hero .left{position:sticky;top:20px;align-self:start}
+}
+@media (min-width:761px){
+  .pop{height:min(886px,calc(100vh - 64px))}
+  .pop-l{overflow:hidden}
+  .pop-r{overflow-y:auto;overscroll-behavior:contain}
+  .pop-r .ls-dark{margin-top:4px}
+}
+@media (max-width:760px){
+  .pop-r{padding-top:4cqw}
+  .ls-dark{border-radius:2cqw;padding:2cqw 1.4cqw 1cqw}
+}
+
+/* ================= Click-to-call ================= */
+.m-call{display:none}
+.call-line{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;font-family:Inter,Arial,sans-serif;font-size:15px;color:#dfe2ea;text-decoration:none}
+.call-line b{font-family:Montserrat,Arial,sans-serif;font-weight:800;color:#fff;font-size:17px}
+.call-line svg{width:17px;height:17px;color:var(--magenta)}
+.call-line:hover b{text-decoration:underline}
+.pop-call{color:#2b2f3a;margin-top:14px}
+.pop-call b{color:#0d1330}
+@media (max-width:760px){
+  .m-call{display:flex;align-items:center;justify-content:center;gap:8px;background:#0b0b0b;color:#fff;text-decoration:none;font-weight:700;font-size:clamp(13px,3.6vw,16px);padding:9px 16px}
+  .m-call b{font-weight:800;letter-spacing:.2px}
+  .m-call svg{width:16px;height:16px}
+  .pop-call{font-size:max(13px,3cqw);margin-top:3.4cqw}
+  .pop-call b{font-size:max(15px,3.6cqw)}
+}
+
+
+/* ---------- FAQ ---------- */
+.faq{background:#fff;color:#111;padding:72px 16px 70px}
+.faq-in{max-width:1140px;margin:0 auto}
+.faq-kicker{display:table;margin:0 auto;padding:5px 9px;border-left:3px solid var(--magenta);background:linear-gradient(90deg,#fde4f0,rgba(253,228,240,0));font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1b1f2c}
+.faq h2{text-align:center;font-size:clamp(30px,3.2vw,46px);font-weight:800;letter-spacing:-.03em;margin-top:14px;color:#0b0d14}
+.faq-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:34px;align-items:start}
+.faq-col h3{display:table;margin:0 auto 22px;padding:9px 16px;border-radius:6px;background:#c2185b;background:var(--magenta);color:#fff;font-size:15px;font-weight:700}
+.faq details{background:#fff;border:1px solid #e1e4ea;border-radius:6px;box-shadow:0 1px 4px rgba(15,20,40,.05);margin-bottom:14px}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:20px 46px 20px 18px;font-size:14.5px;font-weight:500;line-height:1.35;color:#1b1f2c}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:20px;top:50%;width:7px;height:7px;border-right:2px solid #1b1f2c;border-bottom:2px solid #1b1f2c;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq summary:focus-visible{outline:2px solid var(--magenta);outline-offset:2px;border-radius:6px}
+.faq details[open]{border-color:#f2b6d2}
+.faq .ans{padding:0 18px 18px;font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.6;color:#454a57}
+.faq .ans p+p{margin-top:8px}
+.faq .ans a{color:var(--magenta);font-weight:600}
+@media (max-width:760px){
+  .faq{padding:48px 16px 44px}
+  .faq-cols{grid-template-columns:minmax(0,1fr);gap:18px}
+  .faq-col h3{margin-bottom:16px}
+  .faq summary{padding:16px 42px 16px 14px;font-size:14px}
+  .faq .ans{padding:0 14px 16px}
+}
+/* ---------- Footer (matches unlimited5ghomeinternet.com/fdl01a) ---------- */
+.site-footer{position:relative;overflow:hidden;background:radial-gradient(ellipse 55% 60% at 50% 0%,rgba(226,0,116,.28),transparent 70%),radial-gradient(ellipse 40% 50% at 100% 100%,rgba(60,40,140,.35),transparent 70%),linear-gradient(180deg,#0b1532 0%,#0a1330 55%,#120d2c 100%);color:#d6d9e6;border-top:3px solid var(--magenta);font-family:Montserrat,Arial,sans-serif;padding:50px 0 calc(50px + env(safe-area-inset-bottom))}
+.f-in{max-width:1170px;margin:0 auto;padding:0 5px}
+.f-logo{display:block;width:400px;max-width:calc(100% - 40px);height:auto;margin:35px auto 0;box-sizing:content-box;padding:14px 22px;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.f-tag{max-width:501px;margin:30px auto 0;text-align:center;font-size:16px;line-height:24px;color:#d6d9e6}
+.f-bottom{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:50px;padding:0 5px;font-size:14px;line-height:24px}
+.f-left{text-align:left}
+.f-right{text-align:right}
+.f-copy{text-align:center}
+.f-left a,.f-right a{color:#ff4fa8;text-decoration:underline;text-underline-offset:3px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
+.f-left a+a,.f-right a+a{margin-left:18px}
+.f-copy{color:#aeb3c4}
+.f-copy a{color:#fff;text-decoration:none}
+.site-footer a:hover{opacity:.8}
+@media (max-width:760px){
+  .f-in{padding:0 10px}
+  .f-logo{width:300px;max-width:calc(100% - 64px);padding:12px 18px}
+  .f-tag{max-width:none;margin-top:30px}
+  .f-bottom{grid-template-columns:1fr;gap:10px;margin-top:50px;text-align:center}
+  .f-left,.f-right,.f-copy{text-align:center}
+  .f-left{order:1}.f-copy{order:2}.f-right{order:3}
+}
+
+/* Mobile: fixed copy of the CTA once the in-flow (sticky) one has scrolled off the top */
+.mv-cta-fixed{position:fixed!important;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(140%);margin:0!important;z-index:900;opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
+.mv-cta-fixed.show{transform:translateX(-50%);opacity:1;pointer-events:auto}
+@media (max-width:760px){
+  .site-footer{padding-bottom:calc(50px + 80px + env(safe-area-inset-bottom))}
+}
+@media (min-width:761px){.mv-cta-fixed{display:none!important}}
+
+/* ---------- Plan terms ---------- */
+.terms-link{display:inline;background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.terms-btn{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-top:2px;background:none;border:0;padding:4px 2px;font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.terms-btn svg{width:15px;height:15px;color:var(--magenta)}
+.terms-overlay{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:24px 16px;background:rgba(6,8,22,.78);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.terms-overlay.open{display:flex}
+.terms-box{position:relative;width:100%;max-width:760px;max-height:min(80vh,720px);display:flex;flex-direction:column;background:#fff;color:#1b1f2c;border-radius:14px;border-top:4px solid var(--magenta);box-shadow:0 30px 90px rgba(0,0,0,.55);outline:none}
+.terms-box h2{font-family:Montserrat,Arial,sans-serif;font-size:22px;font-weight:800;padding:22px 56px 12px 24px;border-bottom:1px solid #eceef3}
+.terms-body{overflow-y:auto;overscroll-behavior:contain;padding:16px 24px 24px;font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.6;color:#3a3f4c}
+.terms-body p+p{margin-top:14px}
+.terms-body a{color:var(--magenta)}
+.terms-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:0;background:#f1f2f6;color:#1b1f2c;display:grid;place-items:center;cursor:pointer}
+.terms-close svg{width:16px;height:16px}
+@media (max-width:760px){
+  .terms-overlay{padding:12px;align-items:flex-end}
+  .terms-box{max-height:86vh;border-radius:14px}
+  .terms-box h2{font-size:19px;padding:18px 52px 10px 18px}
+  .terms-body{padding:14px 18px 20px;font-size:13px}
+}
+
+.dag{font-size:.7em;vertical-align:top;position:relative;top:-.1em}
+.mv-cards .terms-btn{font-size:max(12px,2.6cqw)}
+.pc-list .terms-btn{font-size:12.5px;margin-top:0}
+
+/* ================= Single-offer variant (Rely $35 + $100) ================= */
+.card.solo{cursor:default;align-items:flex-start;padding:22px 24px 20px 22px;border-width:2px}
+.card.solo .ico{margin-top:4px}
+.card.solo .title{font-size:19px}
+.card.solo .price{font-size:clamp(46px,4.2vw,64px);line-height:.95;margin-top:2px}
+.card.solo .desc{font-size:14px;margin-top:6px}
+.bonus-pill{display:inline-block;margin-top:12px;padding:8px 14px;border-radius:999px;background:linear-gradient(90deg,#ff1a94,#e20074);color:#fff;font-size:15px;font-weight:600;box-shadow:0 6px 18px rgba(226,0,116,.35)}
+.bonus-pill b{font-weight:900;font-size:1.25em;color:#ffd21f}
+.bonus-pill span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.perks{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px}
+.perks li{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:#fff}
+.ck{width:16px;height:16px;flex:0 0 16px;color:#3ddc6a}
+.solo-cta{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:13px 22px;border:0;border-radius:8px;background:#ffd21f;color:#14161f;font:800 17px Montserrat,Arial,sans-serif;cursor:pointer;box-shadow:0 8px 20px rgba(255,210,31,.25);transition:transform .15s}
+.solo-cta:hover{transform:translateY(-1px)}
+.solo-cta svg{width:18px;height:18px}
+.mv-hl{color:#ffd21f;font-weight:800}
+.mv-card.solo{cursor:default;padding:3.6cqw 3.4cqw 3.4cqw}
+.mv-card.solo .mv-price{font-size:9.4cqw}
+.mv-bonus-pill{display:inline-block;margin-top:2cqw;padding:1.4cqw 2.4cqw;border-radius:999px;background:linear-gradient(90deg,#ff1a94,#e20074);font-size:max(11px,2.5cqw);font-weight:600;line-height:1.3}
+.mv-bonus-pill b{font-weight:900;color:#ffd21f}
+.mv-perks{list-style:none;margin-top:2.4cqw;display:grid;gap:1.2cqw}
+.mv-perks li{display:flex;align-items:center;gap:1.4cqw;font-size:max(11px,2.45cqw);font-weight:600}
+.mv-perks .ck{width:max(13px,3cqw);height:max(13px,3cqw);flex:0 0 auto}
+.pc.solo{cursor:default;align-items:flex-start;padding:16px 16px 16px 16px;border-width:2px}
+.pc.solo .price{font-size:44px}
+.pc.solo .title{font-size:16px}
+.pc.solo .bonus-pill{font-size:13px;padding:6px 12px;margin-top:10px}
+.pc.solo .perks{margin-top:10px;gap:4px 14px}
+.pc.solo .perks li{font-size:12.5px}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo-collins" href="#" aria-label="Collins Mobile">
+      <svg viewBox="0 0 250 60" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="hexL" x1="0" x2="1"><stop offset="0" stop-color="#3b3f44"/><stop offset=".5" stop-color="#2a2d31"/><stop offset=".5" stop-color="#4a4e54"/><stop offset="1" stop-color="#5c6066"/></linearGradient>
+          <linearGradient id="cmG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6dff4a"/><stop offset="1" stop-color="#27c41a"/></linearGradient>
+        </defs>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="url(#hexL)"/>
+        <path d="M27 2 50 15v30L27 58 4 45V15z" fill="none" stroke="#1d1f22" stroke-width="1.5"/>
+        <text x="27" y="39.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="-1.5" fill="url(#cmG)">CM</text>
+        <text x="60" y="38" font-family="Montserrat,Arial,sans-serif" font-size="19" letter-spacing=".6"><tspan font-weight="800" fill="#2b2e33">COLLINS</tspan><tspan font-weight="500" fill="#5d6168">MOBILE</tspan></text>
+      </svg>
+    </a>
+    <div class="header-right">
+      <div class="logo-tm"><img src="images/tmobile-home-internet.png" alt="T-Mobile Home Internet"><span>Authorized Retailer</span></div>
+      <a class="call-btn" href="tel:+18887654506">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+        888-765-4506
+      </a>
+    </div>
+  </div>
+</header>
+
+<a class="m-call" href="tel:+18887654506"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call Now: <b>888-765-4506</b></a>
+
+<div class="promo-bar">
+  <span>Wait time is less than <span class="count">(<span id="secs">15</span>) seconds</span></span>
+  <span class="sep"></span>
+  <span class="lt">For a limited time only - Order by 7:00 P.M. EST <span id="today">10/12/2026</span></span>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"><path d="M5 23 24 6l19 17"/><path d="M10 19v22h28V19"/><path d="M19.5 41V29h9v12"/></g></symbol>
+  <symbol id="i-gift" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="17" width="36" height="9" rx="1"/><path d="M9 26v16h30V26"/><path d="M24 17v25"/><path d="M24 17c-3-7-11-9-11-4 0 3 5 4 11 4z"/><path d="M24 17c3-7 11-9 11-4 0 3-5 4-11 4z"/></g></symbol>
+  <symbol id="i-wifi-c" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="21"/><path d="M12 21a17 17 0 0 1 24 0"/><path d="M16.5 26a11 11 0 0 1 15 0"/><path d="M21 31a5 5 0 0 1 6 0"/></g><circle cx="24" cy="35" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"><path d="M5 18a27 27 0 0 1 38 0"/><path d="M11.5 25a18 18 0 0 1 25 0"/><path d="M18 32a9 9 0 0 1 12 0"/></g><circle cx="24" cy="39" r="4" fill="currentColor"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 2.5v19M16.6 7.4C16 5.8 14.3 4.8 12 4.8c-2.8 0-4.6 1.4-4.6 3.5 0 4.7 9.3 2.6 9.3 7.4 0 2-1.9 3.5-4.7 3.5-2.4 0-4.3-1.1-4.8-2.9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"><path d="M6 2.8h8.5l4 4v14.4H6z"/><path d="M14.5 2.8v4h4"/><path d="M9 11h6.5M9 14h6.5M9 17h4.5"/></g></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84a.47.47 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 0 0-.59.22L2.74 8.87a.47.47 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.48.48 0 0 0-.12-.61zM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.2 3.5 9.6 7.8 8 9.6a12 12 0 0 0 6.4 6.4l1.8-1.6 4.3 2.4-.9 3.4c-.2.6-.8 1-1.4.9A17 17 0 0 1 3 5.8c-.1-.6.3-1.2.9-1.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+  <symbol id="i-caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z" fill="currentColor"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05A4.2 4.2 0 0 1 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+  <symbol id="i-us" viewBox="0 0 19 12"><rect width="19" height="12" fill="#b22234"/><g fill="#fff"><rect y="1.85" width="19" height=".92"/><rect y="3.7" width="19" height=".92"/><rect y="5.54" width="19" height=".92"/><rect y="7.38" width="19" height=".92"/><rect y="9.23" width="19" height=".92"/></g><rect width="7.6" height="6.46" fill="#3c3b6e"/></symbol>
+</svg>
+
+<!-- ================= MOBILE PAGE (shown <=760px) ================= -->
+<section class="mv" aria-label="T-Mobile 5G Home Internet offers">
+  <div class="mv-ticker" aria-hidden="true"><div class="mv-track"><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span><span>Limited Time Offer</span></div></div>
+  <div class="mv-in">
+    <div class="mv-glow"></div>
+    <h1 class="mv-h1">T-Mobile 5G<br>Home Internet</h1>
+    <p class="mv-sub">Rely Home Internet for just<br><b class="mv-hl">$35/mo + $100 back.</b><sup class="dag">&dagger;</sup></p>
+
+    <div class="mv-offers">
+      <div class="mv-table"></div>
+      <div class="mv-router"><img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655"></div>
+      <div class="mv-cards">
+        <div class="mv-card solo active" data-offer="$35/mo - Rely Home Internet">
+          <div class="mv-title">Rely Home Internet</div>
+          <div class="mv-price">$35<em>/mo</em><sup>*</sup></div>
+          <div class="mv-desc">With AutoPay, qualifying voice line + taxes and fees</div>
+          <div class="mv-bonus-pill"><b>+ $100</b> virtual prepaid Mastercard<sup class="dag">&dagger;</sup></div>
+          <ul class="mv-perks"><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>5-Year Price Guarantee</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>No annual contract</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Easy self-installation</li></ul>
+        </div>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
+      </div>
+    </div>
+
+    <div class="mv-feats">
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+      <span class="mv-sep"></span>
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+      <span class="mv-sep"></span>
+      <div class="mv-feat"><span class="mv-fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+    </div>
+
+    <button type="button" class="mv-cta" data-open-pop><svg><use href="#i-arrow"/></svg>Check Availability Now</button>
+    <button type="button" class="mv-cta mv-cta-fixed" data-open-pop aria-hidden="true" tabindex="-1"><svg><use href="#i-arrow"/></svg>Check Availability Now</button>
+    <p class="mv-cta-sub">See If $35/mo Is Available at Your Address</p>
+  </div>
+  <div class="mv-strip"></div>
+  <p class="mv-fine">
+    Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts.<br>
+    *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button><br>
+    **Allow 10 weeks. <button type="button" class="terms-link" data-terms="card">See Full Terms</button><br>
+    &dagger;$100 via virtual prepaid Mastercard for Rely Home Internet, digital (online) activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button>
+  </p>
+</section>
+
+<section class="hero">
+  <!-- background light streaks + network mesh -->
+  <svg class="hero-bg" viewBox="0 0 1600 670" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="streak" x1="0" x2="1">
+        <stop offset="0" stop-color="#ff2d9b" stop-opacity="0"/>
+        <stop offset=".45" stop-color="#ff2d9b" stop-opacity=".9"/>
+        <stop offset="1" stop-color="#ff2d9b" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+      <filter id="blur2"><feGaussianBlur stdDeviation="1.2"/></filter>
+    </defs>
+    <g filter="url(#blur)" opacity=".75">
+      <path d="M0 330 C 300 380, 520 520, 900 560 S 1300 600, 1600 560" stroke="url(#streak)" stroke-width="22" fill="none"/>
+      <path d="M0 470 C 250 450, 500 560, 820 610 S 1250 640, 1600 620" stroke="url(#streak)" stroke-width="14" fill="none"/>
+    </g>
+    <g filter="url(#blur2)" opacity=".9">
+      <path d="M0 340 C 300 390, 520 525, 900 565 S 1300 605, 1600 565" stroke="#ff4fb0" stroke-width="2" fill="none"/>
+      <path d="M0 400 C 260 420, 540 545, 880 590 S 1300 620, 1600 600" stroke="#ff4fb0" stroke-width="1.2" fill="none" opacity=".7"/>
+      <path d="M0 480 C 250 460, 500 570, 820 615 S 1250 645, 1600 625" stroke="#ff4fb0" stroke-width="1.5" fill="none"/>
+    </g>
+    <g stroke="#6b78c9" stroke-width=".7" fill="none" opacity=".35">
+      <circle cx="1080" cy="300" r="260"/>
+      <ellipse cx="1080" cy="300" rx="260" ry="90"/>
+      <ellipse cx="1080" cy="300" rx="260" ry="170"/>
+      <ellipse cx="1080" cy="300" rx="90" ry="260"/>
+      <ellipse cx="1080" cy="300" rx="180" ry="260"/>
+      <path d="M840 220 L960 120 L1110 60 L1250 140 L1320 280 L1260 430 L1120 520 L960 480 L860 380 Z"/>
+      <path d="M960 120 L1080 300 L1250 140 M1080 300 L1320 280 M1080 300 L1120 520 M1080 300 L860 380 M1110 60 L1080 300"/>
+    </g>
+    <g fill="#9aa6ff" opacity=".55">
+      <circle cx="960" cy="120" r="2.2"/><circle cx="1110" cy="60" r="2.2"/><circle cx="1250" cy="140" r="2.2"/>
+      <circle cx="1320" cy="280" r="2.2"/><circle cx="1260" cy="430" r="2.2"/><circle cx="1120" cy="520" r="2.2"/>
+      <circle cx="860" cy="380" r="2.2"/><circle cx="840" cy="220" r="2.2"/><circle cx="1080" cy="300" r="2.6"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="left-top">
+        <p class="eyebrow">This is a <u>Limited Time</u> promotional offer!</p>
+        <h1>
+          <span class="l1">T-Mobile 5G Home Internet</span>
+          <span class="l2">$35/mo + $100 Back</span>
+        </h1>
+        <p class="sub">Rely Home Internet &mdash; check if it&rsquo;s available at your address</p>
+      </div>
+
+      <div class="cards">
+        <div class="card solo active" data-offer="$35/mo - Rely Home Internet">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 23 24 7l18 16"/><path d="M11 19v22h26V19"/><path d="M20 41V29h8v12"/></svg>
+          <div class="body">
+            <div class="title">Rely Home Internet</div>
+            <div class="price">$35/mo<small>*</small></div>
+            <div class="desc">With AutoPay, qualifying voice line + taxes and fees</div>
+            <div class="bonus-pill"><b>+ $100</b> virtual prepaid Mastercard<sup class="dag">&dagger;</sup><span>when you activate online</span></div>
+            <ul class="perks"><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>5-Year Price Guarantee</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>No annual contract</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Easy self-installation</li></ul>
+            <button type="button" class="solo-cta" data-open-pop>Check Availability Now <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
+      </div>
+
+      <div class="router">
+        <img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655">
+      </div>
+
+      <div class="feats">
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18"/><path d="M16.5 7.5C16 6 14.3 5 12 5c-2.8 0-4.5 1.4-4.5 3.4 0 4.6 9 2.6 9 7.2 0 2-1.8 3.4-4.5 3.4-2.4 0-4.2-1.1-4.7-2.8"/></svg></span>
+          <p><b>$0 Due Today</b><br>for qualifying<br>customers</p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 11h7M9 14h7M9 17h5"/></svg></span>
+          <p><b>No Annual<br>Contracts</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5l1.6 2.6 3-.6.7 3 2.7 1.4-1.2 2.8 1.2 2.8-2.7 1.4-.7 3-3-.6L12 21.5l-1.6-2.6-3 .6-.7-3-2.7-1.4L5.2 12 4 9.2l2.7-1.4.7-3 3 .6z"/></svg></span>
+          <p><b>No Monthly<br>Equipment Fees</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z"/></svg></span>
+          <p><b>Easy<br>Self-Installation</b></p>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+          <p><b>15-Day Test Drive</b><br>for Qualifying<br>Customers</p>
+        </div>
+      </div>
+
+      <p class="fine">
+        Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts.<br>
+        *During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button><br>
+        **Allow 10 weeks. <button type="button" class="terms-link" data-terms="card">See Full Terms</button><br>
+    &dagger;$100 via virtual prepaid Mastercard for Rely Home Internet, digital (online) activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button>
+      </p>
+    </div>
+
+    <!-- Lead form -->
+    <aside class="panel" id="form">
+      <h2>Check availability for<br>$35/mo + $100 back</h2>
+      <div class="ls-slot" id="slotPage"></div>
+      <a class="call-line" href="tel:+18887654506"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Prefer to talk? Call <b>888-765-4506</b></a>
+    </aside>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faqTitle">
+  <div class="faq-in">
+    <span class="faq-kicker">T-Mobile FAQs</span>
+    <h2 id="faqTitle">People Ask Us</h2>
+    <div class="faq-cols">
+      <div class="faq-col">
+        <h3>General</h3>
+        <details><summary>Do these plans come with 5-Year price guarantee?</summary><div class="ans"><p>Yes, new and upgrading customers on T-Mobile Rely Internet, T-Mobile Amplified Internet, T-Mobile All-In Internet, and AWAY&trade; are covered by a 5-year price guarantee. The 5-year price guarantee means we won&rsquo;t change the price of fixed-wireless 5G internet data for at least 5 years while you are on an eligible plan. Taxes &amp; fees, voluntary equipment or speed upgrades, future wireless generations, select limited-time promotions, per-use charges, third-party services, and network management practices aren&rsquo;t included. This guarantee starts when you activate or switch to an eligible plan and doesn&rsquo;t restart if you add a line or change plans after that.</p></div></details>
+        <details><summary>Can I purchase higher-speed service?</summary><div class="ans"><p>We don&rsquo;t offer tiered pricing based on speeds at this time. Customers receive the best speeds available from the service at their location. As better speeds are available, customers will automatically experience them, at no additional cost. During congestion, Internet customers may notice speeds slower than customers using other T-Mobile services and further reduction if using &gt;1.2TB/mo., due to data prioritization.</p></div></details>
+        <details><summary>Are there ways I cannot use T-Mobile 5G Home Internet?</summary><div class="ans"><p>You can use your Home Internet for all the homework, streaming, and video conferencing you need! But to ensure that our network is available for all customers, there are some restrictions on activities that can damage or disproportionately congest the network. For example, Home Internet is not intended for unattended use, automatic data feeds, automated machine-to-machine connections, or uses that automatically consume unreasonable amounts of available network capacity. In addition, many T-Mobile Internet products are intended to be used in a fixed location, and use at a location other than one we&rsquo;ve approved is not permitted.</p></div></details>
+        <details><summary>Who is eligible for T-Mobile 5G Home Internet?</summary><div class="ans"><p>Eligibility is determined by the service address. Address eligibility is based off network capacity, which is expanding all the time, but can also change as more customers join T-Mobile.</p><p>Home Internet and Home Internet Plus must have a service address that is eligible for unlimited service. These plans are eligible for use at only the approved address.</p><p>Home Internet Lite must have a service address eligible for Lite plans. Home Internet Lite plans activated starting May 9, 2024 may only be used at the approved address.</p><p>AWAY&trade; customers must have an eligible physical address to get started. Once activated, AWAY&trade; plans may be used nationwide across T-Mobile&rsquo;s network, but should not be used primarily in a single location.</p></div></details>
+        <details><summary>Can I get a discount for having both T-Mobile phone and Internet services?</summary><div class="ans"><p>Yes, you can get a discount when you bundle new Home Internet or Home Internet Plus with T-Mobile voice service.</p></div></details>
+        <details><summary>Can I get T-Mobile 5G Internet for my business?</summary><div class="ans"><p>Great news! T-Mobile has the Internet access solutions that you need to keep your business and your employees connected and productive.</p></div></details>
+        <details><summary>Can I transfer my T-Mobile 5G Internet service when I move homes?</summary><div class="ans"><p>Yes, give us a call at <a href="tel:+18332981408">1-833-298-1408</a> prior to moving to confirm that your new address is eligible for service and set up a change of address.</p></div></details>
+      </div>
+      <div class="faq-col">
+        <h3>Worry-free 15-day test drive</h3>
+        <details><summary>What is Worry-free 15-day test drive, and who is eligible?</summary><div class="ans"><p>New and existing T-Mobile customers activating Home Internet on a qualifying plan are eligible to receive their money back via a onetime bill credit if they choose to schedule cancellation of service within the first 15 days of activation.</p></div></details>
+        <details><summary>How can I try Worry-free 15-day test drive</summary><div class="ans"><p>Any customer who activates T-Mobile Home Internet or Small Business Internet on a qualifying plan within the promotional window and schedules cancellation of service within the first 15 days of activation will qualify for Worry-free 15-day test drive.</p></div></details>
+        <details><summary>How can I get my money back if I do not wish to continue with T-Mobile Internet?</summary><div class="ans"><p>At the time cancellation is scheduled, a one time bill credit will be applied to your account to zero out any T-Mobile Internet service charges on your bill. If there is a credit balance on the account because a payment was made before the one time bill credit was applied, the credit balance will be proactively paid out after 30 days via a Prepaid MasterCard from North Lane to the billing address on file.</p></div></details>
+        <details><summary>When does my 15 days start for Worry-free 15-day test drive?</summary><div class="ans"><p>Your 15 Days starts the day you activate and bring home your device from a retail store or once you receive a notification that your 5G gateway has shipped.</p></div></details>
+        <details><summary>Do I need to return any equipment that was sent to me if I cancel service?</summary><div class="ans"><p>Yes, you will need to return the gateway after you cancel your service, or you will be charged a non-return fee to your bill that is not eligible for any money back adjustment. Equipment Non-Return Fees are not part of Worry-free 15-day test drive. These will be handled in the same way they would without Worry-free 15-day test drive and are not eligible for a money back adjustment.</p></div></details>
+        <details><summary>What is the difference between T-Mobile 30 day Network Worry-free 15-day test drive, and the 15 day Internet Worry-free 15-day test drive?</summary><div class="ans"><p>The T-Mobile Network Worry-free 15-day test drive allows non-T-Mobile customers to try T-Mobile&rsquo;s network for up to 30 days with their own phone, phone number and apps from another carrier. While the T-Mobile Internet Worry-free 15-day test drive allows Non-T-Mobile customers and existing T-Mobile customers to try out T-Mobile Home Internet or Small Business Internet service for 15 days after activation worry-free. If T-Mobile Internet is not right for you, cancel within the first 15 days for a full refund.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="f-in">
+    <img class="f-logo" src="images/collins-x-tmobile-footer-logo.png" width="400" height="68" alt="Collins Mobile &times; T-Mobile Home Internet Authorized Retailer" loading="lazy">
+    <p class="f-tag">We&rsquo;re developing the ultimate communications network to power high-quality, secure, affordable, fast connections.</p>
+    <div class="f-bottom">
+      <p class="f-left"><a href="https://unlimited5ghomeinternet.com/privacy-policy-is" target="_blank" rel="noopener">Privacy Policy</a><a href="https://unlimited5ghomeinternet.com/do-not-sell-my-info" target="_blank" rel="noopener">Do Not Sell My Info</a></p>
+      <p class="f-copy"><span class="yr">2026</span> All Rights Reserved <a href="https://unlimited5ghomeinternet.com/" target="_blank" rel="noopener">Unlimited5GHomeInternet.com</a></p>
+      <p class="f-right"><a href="#plan-terms" data-terms>Plan Terms</a><a href="https://unlimited5ghomeinternet.com/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://unlimited5ghomeinternet.com/terms-of-services" target="_blank" rel="noopener">Terms &amp; Condition</a></p>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.site-footer .yr').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+
+
+<!-- ================= PLAN TERMS ================= -->
+<template id="tt-disclaimer"><p>Not available in all areas. $35 device connection charge due at sale. Plus taxes &amp; fees for accounts currently paying for a T-Mobile wireless line with additional taxes &amp; fees: Monthly Regulatory Programs (RPF) &amp; Telco Recovery Fee (TRF) totaling $1.40 per data only line ($0.12 for RPF &amp; $1.28 for TRF) apply; taxes/fees approx. 3-12% of bill. Credit approval required. For use only with select T-Mobile Gateways for in-home use at location provided at activation; service restricted away from approved address. Return gateway undamaged or pay up to $370. Video streaming resolution depends on available speeds. For best performance, leave video streaming applications at their default resolution setting. Not compatible with some live TV streaming services. AutoPay Pricing for lines 1-8 on account. AutoPay discount requires bank account or debit card, otherwise $10 more/line/mo. May not be reflected on first bill. Network Management: Service may be slowed, suspended, terminated, or restricted for misuse, abnormal use, interference with our network or ability to provide quality service to other users. See <a href="https://www.t-mobile.com/OpenInternet" target="_blank" rel="noopener">T-Mobile.com/Open Internet</a> for details. See Terms and Conditions (including arbitration provision) at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a> for additional information.</p></template>
+<template id="tt-card"><p>Via virtual prepaid Mastercard when you activate a new Home Internet line online. Allow 10 weeks. Limited-time offer; subject to change. Register code within 30 days of activating new Home Internet line. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. $150 via virtual prepaid Mastercard; requires 60 days service before validation; use online or in-store via accepted mobile payment apps; no cash access &amp; expires in 6 months. The Virtual Prepaid Mastercard is issued by Sunrise Banks N.A., Member FDIC, pursuant to a license from Mastercard International Incorporated. Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Incorporated. This card may be used everywhere Debit Mastercard is accepted. Registration, activation, acceptance, or use of this card constitutes acceptance of the terms and conditions stated in the Prepaid Card Agreement. This promotion is not associated, sponsored, or endorsed by Mastercard or Sunrise Banks N.A. Allow 1 week from fulfilment of offer requirements. Lines must be active and in good standing when card is issued. Max 4/account. May not be combined with some offers or discounts.</p></template>
+<div class="terms-overlay" id="termsOverlay" aria-hidden="true">
+  <div class="terms-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle" tabindex="-1">
+    <button type="button" class="terms-close" aria-label="Close plan terms"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+    <h2 id="termsTitle">Plan terms</h2>
+    <div class="terms-body">
+      <p>Limited-time; subject to change. Qualifying credit, postpaid voice line, and new Internet line required. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Credits may take up to 2 bill cycles; credits will stop if you cancel any lines or change plans. Limit 1/account. May not be combined with some offers or discounts. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. Not available in all areas. $35 device connection charge due at sale. Plus taxes &amp; fees for accounts currently paying for a T-Mobile wireless line with additional taxes &amp; fees: Monthly Regulatory Programs &amp; Telco Recovery Fees totaling up to $2.60 per line, and federal and local surcharges apply. See Broadband Facts at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a>. Credit approval required. For use only with select T-Mobile Gateways for in-home use at location provided at activation; service restricted away from approved address. Return gateway undamaged or pay up to $370. Video streaming resolution depends on available speeds. For best performance, leave video streaming applications at their default resolution setting. Not compatible with some live TV streaming services. AutoPay Pricing for lines 1-8 on account. AutoPay discount requires bank account or debit card, otherwise $10 more/line/mo. May not be reflected on first bill. Network Management: Service may be slowed, suspended, terminated, or restricted for misuse, abnormal use, interference with our network or ability to provide quality service to other users. See <a href="https://www.t-mobile.com/OpenInternet" target="_blank" rel="noopener">T-Mobile.com/OpenInternet</a> for details. See Terms and Conditions (including arbitration provision) at <a href="https://www.t-mobile.com" target="_blank" rel="noopener">www.T-Mobile.com</a> for additional information. 5-Year Price Guarantee means that we won&rsquo;t change the price of fixed-wireless 5G internet data for at least 5 years while you are on an eligible plan. Taxes &amp; fees, voluntary equipment or speed upgrades, future wireless generations, select limited-time promotions, per-use charges, third-party services, and network management practices aren&rsquo;t included. This guarantee starts when you activate or switch to an eligible plan and doesn&rsquo;t restart if you add a line or change plans after that.</p>
+      <p>Limited-time; subject to change. Month On Us: With one-time bill credit equal to monthly rate plus fees after AutoPay and other applicable discounts. Qualifying new Internet line required. Enter promotional code at checkout. Not transferrable. Allow 2 bill cycles for credit. Limit 2/account. May not be combined with some offers or discounts. Up to $200 Back: Available for digital activations ($100: Rely; $100: Amplified; $200: All-In), not available in retail. Register code within 30 days of activating qualifying new Home Internet line. If you have cancelled Internet lines in past 90 days, you may need to reactivate them first. Up to $200 via virtual prepaid Mastercard; use online or in-store via accepted mobile payment apps; no cash access &amp; expires in 6 months. The Virtual Prepaid Mastercard is issued by Sunrise Banks N.A., Member FDIC, pursuant to a license from Mastercard International Incorporated. Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Incorporated. This card may be used everywhere Debit Mastercard is accepted. Registration, activation, acceptance, or use of this card constitutes acceptance of the terms and conditions stated in the Prepaid Card Agreement. This promotion is not associated, sponsored, or endorsed by Mastercard or Sunrise Banks N.A. Lines must be active and in good standing when card is issued. Max 1/account. May not be combined with some offers, discounts, or promotions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= POPUP FORM ================= -->
+<div class="pop-overlay" id="popOverlay" aria-hidden="true">
+  <div class="pop" role="dialog" aria-modal="true" aria-labelledby="popTitle" tabindex="-1">
+    <button type="button" class="pop-close" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+
+    <div class="pop-l">
+      <div class="pop-badge"><svg><use href="#i-bolt"/></svg>Limited Time <span class="o">Offer</span></div>
+      <h2 class="pop-h">T-Mobile 5G<br>Home Internet</h2>
+      <p class="pop-sub d-only">Rely Home Internet for just<br>$35/mo + $100 back.<sup class="dag">&dagger;</sup></p>
+      <p class="pop-sub m-only">Rely Home Internet for just $35/mo + $100 back.<sup class="dag">&dagger;</sup></p>
+
+      <div class="pc-list d-only">
+        <div class="pc solo active" data-offer="$35/mo - Rely Home Internet">
+          <svg class="ico"><use href="#i-home"/></svg>
+          <div class="body"><div class="title">Rely Home Internet</div><div class="price">$35/mo<sup>*</sup></div><div class="desc">With AutoPay, qualifying voice line + taxes and fees</div><div class="bonus-pill"><b>+ $100</b> virtual prepaid Mastercard<sup class="dag">&dagger;</sup><span>when you activate online</span></div><ul class="perks"><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>5-Year Price Guarantee</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>No annual contract</li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Easy self-installation</li></ul></div>
+        </div>
+        <button type="button" class="terms-btn" data-terms><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Plan terms</button>
+      </div>
+
+      <div class="pop-bottom">
+        <div class="pop-router d-only"><img src="images/router-angle.png" alt="" width="428" height="655"></div>
+        <div class="pop-feats d-only">
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+          <div class="pop-feat"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+        </div>
+      </div>
+      <div class="pop-router m-only"><img src="images/router-front.png" alt="" width="882" height="1112"></div>
+    </div>
+
+    <div class="pop-r">
+      <div class="d-only">
+        <div class="pop-step" id="popStep">Step 1 of 2</div>
+        <div class="pop-bar"><i id="popBar"></i></div>
+        <h3 id="popTitle">Check Availability <span>for $35/mo + $100 Back</span></h3>
+        <p class="pop-intro">Enter your information below to see if this offer is available at your address.</p>
+      </div>
+
+      <div class="ls-slot ls-dark" id="slotPop"></div>
+
+      <div class="pm-feats m-only">
+        <div class="f"><span class="fi"><svg><use href="#i-dollar"/></svg></span><p><b>$0 Due Today</b><br>for qualifying<br>customers</p></div>
+        <span class="sep"></span>
+        <div class="f"><span class="fi"><svg><use href="#i-doc"/></svg></span><p><b>No Annual<br>Contracts</b></p></div>
+        <span class="sep"></span>
+        <div class="f"><span class="fi"><svg><use href="#i-gear"/></svg></span><p><b>Easy<br>Self-Installation</b></p></div>
+      </div>
+
+      <a class="call-line pop-call" href="tel:+18887654506"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Prefer to call? <b>888-765-4506</b></a>
+
+      <div class="pop-trust">
+        <div><svg><use href="#i-lock"/></svg><span>Secure<br> &amp; Protected</span></div>
+        <span class="sep"></span>
+        <div><svg><use href="#i-shield"/></svg><span>No Obligation</span></div>
+        <span class="sep"></span>
+        <div><svg><use href="#i-people"/></svg><span>T-Mobile<br> Authorized Retailer</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LeadStacker form: ONE iframe on the page (form_embed.js removes duplicate ids),
+     placed into #slotPage (desktop page) or #slotPop (popup) as needed. -->
+<template id="lsFormTpl">
+  <div class="ls-host" id="lsHost">
+    <iframe
+        src="https://link.leadstacker.com/widget/form/4a9d2QiY65WY6o9jIoJW"
+        style="width:100%;height:100%;border:none;border-radius:4px"
+        id="inline-4a9d2QiY65WY6o9jIoJW"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="FDL07 - 888-444-3098"
+        data-height="2361"
+        data-layout-iframe-id="inline-4a9d2QiY65WY6o9jIoJW"
+        data-form-id="4a9d2QiY65WY6o9jIoJW"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="FDL07 - 888-444-3098"
+        >
+    </iframe>
+  </div>
+</template>
+
+<script>
+(function(){
+  // Today's date in the promo bar (MM/DD/YYYY)
+  var d=new Date();
+  document.getElementById('today').textContent=
+    String(d.getMonth()+1).padStart(2,'0')+'/'+String(d.getDate()).padStart(2,'0')+'/'+d.getFullYear();
+
+  var $$=function(q){return [].slice.call(document.querySelectorAll(q))};
+  var mobileMQ=window.matchMedia('(max-width:760px)');
+  var slotPage=document.getElementById('slotPage'), slotPop=document.getElementById('slotPop');
+  var overlay=document.getElementById('popOverlay'), dialog=overlay.querySelector('.pop'), lastFocus=null;
+
+  // Insert the single form iframe into the right slot before form_embed.js runs
+  var tpl=document.getElementById('lsFormTpl');
+  var host=tpl.content.firstElementChild.cloneNode(true);
+  (mobileMQ.matches?slotPop:slotPage).appendChild(host);
+
+  // Move the form; moveBefore() keeps the iframe (and anything typed) alive where supported
+  function placeForm(slot){
+    if(host.parentNode===slot) return;
+    if(slot.moveBefore) slot.moveBefore(host,null); else slot.appendChild(host);
+  }
+  function homeSlot(){return (mobileMQ.matches||overlay.classList.contains('open'))?slotPop:slotPage}
+  (mobileMQ.addEventListener?mobileMQ.addEventListener('change',function(){placeForm(homeSlot())}):mobileMQ.addListener(function(){placeForm(homeSlot())}));
+
+  // Highlight the chosen offer on every card set (page + popup)
+  function choose(val){
+    $$('[data-offer]').forEach(function(c){
+      var on=c.dataset.offer===val;
+      c.classList.toggle('active',on);
+      if(c.hasAttribute('aria-checked')) c.setAttribute('aria-checked',on);
+    });
+  }
+
+  function openPop(){
+    lastFocus=document.activeElement;
+    overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    placeForm(slotPop);
+    fitPop();
+    overlay.scrollTop=0; dialog.focus();
+  }
+  function closePop(){
+    overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+    placeForm(homeSlot());
+    if(lastFocus) lastFocus.focus();
+  }
+  overlay.querySelector('.pop-close').addEventListener('click',closePop);
+  overlay.addEventListener('mousedown',function(e){if(e.target===overlay) closePop()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open')) closePop()});
+
+  $$('.card, .mv-card').forEach(function(c){
+    c.addEventListener('click',function(e){if(e.target.closest('[data-open-pop]')) return; choose(c.dataset.offer); openPop()});
+  });
+  $$('[data-open-pop]').forEach(function(b){b.addEventListener('click',openPop)});
+  $$('.pc').forEach(function(c){c.addEventListener('click',function(){choose(c.dataset.offer)})});
+
+  // Feature row: drop the divider on whichever item starts a (wrapped) row
+  var feats=$$('.feat');
+  function markRows(){
+    var top=null;
+    feats.forEach(function(f){f.classList.remove('row-start')});
+    feats.forEach(function(f){var t=f.offsetTop; if(top===null||Math.abs(t-top)>4){f.classList.add('row-start'); top=t}});
+  }
+  // Desktop popup: shrink the left panel to fit short screens instead of clipping it
+  var popL=overlay.querySelector('.pop-l'), popBottom=overlay.querySelector('.pop-bottom');
+  function fitPop(){
+    popL.style.zoom='';
+    if(mobileMQ.matches||!overlay.classList.contains('open')) return;
+    var natural=popBottom.offsetTop+popBottom.offsetHeight;
+    var avail=dialog.clientHeight;
+    if(natural>avail) popL.style.zoom=(avail/natural).toFixed(3);
+  }
+  window.addEventListener('resize',function(){markRows(); fitPop()});
+
+  // ---------- Auto popup + exit intent (each once per visit) ----------
+  var AUTO_DELAY=7000;                       // ms before the timed popup
+  function store(k,v){try{if(v===undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k,v)}catch(e){return null}}
+  function leadSubmitted(){try{return !!localStorage.getItem('_ud')}catch(e){return false}}  // GHL sticky-contact data, set on submit
+  // Don't interrupt someone filling in the page form. (The GHL iframe grabs focus on load,
+  // so focus alone isn't a signal - use real pointer/touch activity over the form instead.)
+  var formActiveAt=0;
+  ['mouseover','mousemove','pointerdown','touchstart'].forEach(function(ev){
+    host.addEventListener(ev,function(){formActiveAt=Date.now()},{passive:true});
+  });
+  function canPop(){
+    if(overlay.classList.contains('open')||leadSubmitted()||(window.__termsOpen&&window.__termsOpen())) return false;
+    return Date.now()-formActiveAt>15000;
+  }
+  function tryAuto(){
+    if(store('tmo_pop_auto')) return;
+    if(document.hidden||!canPop()){setTimeout(tryAuto,4000); return}
+    store('tmo_pop_auto','1'); openPop();
+  }
+  setTimeout(tryAuto,AUTO_DELAY);
+
+  // Mobile CTA: show the fixed copy when the in-flow button is above the viewport
+  var ctaInline=document.querySelector('.mv-cta:not(.mv-cta-fixed)'), ctaFixed=document.querySelector('.mv-cta-fixed');
+  function syncCta(){
+    var show=mobileMQ.matches && ctaInline.getBoundingClientRect().bottom<0;
+    ctaFixed.classList.toggle('show',show);
+    ctaFixed.setAttribute('aria-hidden',show?'false':'true');
+    ctaFixed.tabIndex=show?0:-1;
+  }
+  window.addEventListener('scroll',syncCta,{passive:true});
+  window.addEventListener('resize',syncCta);
+  syncCta();
+
+  var exitArmed=false;
+  setTimeout(function(){exitArmed=true},3000);   // ignore the first few seconds
+  function exitIntent(){
+    if(!exitArmed||store('tmo_pop_exit')||!canPop()) return;
+    store('tmo_pop_exit','1'); store('tmo_pop_auto','1'); openPop();
+  }
+  // Desktop: cursor leaves through the top of the window (towards tabs / address bar / close)
+  document.addEventListener('mouseout',function(e){
+    if(mobileMQ.matches||e.relatedTarget||e.clientY>8) return;
+    exitIntent();
+  });
+  // Phones: a quick scroll back up after reading down the page
+  var lastY=window.scrollY,lastT=Date.now(),maxY=0;
+  window.addEventListener('scroll',function(){
+    if(!mobileMQ.matches) return;
+    var y=window.scrollY,t=Date.now();
+    maxY=Math.max(maxY,y);
+    if(maxY>600&&y<lastY&&(lastY-y)/Math.max(t-lastT,1)>1.2&&y>150) exitIntent();   // >1.2px/ms upward
+    lastY=y; lastT=t;
+  },{passive:true});
+  markRows();
+})();
+</script>
+<script>
+(function(){
+  // Plan terms modal: any [data-terms] element opens it
+  var ov=document.getElementById('termsOverlay'), box=ov.querySelector('.terms-box'), last=null;
+  var titleEl=document.getElementById('termsTitle'), bodyEl=box.querySelector('.terms-body'), planHTML=bodyEl.innerHTML;
+  function setContent(key){
+    var t=key&&document.getElementById('tt-'+key);
+    titleEl.textContent=t?'Legal Disclaimer':'Plan terms';
+    bodyEl.innerHTML=t?t.innerHTML:planHTML;
+  }
+  function open(e,key){ if(e) e.preventDefault(); setContent(key); last=document.activeElement; ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; box.querySelector('.terms-body').scrollTop=0; box.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true'); if(!document.querySelector('.pop-overlay.open')) document.documentElement.style.overflow=''; if(last) last.focus(); }
+  document.addEventListener('click',function(e){ var t=e.target.closest('[data-terms]'); if(t){ e.stopPropagation(); open(e,t.getAttribute('data-terms')); } },true);
+  ov.querySelector('.terms-close').addEventListener('click',close);
+  ov.addEventListener('mousedown',function(e){ if(e.target===ov) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')){ e.stopImmediatePropagation(); close(); } },true);
+  window.__termsOpen=function(){return ov.classList.contains('open')};
+})();
+</script>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
+</body>
+</html>
