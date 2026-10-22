@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>T-Mobile 5G Home Internet for $35/mo + $100 Back | Check Your Address | Collins Mobile</title>
-<meta name="description" content="Check if T-Mobile 5G Home Internet is available at your address. $35/mo with AutoPay and a qualifying voice line, plus $100 back via virtual prepaid Mastercard.">
+<title>T-Mobile Rely Home Internet for $35/mo | Check Your Address | Collins Mobile</title>
+<meta name="description" content="Check if T-Mobile Rely Home Internet is available at your address. $35/mo with AutoPay and eligible voice line, plus taxes &amp; fees. Get $100 back via virtual prepaid Mastercard&reg;.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -291,6 +291,38 @@ h1 .nw{white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none!important}html{scroll-behavior:auto}}
 
+/* ---------- Rating + reviews (design draft) ---------- */
+.stars{display:inline-flex;gap:2px;color:#ffb400}
+.stars svg{width:15px;height:15px}
+.avs{display:flex;flex:0 0 auto}
+.av{width:42px;height:42px;border-radius:50%;border:2px solid #fff;margin-left:-10px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.av:first-child{margin-left:0}
+.t-item.rating{gap:14px}
+.t-item.rating b{font-size:14.5px;margin-top:2px}
+.trust .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+.reviews{padding:26px 0 6px}
+.rv-box{background:#fff;border:1px solid #f1d6e4;border-radius:16px;box-shadow:0 10px 30px rgba(226,0,116,.07);padding:26px 22px 22px}
+.rv-box h2{text-align:center;font-size:clamp(22px,2vw,28px);font-weight:800;letter-spacing:-.01em}
+.rv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.rv{display:flex;gap:16px;border:1px solid var(--line);border-radius:10px;padding:18px 16px}
+.rv-av{flex:0 0 72px;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;font-weight:800}
+.rv-body .stars svg{width:17px;height:17px}
+.rv blockquote{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.5;color:#2b2f3a;margin-top:8px}
+.rv figcaption{margin-top:10px}
+.rv figcaption b{display:block;font-size:14px;font-weight:800}
+.rv figcaption span{display:block;font-family:Inter,Arial,sans-serif;font-size:12.5px;color:var(--muted)}
+@media (max-width:1100px){.rv-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .trust .wrap{grid-template-columns:minmax(0,1fr)}
+  .t-item.rating{flex-wrap:wrap}
+  .av{width:36px;height:36px;font-size:12px}
+  .reviews{padding:18px 0 0}
+  .rv-box{padding:20px 14px 14px;border-radius:14px}
+  .rv{padding:14px 12px;gap:12px}
+  .rv-av{flex-basis:52px;width:52px;height:52px;font-size:17px}
+}
+
 /* ---------- Desktop: form scrolls inside its card ---------- */
 .ls-scroll{position:relative;margin-top:6px}
 .ls-scroll .ls-host{margin-top:0;overflow:hidden}
@@ -366,6 +398,22 @@ h1 .nw{white-space:nowrap}
   .fc-perks li{font-size:12px}
 }
 @media (prefers-reduced-motion:reduce){.fc-prompt{animation:none}}
+
+/* ---------- $100 card graphic: virtual prepaid card (not a gift card) ---------- */
+.giftcard{background:linear-gradient(135deg,#ff2a95 0%,#e20074 45%,#7a0049 100%)!important}
+.giftcard .ribbon,.giftcard .bow{display:none!important}
+.giftcard::before{content:"";position:absolute;right:9%;left:auto;top:12%;width:15%;height:20%;border-radius:4px;background:linear-gradient(135deg,#ffe08a,#c9a24a)}
+.giftcard .gc-amt{left:9%!important;right:auto!important;top:12%!important;color:#fff!important;line-height:1}
+.giftcard .gc-back{left:9%!important;right:auto!important;top:46%!important;color:#fff!important;line-height:1}
+.giftcard .gc-lbl{position:absolute;left:9%;right:30%;bottom:8%;font-size:clamp(7px,.6vw,9px);line-height:1.15;font-weight:700;letter-spacing:.2px;text-transform:uppercase;color:rgba(255,255,255,.92)}
+.ast-legal{font-family:Inter,Arial,sans-serif;font-size:12px;color:inherit;opacity:.85;margin-top:8px}
+
+/* Desktop: show the whole form (no inner scrolling) */
+.ls-pane{max-height:none!important;overflow:visible!important}
+.ls-scroll::after,.ls-hint{display:none!important}
+.giftcard .gc-amt{font-size:clamp(19px,1.8vw,27px)!important}
+.giftcard .gc-back{font-size:clamp(14px,1.35vw,20px)!important;top:40%!important}
+.giftcard .gc-lbl{font-size:clamp(6px,.5vw,7.5px)!important}
 </style>
 </head>
 <body>
@@ -395,14 +443,14 @@ h1 .nw{white-space:nowrap}
 <div class="ticker" role="note" aria-label="Offer highlights">
   <div class="ticker-track">
     <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time offer</span>
-    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 back<sup class="dag">&dagger;</sup></span>
-    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>Home Internet starting at $35/mo<sup class="ast">*</sup></span>
-    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>5G Wi-Fi gateway included</span>
+    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$100 back via virtual prepaid Mastercard&reg;<sup class="ast">**</sup></span>
+    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>T-Mobile Rely Home Internet $35/mo<sup class="ast">*</sup></span>
+    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>No equipment fee</span>
     <a class="ticker-item go" href="#check" data-check>Check if your address qualifies <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time offer</span>
-    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 back<sup class="dag">&dagger;</sup></span>
-    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>Home Internet starting at $35/mo<sup class="ast">*</sup></span>
-    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>5G Wi-Fi gateway included</span>
+    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$100 back via virtual prepaid Mastercard&reg;<sup class="ast">**</sup></span>
+    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>T-Mobile Rely Home Internet $35/mo<sup class="ast">*</sup></span>
+    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>No equipment fee</span>
     <span class="ticker-item dup" aria-hidden="true">Check if your address qualifies <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </div>
 </div>
@@ -411,19 +459,19 @@ h1 .nw{white-space:nowrap}
   <div class="wrap">
     <div class="h-copy">
       <span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time Home Internet offer</span>
-      <h1>Get T-Mobile 5G <span class="nw">Home Internet for</span> <span class="hl">Just $35/mo<sup class="ast">*</sup></span></h1>
-      <p class="lead">With AutoPay and a qualifying voice line, plus taxes &amp; fees. Plus get <b>$100 back</b> via virtual prepaid Mastercard<sup class="dag">&dagger;</sup> when you activate online.</p>
-      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today for qualifying customers<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via virtual prepaid Mastercard<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
+      <h1>Get T-Mobile Rely <span class="nw">Home Internet for</span> <span class="hl">Just $35/mo<sup class="ast">*</sup></span></h1>
+      <p class="lead">With Unlimited 5G Data. With AutoPay and eligible voice line, plus taxes &amp; fees. Plus get $100 back via virtual prepaid Mastercard&reg;.<sup class="ast">**</sup></p>
+      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Worry-free 15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
     </div>
 
-    <div class="mtrust no-rate" aria-label="Why choose us"><div class="mt-items"><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><span class="l">Authorized<br>T-Mobile Retailer</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><span class="l">5-Year Price Guarantee</span></div><a class="mt-it call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><span class="l">Call<br>888-765-4506</span></a></div></div>
+    <div class="mtrust no-rate" aria-label="Why choose us"><div class="mt-items"><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><span class="l">Authorized<br>T-Mobile Retailer</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><span class="l">5-Year Price<br>Guarantee</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><span class="l">Check Availability Instantly</span></div></div></div>
 
     <div class="h-visual">
       <div class="glow"></div>
       <div class="giftcard" aria-hidden="true">
           <svg class="ribbon" viewBox="0 0 200 130" preserveAspectRatio="none"><rect x="0" y="96" width="200" height="14" fill="#e20074"/><rect x="30" y="0" width="16" height="130" fill="#e20074"/></svg>
           <svg class="bow" viewBox="0 0 80 60"><path d="M40 30C28 10 6 6 8 22s20 14 32 8zM40 30C52 10 74 6 72 22s-20 14-32 8z" fill="#ff1a8c" stroke="#b8005e" stroke-width="2"/><path d="M40 30 26 56M40 30l14 26" stroke="#e20074" stroke-width="7" stroke-linecap="round"/><circle cx="40" cy="30" r="7" fill="#e20074"/></svg>
-          <span class="gc-amt">$100</span><span class="gc-back">Back</span>
+          <span class="gc-amt">$100</span><span class="gc-back">Back</span><span class="gc-lbl">Virtual Prepaid Mastercard&reg;</span>
         </div>
       <div class="router"><img src="images/router-angle.png" alt="T-Mobile 5G Home Internet gateway" width="428" height="655"></div>
       <div class="m-art" style="display:none">
@@ -431,20 +479,20 @@ h1 .nw{white-space:nowrap}
         <div class="giftcard" aria-hidden="true">
           <svg class="ribbon" viewBox="0 0 200 130" preserveAspectRatio="none"><rect x="0" y="96" width="200" height="14" fill="#e20074"/><rect x="30" y="0" width="16" height="130" fill="#e20074"/></svg>
           <svg class="bow" viewBox="0 0 80 60"><path d="M40 30C28 10 6 6 8 22s20 14 32 8zM40 30C52 10 74 6 72 22s-20 14-32 8z" fill="#ff1a8c" stroke="#b8005e" stroke-width="2"/><path d="M40 30 26 56M40 30l14 26" stroke="#e20074" stroke-width="7" stroke-linecap="round"/><circle cx="40" cy="30" r="7" fill="#e20074"/></svg>
-          <span class="gc-amt">$100</span><span class="gc-back">Back</span>
+          <span class="gc-amt">$100</span><span class="gc-back">Back</span><span class="gc-lbl">Virtual Prepaid Mastercard&reg;</span>
         </div>
       </div>
-      <div class="m-checks" style="display:none"><ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today for qualifying customers<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via virtual prepaid Mastercard<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li></ul></div>
+      <div class="m-checks" style="display:none"><ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li></ul></div>
     </div>
 
     <aside class="h-form" id="check">
       <p class="fc-prompt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Enter your address below. It&rsquo;s free</p>
       <div class="formcard">
-        <div class="fc-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg><span>Your offer: <b>$35/mo + $100 back</b><sup class="dag">&dagger;</sup></span></div>
+        <div class="fc-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg><span>Your offer: <b>Rely Home Internet $35/mo</b><sup class="ast">*</sup> + <b>$100 back</b> via virtual prepaid Mastercard&reg;<sup class="ast">**</sup></span></div>
         <h2>Check Your Address</h2>
         <h3>See If You Qualify for This Offer</h3>
-        <p class="fc-sub">Fast, free availability check.</p>
-        <ul class="fc-perks"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No credit card needed</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No obligation</li></ul>
+        <p class="fc-sub">Check availability instantly. It&rsquo;s free.</p>
+        <ul class="fc-perks"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No obligation</li></ul>
         <p class="fc-urg"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></svg>Limited-time pricing. Check before this offer changes.</p>
         <div class="ls-scroll" id="lsScroll">
         <div class="ls-pane" id="lsPane">
@@ -476,7 +524,7 @@ h1 .nw{white-space:nowrap}
         <p class="fc-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></svg>Secure &amp; No Obligation</p>
         <ul class="fc-checks">
           <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No commitment to purchase</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free to check</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Check availability instantly</li>
           <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Find out if your address qualifies</li>
         </ul>
       </div>
@@ -487,11 +535,11 @@ h1 .nw{white-space:nowrap}
 <section class="trust" aria-label="Why Collins Mobile">
   <div class="wrap">
     <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><div><b>Authorized<br>T-Mobile Retailer</b></div></div>
-    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><div><b>5-Year Price Guarantee</b><small>On eligible plans</small></div></div>
-    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Free Availability<br>Check</b><small>See if your address qualifies</small></div></div>
-    <a class="t-item call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><div><b>888-765-4506</b><small>Prefer to talk? Call us</small></div></a>
+    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><div><b>5-Year Price<br>Guarantee</b></div></div>
+    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Check Availability<br>Instantly</b></div></div>
   </div>
 </section>
+
 <section class="rv-cta" aria-label="Check your address">
   <div class="wrap">
     <div class="rv-cta-box">
@@ -502,14 +550,11 @@ h1 .nw{white-space:nowrap}
   </div>
 </section>
 
-<!-- REVIEWS: intentionally not published. Add only genuine customer reviews (with permission)
-     and real rating data; the design's sample reviews/ratings were placeholders. -->
-
 <section class="features" aria-label="Benefits">
   <div class="wrap">
     <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="m8 8 8 8M16 8l-8 8"/></g></svg></span><h3>No Annual Contract</h3><p>No long-term commitment.<br>Service terms apply.</p></div>
-    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>Quick Setup</h3><p>Simple self-install<br>with step-by-step instructions.</p></div>
-    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><h3>15-Day Test Drive</h3><p>Try it at your address worry-free.</p><button type="button" class="terms-link" data-terms>Get Full Terms</button></div>
+    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>15-Minute Setup</h3><p>Go from box to browsing<br>in 15 minutes.</p></div>
+    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><h3>Worry-free 15-Day Test Drive</h3><p>Try it for 15 days to see if it works for you, or get your money back.</p><button type="button" class="terms-link" data-terms>Get Full Terms</button></div>
     <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg></span><h3>Address Based Availability</h3><p>Check if service is available<br>in your area.</p></div>
   </div>
 </section>
@@ -535,17 +580,18 @@ h1 .nw{white-space:nowrap}
         <div class="giftcard" aria-hidden="true">
           <svg class="ribbon" viewBox="0 0 200 130" preserveAspectRatio="none"><rect x="0" y="96" width="200" height="14" fill="#e20074"/><rect x="30" y="0" width="16" height="130" fill="#e20074"/></svg>
           <svg class="bow" viewBox="0 0 80 60"><path d="M40 30C28 10 6 6 8 22s20 14 32 8zM40 30C52 10 74 6 72 22s-20 14-32 8z" fill="#ff1a8c" stroke="#b8005e" stroke-width="2"/><path d="M40 30 26 56M40 30l14 26" stroke="#e20074" stroke-width="7" stroke-linecap="round"/><circle cx="40" cy="30" r="7" fill="#e20074"/></svg>
-          <span class="gc-amt">$100</span><span class="gc-back">Back</span>
+          <span class="gc-amt">$100</span><span class="gc-back">Back</span><span class="gc-lbl">Virtual Prepaid Mastercard&reg;</span>
         </div>
         <div class="router"><img src="images/router-angle.png" alt="" width="428" height="655"></div>
       </div>
       <div>
         <span class="dmo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Don&rsquo;t miss out</span>
-        <h2 id="bandTitle">Your Next Internet Bill Could Be Just <span class="hl">$35/mo<sup class="ast">*</sup></span></h2>
+        <h2 id="bandTitle">Your Next Internet Bill Could Be Just <span class="hl">$35/mo<sup class="ast">*</sup></span> with T-Mobile Rely Home Internet</h2>
         <p>Limited-time promotional pricing and availability may change. Check your address now to see if this offer is available.</p>
+        <p class="ast-legal">*With AutoPay and eligible voice line, plus taxes &amp; fees.</p>
         <a class="btn" href="#check" data-check>Check My Address <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li></ul>
+      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Worry-free 15-Day Test Drive</span></li></ul>
     </div>
   </div>
 </section>
@@ -556,16 +602,15 @@ h1 .nw{white-space:nowrap}
     <h2 id="faqTitle">Real Questions. <span class="hl">Clearer Answers.</span></h2>
     <div class="faq-cols">
       <div><details><summary>Is T-Mobile 5G Home Internet available at my address?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>Availability depends on your service address and network capacity, which changes over time. Enter your information in the form above, or call <a href="tel:+18887654506">888-765-4506</a>, and we&rsquo;ll check your address for you.</p></div></details><details><summary>Is there an annual contract?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>No. There&rsquo;s no annual contract. If you cancel, you&rsquo;ll need to return the gateway undamaged or pay up to $370.</p></div></details><details><summary>Can I switch from my current internet provider?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>Yes. If T-Mobile 5G Home Internet is available at your address, you can switch. Many people keep their current service until their gateway is set up, then cancel their old provider.</p></div></details><details><summary>How does setup work?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>Your T-Mobile 5G gateway is a simple self-install: plug it in at the service address you provide at activation and follow the step-by-step instructions. Service is for in-home use at that address.</p></div></details></div>
-      <div><details><summary>Do I need a T-Mobile phone service to qualify?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>This $35/mo price requires a qualifying postpaid T-Mobile voice line, AutoPay, qualifying credit, and a new Home Internet line. Our team can tell you which options fit your account.</p></div></details><details><summary>What does the 15-day test drive mean?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>New and existing T-Mobile customers activating Home Internet on a qualifying plan can get their money back via a one-time bill credit if they schedule cancellation within the first 15 days of activation. The gateway must be returned.</p></div></details><details><summary>Are taxes and fees included in the monthly price?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>No. $35/mo is with AutoPay and a qualifying voice line, plus taxes &amp; fees. Without AutoPay it&rsquo;s $10 more per line per month, and a $35 device connection charge is due at sale.</p></div></details><details><summary>What information do I need to check availability?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>Just your name, mobile phone number, email, and the street address and ZIP code where you want service. It&rsquo;s free to check and there&rsquo;s no obligation.</p></div></details></div>
+      <div><details><summary>Do I need a T-Mobile phone service to qualify?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>T-Mobile Rely Home Internet at $35/mo requires AutoPay and an eligible voice line, plus taxes &amp; fees, qualifying credit, and a new Home Internet line. Our team can tell you which options fit your account.</p></div></details><details><summary>What does the 15-day test drive mean?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>New and existing T-Mobile customers activating Home Internet on a qualifying plan can get their money back via a one-time bill credit if they schedule cancellation within the first 15 days of activation. The gateway must be returned.</p></div></details><details><summary>Are taxes and fees included in the monthly price?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>No. T-Mobile Rely Home Internet is $35/mo with AutoPay and eligible voice line, plus taxes &amp; fees. Without AutoPay it&rsquo;s $10 more per line per month, and a $35 device connection charge is due at sale.</p></div></details><details><summary>What information do I need to check availability?<svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></summary><div class="ans"><p>Just your name, mobile phone number, email, and the street address and ZIP code where you want service. It&rsquo;s free to check and there&rsquo;s no obligation.</p></div></details></div>
     </div>
   </div>
 </section>
 
 <section class="fine" aria-label="Offer details">
   <div class="wrap">
-    <p>*$35/mo with AutoPay and a qualifying voice line, plus taxes &amp; fees. Without AutoPay, $10 more/line/mo. $0 due today for qualifying customers; $35 device connection charge due at sale. Credit approval required. Not available in all areas. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p>
-    <p>&dagger;$100 via virtual prepaid Mastercard for Rely Home Internet, digital (online) activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button></p>
-    <p>**Allow 10 weeks. <button type="button" class="terms-link" data-terms="card">See Full Terms</button></p>
+    <p>*T-Mobile Rely Home Internet $35/mo with AutoPay and eligible voice line, plus taxes &amp; fees. Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p>
+    <p>**Get $100 back via virtual prepaid Mastercard&reg; when you activate a new Home Internet line online. Allow 10 weeks. <button type="button" class="terms-link" data-terms="card">See Full Terms</button> &middot; <button type="button" class="terms-link" data-terms>Plan terms</button></p>
   </div>
 </section>
 
