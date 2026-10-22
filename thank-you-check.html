@@ -254,7 +254,7 @@ img{display:block;max-width:100%}
 @media (max-width:370px){.mt-h .cb{display:none} .mt-h{justify-content:center}}
 @media (max-width:350px){.why-g{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:12px} .why-g div:nth-child(3){border-left:0}}
 
-/* ---------- $100 card graphic: virtual prepaid card (not a gift card) ---------- */
+/* ---------- $100 card graphic: virtual prepaid Mastercard card ---------- */
 .giftcard{background:linear-gradient(135deg,#ff2a95 0%,#e20074 45%,#7a0049 100%)!important}
 .giftcard .ribbon,.giftcard .bow{display:none!important}
 .giftcard::before{content:"";position:absolute;right:9%;left:auto;top:12%;width:15%;height:20%;border-radius:4px;background:linear-gradient(135deg,#ffe08a,#c9a24a)}
@@ -289,6 +289,19 @@ img{display:block;max-width:100%}
   .terms-body{padding:14px 18px 20px;font-size:13px}
 }
 
+
+/* ---------- Hero background photo (Unsplash hlOpCML8twI), tinted magenta ---------- */
+.hero,.mhero{isolation:isolate}
+.hero-photo{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-photo i{position:absolute;inset:-14px;background:url(images/living-room-bg.jpg) center 62%/cover no-repeat;filter:grayscale(1) blur(2px) brightness(1.15) contrast(1.2)}
+.hero-photo i{z-index:0}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;background:#d1007a;mix-blend-mode:color;opacity:.95}
+.hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:
+  radial-gradient(ellipse 30% 40% at 52% 100%,rgba(255,30,150,.5),transparent 70%),
+  radial-gradient(ellipse 22% 55% at 96% 30%,rgba(255,60,170,.35),transparent 70%),
+  linear-gradient(90deg,rgba(18,4,22,.72) 0%,rgba(18,4,22,.2) 50%,rgba(18,4,22,.4) 100%)}
+.hero > .wrap,.mhero > *:not(.hero-photo){position:relative;z-index:1}
+@media (max-width:760px){.mvis .giftcard .gc-amt{font-size:clamp(17px,5vw,22px)!important}.mvis .giftcard .gc-back{font-size:clamp(13px,3.8vw,17px)!important;top:38%!important}.mvis .giftcard .gc-lbl{font-size:6px!important;bottom:7%!important}}
 </style>
 </head>
 <body>
@@ -320,6 +333,7 @@ img{display:block;max-width:100%}
 </div></div>
 
 <section class="hero d-only">
+  <div class="hero-photo" aria-hidden="true"><i></i></div>
   <div class="wrap">
     <div>
       <div class="gn"><span class="ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h1><span class="greet">Great News, <span class="fn">Phil</span>!</span><span class="hl">Your Spot Is Reserved!</span></h1></div>
@@ -372,6 +386,7 @@ img{display:block;max-width:100%}
 
 <!-- ================= MOBILE ================= -->
 <section class="mhero m-only">
+  <div class="hero-photo" aria-hidden="true"><i></i></div>
   <div class="confetti" aria-hidden="true">
     <i style="left:22%;top:26px;transform:rotate(-30deg)"></i><i style="left:30%;top:70px;transform:rotate(40deg)"></i><i style="left:36%;top:14px;transform:rotate(15deg)"></i>
     <i style="left:62%;top:20px;transform:rotate(-20deg)"></i><i style="left:70%;top:62px;transform:rotate(55deg)"></i><i style="left:76%;top:30px;transform:rotate(-50deg)"></i>

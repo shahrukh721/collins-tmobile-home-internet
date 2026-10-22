@@ -400,7 +400,7 @@ h1 .nw{white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){.fc-prompt{animation:none}}
 
-/* ---------- $100 card graphic: virtual prepaid card (not a gift card) ---------- */
+/* ---------- $100 card graphic: virtual prepaid Mastercard card ---------- */
 .giftcard{background:linear-gradient(135deg,#ff2a95 0%,#e20074 45%,#7a0049 100%)!important}
 .giftcard .ribbon,.giftcard .bow{display:none!important}
 .giftcard::before{content:"";position:absolute;right:9%;left:auto;top:12%;width:15%;height:20%;border-radius:4px;background:linear-gradient(135deg,#ffe08a,#c9a24a)}
@@ -415,6 +415,18 @@ h1 .nw{white-space:nowrap}
 .giftcard .gc-amt{font-size:clamp(19px,1.8vw,27px)!important}
 .giftcard .gc-back{font-size:clamp(14px,1.35vw,20px)!important;top:40%!important}
 .giftcard .gc-lbl{font-size:clamp(6px,.5vw,7.5px)!important}
+
+/* ---------- Hero background photo (Unsplash hlOpCML8twI), tinted magenta ---------- */
+.hero,.mhero{isolation:isolate}
+.hero-photo{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-photo i{position:absolute;inset:-14px;background:url(images/living-room-bg.jpg) center 62%/cover no-repeat;filter:grayscale(1) blur(2px) brightness(1.15) contrast(1.2)}
+.hero-photo i{z-index:0}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;background:#d1007a;mix-blend-mode:color;opacity:.95}
+.hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:
+  radial-gradient(ellipse 30% 40% at 52% 100%,rgba(255,30,150,.5),transparent 70%),
+  radial-gradient(ellipse 22% 55% at 96% 30%,rgba(255,60,170,.35),transparent 70%),
+  linear-gradient(90deg,rgba(18,4,22,.72) 0%,rgba(18,4,22,.2) 50%,rgba(18,4,22,.4) 100%)}
+.hero > .wrap,.mhero > *:not(.hero-photo){position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -457,6 +469,7 @@ h1 .nw{white-space:nowrap}
 </div>
 
 <section class="hero">
+  <div class="hero-photo" aria-hidden="true"><i></i></div>
   <div class="wrap">
     <div class="h-copy">
       <span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time Home Internet offer</span>
