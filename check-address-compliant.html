@@ -238,7 +238,7 @@ h1 .nw{white-space:nowrap}
   .h-call{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--magenta);color:#fff}
   .h-call svg{width:18px;height:18px}
   .ticker-track{height:36px}
-  .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "form" "visual";gap:18px;padding-top:20px;padding-bottom:20px}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "trust" "form" "visual";gap:18px;padding-top:20px;padding-bottom:20px}
   .h-copy .checks{display:none}
   .badge{font-size:11px;padding:6px 11px}
   h1{font-size:clamp(29px,8.4vw,40px);margin-top:12px}
@@ -310,7 +310,7 @@ h1 .nw{white-space:nowrap}
 /* ---------- Mobile: compact horizontal trust strip at the top ---------- */
 .mtrust{display:none}
 @media (max-width:760px){
-  .mtrust{display:block;background:#fff;border-bottom:1px solid var(--line);padding:10px 12px 10px}
+  .mtrust{display:block;grid-area:trust;background:#fff;color:var(--ink);border-radius:12px;padding:10px 10px 10px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
   .mt-rate{display:flex;align-items:center;justify-content:center;gap:10px}
   .mt-rate .av{width:28px;height:28px;font-size:9.5px;margin-left:-5px;border-width:2px;letter-spacing:-.3px}
   .mt-rate .av:first-child{margin-left:0}
@@ -327,6 +327,25 @@ h1 .nw{white-space:nowrap}
   .trust{display:none}
 }
 @media (max-width:350px){.mt-it .t-ic{display:none}.mt-rate .avs{display:none}}
+
+/* ---------- CTA under reviews ---------- */
+.rv-cta{padding:18px 0 4px}
+.rv-cta-box{display:flex;align-items:center;gap:18px;padding:18px 22px;border-radius:14px;background:linear-gradient(90deg,#fff3f9,#fde4f0);border:1px solid #f3c9dc}
+.rv-cta-ic{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--magenta);color:#fff;display:grid;place-items:center;box-shadow:0 6px 16px rgba(226,0,116,.3)}
+.rv-cta-ic svg{width:26px;height:26px}
+.rv-cta-txt{flex:1;min-width:0}
+.rv-cta-txt b{display:block;font-size:20px;font-weight:800;letter-spacing:-.01em}
+.rv-cta-txt span{display:block;font-family:Inter,Arial,sans-serif;font-size:14px;color:var(--muted);margin-top:3px}
+.rv-cta .btn{flex:0 0 auto}
+@media (max-width:760px){
+  .rv-cta{padding:14px 0 0}
+  .rv-cta-box{flex-wrap:wrap;gap:12px;padding:16px 14px;text-align:left}
+  .rv-cta-ic{flex-basis:42px;width:42px;height:42px}
+  .rv-cta-ic svg{width:22px;height:22px}
+  .rv-cta-txt b{font-size:17px}
+  .rv-cta-txt span{font-size:13px}
+  .rv-cta .btn{width:100%}
+}
 </style>
 </head>
 <body>
@@ -368,7 +387,6 @@ h1 .nw{white-space:nowrap}
   </div>
 </div>
 
-<div class="mtrust no-rate" aria-label="Why choose us"><div class="mt-items"><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><span class="l">Authorized<br>T-Mobile Retailer</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><span class="l">5-Year Price Guarantee</span></div><a class="mt-it call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><span class="l">Call<br>888-765-4506</span></a></div></div>
 <section class="hero">
   <div class="wrap">
     <div class="h-copy">
@@ -377,6 +395,8 @@ h1 .nw{white-space:nowrap}
       <p class="lead">With AutoPay and a qualifying voice line, plus taxes &amp; fees. Plus get <b>$100 back</b> via virtual prepaid Mastercard<sup class="dag">&dagger;</sup> when you activate online.</p>
       <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today for qualifying customers<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via virtual prepaid Mastercard<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
     </div>
+
+    <div class="mtrust no-rate" aria-label="Why choose us"><div class="mt-items"><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><span class="l">Authorized<br>T-Mobile Retailer</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><span class="l">5-Year Price Guarantee</span></div><a class="mt-it call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><span class="l">Call<br>888-765-4506</span></a></div></div>
 
     <div class="h-visual">
       <div class="glow"></div>
@@ -444,8 +464,17 @@ h1 .nw{white-space:nowrap}
   <div class="wrap">
     <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><div><b>Authorized<br>T-Mobile Retailer</b></div></div>
     <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><div><b>5-Year Price Guarantee</b><small>On eligible plans</small></div></div>
-    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Available in<br>Your Area</b><small>Check your address</small></div></div>
+    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Free Availability<br>Check</b><small>See if your address qualifies</small></div></div>
     <a class="t-item call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><div><b>888-765-4506</b><small>Prefer to talk? Call us</small></div></a>
+  </div>
+</section>
+<section class="rv-cta" aria-label="Check your address">
+  <div class="wrap">
+    <div class="rv-cta-box">
+      <span class="rv-cta-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span>
+      <div class="rv-cta-txt"><b>See if this offer is available at your address</b><span>Fill out the quick form to check your address. It&rsquo;s free and there&rsquo;s no obligation.</span></div>
+      <a class="btn" href="#check" data-check>Check My Address <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
   </div>
 </section>
 
