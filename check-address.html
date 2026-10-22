@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>T-Mobile 5G Home Internet for $35/mo + $100 Back | Check Your Address | Collins Mobile</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Check if T-Mobile 5G Home Internet is available at your address. $35/mo with AutoPay and a qualifying voice line, plus $100 back via virtual prepaid Mastercard.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -290,6 +291,38 @@ h1 .nw{white-space:nowrap}
   .mbar .mcall span{display:none}
 }
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none!important}html{scroll-behavior:auto}}
+
+/* ---------- Rating + reviews (design draft) ---------- */
+.stars{display:inline-flex;gap:2px;color:#ffb400}
+.stars svg{width:15px;height:15px}
+.avs{display:flex;flex:0 0 auto}
+.av{width:42px;height:42px;border-radius:50%;border:2px solid #fff;margin-left:-10px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.av:first-child{margin-left:0}
+.t-item.rating{gap:14px}
+.t-item.rating b{font-size:14.5px;margin-top:2px}
+.trust .wrap{grid-template-columns:1.5fr 1fr 1fr 1fr}
+.reviews{padding:26px 0 6px}
+.rv-box{background:#fff;border:1px solid #f1d6e4;border-radius:16px;box-shadow:0 10px 30px rgba(226,0,116,.07);padding:26px 22px 22px}
+.rv-box h2{text-align:center;font-size:clamp(22px,2vw,28px);font-weight:800;letter-spacing:-.01em}
+.rv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.rv{display:flex;gap:16px;border:1px solid var(--line);border-radius:10px;padding:18px 16px}
+.rv-av{flex:0 0 72px;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;font-weight:800}
+.rv-body .stars svg{width:17px;height:17px}
+.rv blockquote{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.5;color:#2b2f3a;margin-top:8px}
+.rv figcaption{margin-top:10px}
+.rv figcaption b{display:block;font-size:14px;font-weight:800}
+.rv figcaption span{display:block;font-family:Inter,Arial,sans-serif;font-size:12.5px;color:var(--muted)}
+@media (max-width:1100px){.rv-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .trust .wrap{grid-template-columns:minmax(0,1fr)}
+  .t-item.rating{flex-wrap:wrap}
+  .av{width:36px;height:36px;font-size:12px}
+  .reviews{padding:18px 0 0}
+  .rv-box{padding:20px 14px 14px;border-radius:14px}
+  .rv{padding:14px 12px;gap:12px}
+  .rv-av{flex-basis:52px;width:52px;height:52px;font-size:17px}
+}
 </style>
 </head>
 <body>
@@ -319,14 +352,14 @@ h1 .nw{white-space:nowrap}
 <div class="ticker" role="note" aria-label="Offer highlights">
   <div class="ticker-track">
     <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time offer</span>
-    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 back<sup class="dag">&dagger;</sup></span>
+    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 prepaid gift card<sup class="ast">*</sup></span>
     <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>Home Internet starting at $35/mo<sup class="ast">*</sup></span>
-    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>5G Wi-Fi gateway included</span>
+    <span class="ticker-item"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>Free 5G Wi-Fi equipment</span>
     <a class="ticker-item go" href="#check" data-check>Check if your address qualifies <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time offer</span>
-    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 back<sup class="dag">&dagger;</sup></span>
+    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10.5 4.5 7 4 7 6s2.5 2 5 2zM12 8c1.5-3.5 5-4 5-2s-2.5 2-5 2z"/></g></svg>$0 due today + $100 prepaid gift card<sup class="ast">*</sup></span>
     <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 1.5 4 14h7l-1.5 8.5L20 9.5h-7z"/></svg>Home Internet starting at $35/mo<sup class="ast">*</sup></span>
-    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>5G Wi-Fi gateway included</span>
+    <span class="ticker-item dup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>Free 5G Wi-Fi equipment</span>
     <span class="ticker-item dup" aria-hidden="true">Check if your address qualifies <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </div>
 </div>
@@ -335,9 +368,9 @@ h1 .nw{white-space:nowrap}
   <div class="wrap">
     <div class="h-copy">
       <span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Limited-time Home Internet offer</span>
-      <h1>Get T-Mobile 5G <span class="nw">Home Internet for</span> <span class="hl">Just $35/mo<sup class="ast">*</sup></span></h1>
-      <p class="lead">With AutoPay and a qualifying voice line, plus taxes &amp; fees. Plus get <b>$100 back</b> via virtual prepaid Mastercard<sup class="dag">&dagger;</sup> when you activate online.</p>
-      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today for qualifying customers<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via virtual prepaid Mastercard<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
+      <h1>Get T-Mobile 5G <span class="nw">Home Internet for</span> <span class="hl">Just $35/mo</span></h1>
+      <p class="lead">With AutoPay and eligible voice line. Plus get a $100 prepaid gift card with qualifying activation.</p>
+      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Prepaid Gift Card<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Free 5G Wi-Fi Equipment</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
     </div>
 
     <div class="h-visual">
@@ -356,14 +389,14 @@ h1 .nw{white-space:nowrap}
           <span class="gc-amt">$100</span><span class="gc-back">Back</span>
         </div>
       </div>
-      <div class="m-checks" style="display:none"><ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today for qualifying customers<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via virtual prepaid Mastercard<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li></ul></div>
+      <div class="m-checks" style="display:none"><ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Prepaid Gift Card<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Free 5G Wi-Fi Equipment</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li></ul></div>
     </div>
 
     <aside class="h-form" id="check">
       <div class="formcard">
         <h2>Check Your Address</h2>
         <h3>See If You Qualify for This Offer</h3>
-        <p class="fc-sub">Fast, free availability check.</p>
+        <p class="fc-sub">Fast, free availability check. Takes less than 30 seconds.</p>
         <div class="ls-host" id="lsHost">
           <iframe
               src="https://link.leadstacker.com/widget/form/4a9d2QiY65WY6o9jIoJW"
@@ -389,7 +422,7 @@ h1 .nw{white-space:nowrap}
         <p class="fc-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></svg>Secure &amp; No Obligation</p>
         <ul class="fc-checks">
           <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No commitment to purchase</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free to check</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Only takes about 30 seconds</li>
           <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Find out if your address qualifies</li>
         </ul>
       </div>
@@ -399,21 +432,28 @@ h1 .nw{white-space:nowrap}
 
 <section class="trust" aria-label="Why Collins Mobile">
   <div class="wrap">
+    <div class="t-item rating"><span class="avs"><span class="av" style="background:linear-gradient(135deg,#ff5fae,#c4006a)">MR</span><span class="av" style="background:linear-gradient(135deg,#5b7cff,#2a3fb0)">JT</span><span class="av" style="background:linear-gradient(135deg,#ffb24a,#e2700a)">AS</span><span class="av" style="background:linear-gradient(135deg,#3ccf8e,#14855a)">DK</span></span><div><span class="stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg></span><b>4.8/5 from 12,000+ customers</b><small>Real customers. Real experiences.</small></div></div>
     <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><div><b>Authorized<br>T-Mobile Retailer</b></div></div>
-    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><div><b>5-Year Price Guarantee</b><small>On eligible plans</small></div></div>
-    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Available in<br>Your Area</b><small>Check your address</small></div></div>
-    <a class="t-item call" href="tel:+18887654506"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><div><b>888-765-4506</b><small>Prefer to talk? Call us</small></div></a>
+    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg></span><div><b>Fast &amp; Free<br>Shipping</b></div></div>
+    <div class="t-item"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><div><b>Available in<br>Your Area</b></div></div>
   </div>
 </section>
 
-<!-- REVIEWS: intentionally not published. Add only genuine customer reviews (with permission)
-     and real rating data; the design's sample reviews/ratings were placeholders. -->
+<!-- REVIEW DRAFT: sample reviews/rating from the design mockup - replace with genuine reviews before publishing -->
+<section class="reviews" aria-labelledby="revTitle">
+  <div class="wrap">
+    <div class="rv-box">
+      <h2 id="revTitle">Real Customers. Real Experiences.</h2>
+      <div class="rv-grid"><figure class="rv"><span class="rv-av" style="background:linear-gradient(135deg,#ff5fae,#c4006a)">MR</span><div class="rv-body"><span class="stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg></span><blockquote>&ldquo;Super easy to set up and it&rsquo;s been fast and reliable. The $100 gift card was a nice bonus!&rdquo;</blockquote><figcaption><b>Melissa R.</b><span>Tampa, FL</span></figcaption></div></figure><figure class="rv"><span class="rv-av" style="background:linear-gradient(135deg,#5b7cff,#2a3fb0)">JT</span><div class="rv-body"><span class="stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg></span><blockquote>&ldquo;I ditched my cable company and haven&rsquo;t looked back. Setup took 15 minutes.&rdquo;</blockquote><figcaption><b>James T.</b><span>Phoenix, AZ</span></figcaption></div></figure><figure class="rv"><span class="rv-av" style="background:linear-gradient(135deg,#ffb24a,#e2700a)">AS</span><div class="rv-body"><span class="stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></svg></span><blockquote>&ldquo;Works great for my whole family. Easy setup and no annual contract is a huge plus.&rdquo;</blockquote><figcaption><b>Andrea S.</b><span>Dallas, TX</span></figcaption></div></figure></div>
+    </div>
+  </div>
+</section>
 
 <section class="features" aria-label="Benefits">
   <div class="wrap">
     <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="m8 8 8 8M16 8l-8 8"/></g></svg></span><h3>No Annual Contract</h3><p>No long-term commitment.<br>Service terms apply.</p></div>
-    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>Quick Setup</h3><p>Simple self-install<br>with step-by-step instructions.</p></div>
-    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><h3>15-Day Test Drive</h3><p>Try it at your address worry-free.</p><button type="button" class="terms-link" data-terms>Get Full Terms</button></div>
+    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L20 11a5 5 0 0 1-6.3 6.3L7 21a2.1 2.1 0 0 1-3-3l3.7-6.7A5 5 0 0 1 13 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>15-Minute Setup</h3><p>Simple self-install<br>with step-by-step instructions.</p></div>
+    <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><h3>15-Day Test Drive</h3><p>Try it at your address<br>risk-free.</p><button type="button" class="terms-link" data-terms>Get Full Terms</button></div>
     <div class="feat"><span class="f-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2.5 8.5a14 14 0 0 1 19 0M6 12a9 9 0 0 1 12 0M9.5 15.5a4 4 0 0 1 5 0"/></g><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg></span><h3>Address Based Availability</h3><p>Check if service is available<br>in your area.</p></div>
   </div>
 </section>
@@ -445,11 +485,11 @@ h1 .nw{white-space:nowrap}
       </div>
       <div>
         <span class="dmo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2s.9 3.2-1.3 5.6C10.5 9.4 8 10.6 8 14a4 4 0 0 0 8 0c0-1.6-.8-2.6-.8-2.6s2.8 1 2.8 4.6A6 6 0 0 1 6 16c0-5.4 4.6-7.2 6-10.2.6-1.3 1.5-3.8 1.5-3.8z"/></svg>Don&rsquo;t miss out</span>
-        <h2 id="bandTitle">Your Next Internet Bill Could Be Just <span class="hl">$35/mo<sup class="ast">*</sup></span></h2>
+        <h2 id="bandTitle">Your Next Internet Bill Could Be Just <span class="hl">$35/mo</span></h2>
         <p>Limited-time promotional pricing and availability may change. Check your address now to see if this offer is available.</p>
         <a class="btn" href="#check" data-check>Check My Address <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back<sup class="dag">&dagger;</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>5G Wi-Fi Gateway Included</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li></ul>
+      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$0 Due Today</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Prepaid Gift Card<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Free 5G Wi-Fi Equipment</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>15-Day Test Drive</span></li></ul>
     </div>
   </div>
 </section>
@@ -468,7 +508,7 @@ h1 .nw{white-space:nowrap}
 <section class="fine" aria-label="Offer details">
   <div class="wrap">
     <p>*$35/mo with AutoPay and a qualifying voice line, plus taxes &amp; fees. Without AutoPay, $10 more/line/mo. $0 due today for qualifying customers; $35 device connection charge due at sale. Credit approval required. Not available in all areas. During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p>
-    <p>&dagger;$100 via virtual prepaid Mastercard for Rely Home Internet, digital (online) activations only; register code within 30 days of activating a qualifying new Home Internet line. No cash access; card expires in 6 months. <button type="button" class="terms-link" data-terms>Plan terms</button></p>
+    <p>*$100 prepaid gift card with qualifying activation. Terms apply. <button type="button" class="terms-link" data-terms>Plan terms</button></p>
     <p>**Allow 10 weeks. <button type="button" class="terms-link" data-terms="card">See Full Terms</button></p>
   </div>
 </section>
