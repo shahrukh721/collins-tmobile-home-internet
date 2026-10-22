@@ -323,6 +323,22 @@ h1 .nw{white-space:nowrap}
   .rv{padding:14px 12px;gap:12px}
   .rv-av{flex-basis:52px;width:52px;height:52px;font-size:17px}
 }
+
+/* ---------- Desktop: form scrolls inside its card ---------- */
+.ls-scroll{position:relative;margin-top:6px}
+.ls-scroll .ls-host{margin-top:0;overflow:hidden}
+@media (min-width:761px){
+  .ls-pane{max-height:clamp(380px,calc(100vh - 300px),560px);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent;padding-right:2px}
+  .ls-pane::-webkit-scrollbar{width:6px}
+  .ls-pane::-webkit-scrollbar-thumb{background:rgba(255,255,255,.35);border-radius:3px}
+  .ls-scroll::after{content:"";position:absolute;left:0;right:8px;bottom:0;height:56px;pointer-events:none;border-radius:0 0 8px 8px;background:linear-gradient(180deg,rgba(11,16,40,0),rgba(11,16,40,.95));transition:opacity .2s}
+  .ls-scroll.at-end::after{opacity:0}
+  .ls-hint{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;font-family:Inter,Arial,sans-serif;font-size:12px;color:#c9ccd8;transition:opacity .2s}
+  .ls-hint svg{width:14px;height:14px;animation:nudge 1.4s ease-in-out infinite}
+  .ls-scroll.at-end + .ls-hint{opacity:0}
+  @keyframes nudge{50%{transform:translateY(3px)}}
+}
+@media (max-width:760px){.ls-hint{display:none}}
 </style>
 </head>
 <body>
@@ -397,6 +413,8 @@ h1 .nw{white-space:nowrap}
         <h2>Check Your Address</h2>
         <h3>See If You Qualify for This Offer</h3>
         <p class="fc-sub">Fast, free availability check. Takes less than 30 seconds.</p>
+        <div class="ls-scroll" id="lsScroll">
+        <div class="ls-pane" id="lsPane">
         <div class="ls-host" id="lsHost">
           <iframe
               src="https://link.leadstacker.com/widget/form/4a9d2QiY65WY6o9jIoJW"
@@ -419,6 +437,9 @@ h1 .nw{white-space:nowrap}
               >
           </iframe>
         </div>
+        </div>
+        </div>
+        <p class="ls-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Scroll to complete the form</p>
         <p class="fc-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM9 8V6a3 3 0 0 1 6 0v2z"/></svg>Secure &amp; No Obligation</p>
         <ul class="fc-checks">
           <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No commitment to purchase</li>
@@ -584,6 +605,16 @@ h1 .nw{white-space:nowrap}
     bar.querySelectorAll('a').forEach(function(el){el.tabIndex=show?0:-1});
   }
   window.addEventListener('scroll',sync,{passive:true}); window.addEventListener('resize',sync); sync();
+})();
+</script>
+<script>
+(function(){
+  // Desktop: hide the bottom fade/hint once the form is scrolled to the end
+  var wrap=document.getElementById('lsScroll'), host=document.getElementById('lsPane');
+  function sync(){ wrap.classList.toggle('at-end', host.scrollHeight-host.clientHeight-host.scrollTop<6); }
+  host.addEventListener('scroll',sync,{passive:true}); window.addEventListener('resize',sync);
+  if(window.ResizeObserver){ new ResizeObserver(sync).observe(host.querySelector('iframe')||host); }
+  setInterval(sync,1500); sync();
 })();
 </script>
 <script src="https://link.leadstacker.com/js/form_embed.js"></script>
