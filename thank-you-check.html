@@ -293,15 +293,16 @@ img{display:block;max-width:100%}
 /* ---------- Hero background photo (Unsplash hlOpCML8twI), tinted magenta ---------- */
 .hero,.mhero{isolation:isolate}
 .hero-photo{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.hero-photo i{position:absolute;inset:-14px;background:url(images/living-room-bg.jpg) center 62%/cover no-repeat;filter:grayscale(1) blur(2px) brightness(1.15) contrast(1.2)}
+.hero-photo i{position:absolute;inset:-14px;background:url(images/living-room-bg.jpg) center 62%/cover no-repeat;filter:grayscale(1) blur(2px) brightness(.75) contrast(1.15)}
 .hero-photo i{z-index:0}
 .hero-photo::before{content:"";position:absolute;inset:0;z-index:1;background:#d1007a;mix-blend-mode:color;opacity:.95}
 .hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:
   radial-gradient(ellipse 30% 40% at 52% 100%,rgba(255,30,150,.5),transparent 70%),
   radial-gradient(ellipse 22% 55% at 96% 30%,rgba(255,60,170,.35),transparent 70%),
-  linear-gradient(90deg,rgba(18,4,22,.72) 0%,rgba(18,4,22,.2) 50%,rgba(18,4,22,.4) 100%)}
+  linear-gradient(90deg,rgba(14,3,18,.85) 0%,rgba(14,3,18,.5) 50%,rgba(14,3,18,.6) 100%)}
 .hero > .wrap,.mhero > *:not(.hero-photo){position:relative;z-index:1}
 @media (max-width:760px){.mvis .giftcard .gc-amt{font-size:clamp(17px,5vw,22px)!important}.mvis .giftcard .gc-back{font-size:clamp(13px,3.8vw,17px)!important;top:38%!important}.mvis .giftcard .gc-lbl{font-size:6px!important;bottom:7%!important}}
+@media (max-width:760px){.hero-photo::after{background:radial-gradient(ellipse 40% 30% at 70% 85%,rgba(255,30,150,.35),transparent 70%),linear-gradient(180deg,rgba(14,3,18,.72) 0%,rgba(14,3,18,.6) 100%)!important}}
 </style>
 </head>
 <body>
