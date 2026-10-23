@@ -503,9 +503,7 @@ h1 .nw{white-space:nowrap}
 
 /* Mobile: give the form iframe extra room so it never scrolls internally
    (form_embed.js sets height to the form body; our CSS adds a buffer, trimmed below) */
-@media (max-width:760px){
-  .ls-host iframe{height:calc(var(--ifh,1100px) + 120px)!important;margin-bottom:-90px!important}
-}
+.ls-host iframe{height:calc(var(--ifh,1100px) + 120px)!important;margin-bottom:-90px!important}
 /* Desktop: larger device image */
 @media (min-width:761px){.h-visual .devimg{left:-18%;right:-8%}}
 </style>
