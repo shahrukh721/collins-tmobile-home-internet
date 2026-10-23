@@ -438,7 +438,7 @@ h1 .nw{white-space:nowrap}
   .hero::before{display:none}
   .hero-photo{bottom:auto!important;height:calc(var(--hero-top,600px) + 40px)}
   .hero-photo::after{background:radial-gradient(ellipse 40% 30% at 70% 85%,rgba(255,30,150,.45),transparent 70%),linear-gradient(90deg,rgba(14,3,18,.6) 0%,rgba(14,3,18,.15) 75%),linear-gradient(180deg,rgba(14,3,18,.7) 0%,rgba(14,3,18,.55) 70%,rgba(255,255,255,0) 86%,#fff 100%)!important}
-  .hero .wrap{grid-template-areas:"copy" "form" "after"!important;padding-bottom:6px!important}
+  .hero .wrap{grid-template-areas:"copy" "fine" "form" "after"!important;padding-bottom:6px!important}
   .mtrust{display:none!important}
   .h-copy{grid-area:copy;position:relative;z-index:2}
   .h-copy .checks{display:grid!important;max-width:56%;gap:8px;margin-top:12px}
@@ -506,6 +506,21 @@ h1 .nw{white-space:nowrap}
 .ls-host iframe{height:calc(var(--ifh,1100px) + 120px)!important;margin-bottom:-90px!important}
 /* Desktop: larger device image */
 @media (min-width:761px){.h-visual .devimg{left:-18%;right:-8%}}
+
+/* ---------- fdl04-ol fine print under offer bullet lists ---------- */
+.bp-fine{margin-top:14px;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.5;color:rgba(255,255,255,.82);max-width:560px}
+.bp-fine p+p{margin-top:4px}
+.bp-fine .terms-link{color:#fff;text-decoration:underline;text-underline-offset:2px;font:inherit;background:none;border:0;padding:0;cursor:pointer}
+.bp-m{display:none}
+@media (max-width:760px){
+  .bp-d{display:none}
+  .bp-m{display:block;grid-area:fine;position:relative;z-index:2;margin-top:6px;font-size:11.5px;max-width:none}
+}
+
+.band-list{align-self:center}
+.band-list .checks{margin-top:0}
+.bp-band{font-size:11.5px;max-width:300px}
+@media (max-width:1180px){.band-list{display:none}}
 </style>
 </head>
 <body>
@@ -563,10 +578,12 @@ h1 .nw{white-space:nowrap}
       <h1>Get T-Mobile Rely <span class="nw">Home Internet for</span> <span class="hl">Just $35/mo<sup class="ast">*</sup></span></h1>
       <p class="lead">With Unlimited 5G Data. With AutoPay and eligible voice line, plus taxes &amp; fees. Plus get $100 back via virtual prepaid Mastercard&reg;.<sup class="ast">**</sup></p>
       <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Worry-free 15-Day Test Drive</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Easy Self-Installation</span></li></ul>
+      <div class="bp-fine bp-d"><p>Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts.</p><p>*During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p><p>**Allow 10 weeks <button type="button" class="terms-link" data-terms="card">See Full Terms</button></p></div>
     </div>
 
     <div class="mtrust no-rate" aria-label="Why choose us"><div class="mt-items"><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></g></svg></span><span class="l">Authorized<br>T-Mobile Retailer</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M13 2.5h7.5a1 1 0 0 1 1 1V11L11 21.5a1.5 1.5 0 0 1-2.1 0L2.5 15.1a1.5 1.5 0 0 1 0-2.1z"/><circle cx="17" cy="7" r="1.6"/></g></svg></span><span class="l">5-Year Price<br>Guarantee</span></div><div class="mt-it"><span class="t-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></svg></span><span class="l">Check Availability Instantly</span></div></div></div>
 
+    <div class="bp-fine bp-m"><p>Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts.</p><p>*During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p><p>**Allow 10 weeks <button type="button" class="terms-link" data-terms="card">See Full Terms</button></p></div>
     <div class="h-visual">
       <div class="glow"></div>
       <div class="devimg"><img src="images/router-card.webp" alt="T-Mobile 5G Home Internet gateway with $100 back" width="1392" height="1024"></div>
@@ -684,7 +701,7 @@ h1 .nw{white-space:nowrap}
         <p class="ast-legal">*With AutoPay and eligible voice line, plus taxes &amp; fees.</p>
         <a class="btn" href="#check" data-check>Check My Address <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Worry-free 15-Day Test Drive</span></li></ul>
+      <div class="band-list"><ul class="checks"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unlimited 5G Data<sup class="ast">*</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$100 Back via Virtual Prepaid Mastercard&reg;<sup class="ast">**</sup></span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Equipment Fee</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>No Annual Contract</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4L18 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Worry-free 15-Day Test Drive</span></li></ul><div class="bp-fine bp-band"><p>Not available in all areas; customers ineligible for 5G Home Internet may be eligible for 4G LTE or other fixed wireless options. Regulatory fees included for qualified accounts.</p><p>*During congestion, customers on this plan may notice speeds lower than other customers and further reduction if using &gt;1.2TB/mo., due to data prioritization. <button type="button" class="terms-link" data-terms="disclaimer">See Full Terms</button></p><p>**Allow 10 weeks <button type="button" class="terms-link" data-terms="card">See Full Terms</button></p></div></div>
     </div>
   </div>
 </section>
